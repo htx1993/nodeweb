@@ -1,0 +1,234 @@
+.hnaui-form-select dl{
+  border:0;
+}
+.hnaui-form-radioed i{
+  color:$themeColor !important;
+}
+.hnaui-form-radio{
+  margin:0;
+  padding-right:10px;
+  i{
+    margin-right:3px;
+  }
+}
+.hnaui-index-search{
+  position: relative;
+  width:400px;
+  background:rgba(255,255,255,.7);
+  z-index:9;
+  margin-top:40px;
+  @include box-shadow(0 0 10px 3px rgba(0,0,0,.2));
+  @include border-radius(3px);
+}
+.hnaui-quick-search{
+  width:1200px;
+  position: absolute;
+  top:58px;
+  left:0;
+  right:0;
+  margin:0 auto;
+  pointer-events:none;
+  .hnaui-form{
+    pointer-events:auto;
+    .col-lg-4{
+    padding:0;
+  }
+  }
+}
+
+.hnaui-msg-text{
+  width:60%;
+  font-size:$fontDefault;
+  margin-top:20px;
+  p{
+    margin-bottom:10px;
+    em{
+      display: inline-block;
+      margin:0 10px;
+    }
+    &:nth-child(1) {
+      em{
+        margin-left: 22px;
+      }
+    }
+  }
+  a{
+    &:hover{
+    color:$themeColor;
+    }
+  }
+
+}
+.hnaui-search-box{
+  padding:34px 30px;
+  height:400px;//438.5
+  .search-btn{
+    margin-top:20px;
+    i{
+      color:#fff;
+    }
+  }
+  .hnaui-icon,.hanui-icon:hover{
+    color:#666;
+  }
+  .hnaui-input-block{
+    margin-left:0;
+    line-height:36px;
+  }
+  .hnaui-input-inline{
+    position: relative;
+    .hnaui-icon{
+      position:absolute;
+      right:5px;
+      top:10px;
+      color:#666;
+      font-size:20px;
+      pointer-events: none;
+    }
+    .hnaui-typeicon{
+      position:absolute;
+      right:-20px;
+      top:3px;
+      z-index:99;
+      height:38px;
+      font-size:14px;
+      line-height:38px;
+      color:$themeColor;
+    }
+  }
+  .hnaui-form-item{
+    position:relative;
+    display:block;
+    width:100%;
+    margin-bottom:15px;
+  }
+  .hnaui-radio{
+    width:100%;
+  }
+
+  .hnaui-form-label{
+    position: absolute;
+    left:10px;
+    top:10px;
+    z-index:9;
+    //width:70px;
+    padding:0;
+   // color:#999;
+    text-align:left;
+  }
+  .hnaui-input{
+    border:1px solid $border;
+    background: #fff;
+    padding-left:70px;
+    @include border-radius(0);
+  /*  &:focus,&:hover{
+      border-bottom:1px solid #ccc !important;;
+    }*/
+    &.p-city{
+      width:92%;
+    }
+
+  }
+  .hnaui-form-select input[readonly], input.o-date[readonly]{
+     background: #fff;
+    border:1px solid $border;
+     color:#666;
+  }
+  .hnaui-select-list {
+    .hnaui-input-inline{
+      width:25.33%;
+      margin-right:10%;
+      margin-right:8% \9;
+      &:nth-child(3n){
+        margin-right:0;
+      }
+      .hnaui-input{
+        padding-left:10px;
+      }
+    }
+  }
+  .hnaui-search-submit{
+    text-align: center;
+  }
+  .hnaui-form-item{
+    clear:none;
+  }
+  .disabled-date {
+   // background-color: $themeColor;
+  }
+  .trip-type , .cabin , .flexible-item{
+    display: none;
+  }
+}
+
+.hnaui-city-change{
+   position:relative;
+}
+.hnaui-change-icon{
+  position:absolute;
+  right:0;
+  top:18px;
+  width:28px;
+  height:55px;
+  border:1px solid $border;
+  border-left:0;
+  span{
+    display:block;
+    position: absolute;
+    top:28%;
+    right:-12px;
+    width:25px;
+    height:25px;
+    line-height:25px;
+    overflow: hidden;
+    text-align: center;
+    color:#fff !important;
+    background: $themeColor;
+    cursor: pointer;
+    @include border-radius(50%);
+    i{
+      display: block;
+      color:#fff !important;
+      line-height:27px;
+      height:25px;
+    }
+  }
+}
+.hnaui-typeicon{
+  cursor: pointer;
+  pointer-events: auto !important;
+  &:hover{
+      .hnaui-msgbox{
+        display:block;
+      }
+    }
+}
+.hnaui-msgbox{
+
+  display: none;
+  position:absolute;
+  right:-30px;
+  bottom:40px;
+  z-index:9999;
+  font-size:$fontDefault;
+  min-width:95px;
+  white-space:nowrap;
+  padding:5px;
+
+  color:#333;
+  line-height:20px;
+  text-align: left;
+
+  background:$bodyBg;
+  border:1px solid $border;
+
+  }
+
+.disabled-date {
+  .hnaui-icon,.hnaui-form-label{
+    color:#999 !important;
+  }
+  input.hnaui-input{
+    border-botttom:1px solid #f2f2f2 !important;
+  }
+}

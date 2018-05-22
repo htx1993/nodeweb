@@ -1,0 +1,279 @@
+$whitebg: #fff;
+$graybg: rgba(204, 204, 204, .6);
+$hna-shadow: 0 3px 3px 2px rgba(0, 0, 0, .2);
+$hnaui-color666: #666;
+
+$labelW: 80px;
+//验证正确
+.login-content .hnaui-warning .verify-ok{
+  position: absolute;
+  right:30px;
+  bottom:25px;
+  text-align: right;
+  display:none;
+}
+.container_full{
+  position:relative;
+}
+.login-content {
+  &.content {
+    background: $bglogin;
+    background-size: cover;
+  }
+  .container {
+    background: transparent !important;
+  }
+
+  .hnaui-form-item {
+    overflow: initial;
+    margin-bottom:12px !important;
+    .hnaui-form-label {
+      width: $labelW;
+      border: 1px solid #ededed;
+      border-right: 0;
+      background: #FBFBFB;
+    }
+    .hnaui-input-block {
+      margin-left: 0;
+      .hnaui-input,
+      .hnaui-textarea,
+      .hnaui-select {
+        padding-right: 35px;
+      }
+    }
+  }
+  .hnaui-required {
+    display: none;
+  }
+
+  .hnaui-login-btn {
+    width: 100%;
+    .hnaui-icon{
+      display: none;
+    }
+  }
+
+  .hnaui-tab {
+    background: $whitebg;
+    padding:20px 40px;
+    @include box-shadow($hna-shadow);
+    position: absolute;
+    width:410px;
+    min-height:460px;
+    left:50%;
+    top:50%;
+    margin-left:-205px;
+    margin-top:-230px;
+    .hnaui-input{
+      @include border-radius(2px);
+    }
+    .hnaui-form-label{
+      display: none;
+    }
+    h2{
+      font-size:$fontDefault + 8;
+      margin-bottom:10px;
+      color:$themeColor;
+    }
+    .close{
+      position: absolute;
+      right:0;
+      top:0;
+      background: $themeColor;
+      color:#fff;
+      padding:1px 6px;
+      cursor: pointer;
+    }
+    .hnaui-verifybtn{
+      background: $themeColor;
+      color:#fff;
+      @include border-radius(5px);
+      height:28px;
+      line-height:28px;
+      right:5px;
+      top:5px;
+    }
+  }
+  .hnaui-tab-title {
+    .hnaui-this:after {
+      border: 0;
+    }
+    li {
+      width:50%;
+      cursor: pointer;
+      padding: 0;
+      font-size:$fontDefault + 4;
+      color:#999;
+      &.hnaui-this {
+       border-bottom:2px solid $themeColor;
+        color:  $themeColor;
+        font-weight:bold;
+      }
+      &.hnaui-login-user-name{
+        text-align: left;
+      }
+      &.hnaui-login-mobil{
+        text-align: right;
+      }
+    }
+
+  }
+  .hnaui-tab-content {
+    padding:25px 0;
+  }
+
+  .hnaui-alink {
+    text-align: right;
+    padding: 4px 0;
+    .forget-password{
+      margin-right:10px;
+      strong{
+        color:$themeColor;
+      }
+    }
+    .trial-times{
+      display: none;
+      float:left;
+      color:red;
+    }
+    a {
+      display: inline-block;
+      padding-left: 10px;
+      color: $hnaui-color666;
+    }
+    em {
+      font-style: normal;
+    }
+  }
+
+  .hnaui-imghover {
+    img {
+      opacity: .5;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+
+  .hnaui-warning {
+    position: absolute;
+    top: 33px;
+    left: 0;
+    padding: 0;
+    width: 100% !important;
+    height: 20px;
+    line-height: 20px;
+    background: none;
+  }
+  .p-input {
+    .hnaui-form-item {
+      overflow: visible;
+    }
+  }
+
+  .p-mmv {
+    .hnaui-form-label {
+      display: none;
+    }
+    .hna-mmv {
+      position: static;
+      left: 0;
+      background: #fbfbfb;
+    }
+  }
+
+  .hnaui-mobile-pre{
+    left: 0;
+    width: 80px;
+    input{
+      border:0 !important;
+      background: none;
+    }
+  }
+  .hnaui-mobile-next{
+    .hnaui-input{
+      padding-left: 80px !important;
+    }
+  }
+
+  .third-login{
+    color: $hnaui-color666;
+    p{
+      border-bottom:1px solid $border;
+      text-align: center;
+      position: relative;
+      margin:30px 0;
+      span{
+        display: inline-block;
+        background: #fff;
+        padding:0 10px;
+        position: absolute;
+        left:50%;
+        margin-left:-60px;
+        top:-8px;
+      }
+    }
+    li{
+      float:left;
+      width:33.334%;
+      text-align: center;
+      .hnaui-icon{
+        display: inline-block;
+        vertical-align: middle;
+        margin-right:3px;
+      }
+      a{
+        color:$hnaui-color666;
+        &:hover{
+          color:$themeColor;
+        }
+      }
+    }
+  }
+
+  .login-content  .footer-block {
+    margin-top: 0 !important;
+  }
+
+  .hnaui-btn-model {
+    margin: 0;
+  }
+
+  //手机密码，号码登录
+  .login-phone-password-num{
+    display: none;
+  }
+  .logintext-phone{
+    margin-bottom:10px;
+    margin-top:-15px;
+    cursor:pointer;
+    span{
+      color:$themeColor;
+      display: inline-block;
+    }
+  }
+
+  .no-login-tips{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,.5);
+    z-index: 99;
+    >span{
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 260px;
+      margin-left: -130px;
+      margin-top: -20px;
+      background: #fff;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+    }
+  }
+}

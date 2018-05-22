@@ -1,0 +1,39 @@
+$imgUrl : "./../images";
+$fontUrl : "./../font";
+
+$bodyBg:#f5f5f5;
+$themePanelBg:#fff;
+$themeColor:#e2000c;
+$themeColorHover:#e2000c;
+$themeColorBtnRight:#9e0008;
+$inputH:38px;
+$btnH:38px;
+$themeColor-opacity:rgba(226,0,12,.5);
+$greenColor:#2bb500;
+$user-titlebg:#f2f2f2;
+$hnaui-redColor:#e60012;
+$hnaui-redbgColor:#fef3f3;
+$bglogin: url("#{$imgUrl}/loginbg.jpg") center top no-repeat;
+
+$orgColor:#ff6600;
+
+//input,select默认蓝色线-->紫色线
+.hnaui-input:hover,
+.hnaui-textarea:hover,
+.hnaui-input:focus,
+.hnaui-textarea:focus{
+  border-bottom-color:$themeColor !important;
+}
+//select下拉选中背景
+.hnaui-form-select dl dd.hnaui-this{
+  background-color: $themeColor;
+}
+$subColor:#333;
+$yellowColor:#fac000;
+$greenColor:#1ca905;
+$darkthemColor:#9e0008;
+$lightthemColor:#ed434c;
+$border:#ececec;
+
+//字体大小
+$fontDefault:12px;

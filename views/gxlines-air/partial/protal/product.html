@@ -1,0 +1,24 @@
+<div class="hnaui-module-box hnaui-product hnaui-clear hnaui-shadow">
+    <h2><i class="hnaui-icon">&#xe62e;</i> <span>Service<strong>旅行服务</strong></span><!--<a href="{{base.server_host}}/airR/increment" class="hnaui-more">更多<i
+            class="hnaui-icon">&#xe654;</i></a>--></h2>
+    <div class="hnaui-content hnaui-clear">
+        <div class="row">
+            {{#each business.productList}}
+            <div class="pro-list">
+                <a class="hnaui-product-item" href="{{jumpHref}}">
+                    <div class="hnaui-product-img">
+                        <p class="delay-load-img" data-src="{{base.static_host}}{{imgSrc}}"></p>
+                    </div>
+                    <div class="hnaui-product-title">
+                        <h3>{{title}}</h3>
+                        <p>{{subTitle}}</p>
+                    </div>
+                    <div class="mask-box">
+                        <p class="hnaui-btn">点击查看</p>
+                    </div>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

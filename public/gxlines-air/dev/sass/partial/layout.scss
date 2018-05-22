@@ -1,0 +1,227 @@
+@import './widget/search-loading';
+
+//左右布局
+.container_right {
+  float: right;
+  width: 290px;
+}
+
+.container_left {
+  position: relative;
+  float: left;
+  width: 890px;
+  min-height: 560px;
+}
+.hnaui-user-panel{
+  padding:0 20px;
+}
+.user-left{
+  float:left;
+  width:65%;
+}
+.user-right{
+  float:right;
+  width:31%;
+}
+
+//
+.container_full {
+  position: relative;
+  width: 100%;
+  min-height: 560px;
+}
+
+.search-result {
+  display: none;
+}
+
+.search-submit {
+  position: relative;
+  display: none;
+  margin-top:30px;
+  .hnaui-btn {
+    //width: 160px;
+    //height:44px;
+    //line-height:44px;
+    //font-size: $fontDefault + 4;
+  }
+}
+
+.hnaui-user{
+  $labelW: 120px;
+  //input hover line
+  .hnaui-form-item {
+    position: relative;
+    .hnaui-form-label {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+
+      width: $labelW;
+      // height: 38px;
+      border: 1px solid #ececec;
+      text-align: right;
+      border-bottom: 0;
+    }
+    .hnaui-input-block {
+      position: relative;
+      left: 0;
+      margin-left: $labelW;
+      //width:100%;
+      > .hnaui-icon {
+        position: absolute;
+        right: 8px;
+        top: 10px;
+      }
+      .hnaui-input,
+      .hnaui-textarea,
+      .hnaui-select {
+        // padding-left:$labelW + 10px;
+        padding-right: 25px;
+        // border-left:none;
+      }
+      .hnaui-form-radio {
+        margin-top: 3px;
+        &:first-of-type {
+          // padding-left:$labelW;
+          border-left: none;
+        }
+      }
+      .hnaui-form-checkbox[hna-skin="primary"] {
+        margin-top: 2px;
+        margin-left: -$labelW;
+
+      }
+      .hnaui-unique-loading {
+        z-index: 9;
+        display: none;
+      }
+    }
+    .hnaui-input-inline {
+      width: auto;
+      margin-left: 0;
+    }
+  }
+
+  //动态口令按钮
+  .hnaui-verifybtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    min-width: 90px;
+    height: $inputH;
+
+    line-height: $inputH;
+    color: #666;
+
+    background: #e6e6e6;
+    @include box-shadow(none);
+    @include border-radius(0);
+
+    .hnaui-icon {
+      display: inline-block;
+    }
+    .count-down {
+      display: inline-block;
+      margin-right: 6px;
+
+      font-size: 16px;
+      font-weight: 600;
+      color: #000;
+    }
+    &:hover {
+      color: #666;
+    }
+  }
+
+  //错误提示
+  .hnaui-warning {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 20;
+
+    //max-width: 260px;
+    height: 38px;
+    padding: 0 8px;
+
+    font-size: 12px;
+    line-height: 38px;
+    color: $hnaui-redColor;
+
+    background: #eee;
+
+    > i {
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-right:5px;
+    }
+    > .verify-ok {
+      color: $greenColor;
+    }
+  }
+
+  .p-input {
+    position: relative;
+    .hnaui-form-item {
+      overflow: hidden;
+    }
+  }
+  .p-mmv {
+    //z-index: 80;
+    .hnaui-form-label {
+      position: relative;
+    }
+  }
+  .hna-mmv-puzzle{
+    z-index: 90;
+  }
+  .hna-mmv-track{
+    z-index: 1;
+  }
+}
+.hnaui-mobile-pre{
+  display: inline-block;
+  position: absolute;
+  left: 120px;
+  width: 80px;
+  z-index: 88;
+}
+.hnaui-mobile-next{
+}
+
+.passenger-content{
+  .hnaui-mobile-pre{
+    position: static!important;
+  }
+  .hnaui-mobile-next{
+    position: absolute !important;
+    width:auto !important;
+    margin-right:0 !important;
+  }
+}
+
+//
+//.hna-mmv{
+//  &:before,&:after{
+//    display: inline-block;
+//    content:"";
+//    position: absolute;
+//    top:0;
+//    z-index:2;
+//    width:18px;
+//    height:40px;
+//    background: #fff;
+//  }
+//  &:before{
+//    left:0;
+//  }
+//  &:after{
+//    right:0;
+//    border-left: 1px solid #d4d4d4;
+//  }
+//}

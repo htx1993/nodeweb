@@ -1,0 +1,134 @@
+$color:#666;
+
+.footer-block{
+  background: $border;
+  .container{
+    padding:0;
+    width:1200px;
+    margin:0 auto;
+  }
+  .hnaui-attention{
+    border-left:1px solid #444;
+    padding-left:40px;
+    margin-top:15px;
+    li{
+      display: inline-block;
+      cursor:pointer;
+      width:100px;
+      text-align: center;
+      margin-right:15px;
+      img{
+        width:100px;
+        height:100px;
+        margin-bottom:5px;
+      }
+    }
+
+  }
+  .hanui-help-center{
+    >div{
+      position: relative;
+      float:left;
+      width:18%;
+      min-height:180px;
+      padding:30px 0 20px 15px;
+     &.link{
+        zoom:1;
+        overflow: hidden;
+       width:22%;
+        li{
+          float:left;
+          width:49%;
+          &.tit{
+            width:100% !important;
+          }
+        }
+
+      }
+
+    }
+    .copyright{
+      width:28%;
+      margin-right:4%;
+      background: $themeColor;
+      color:#666;
+      padding-left:60px;
+      p{
+        margin-bottom:10px;
+        img{
+          margin:20px 20px 20px 0;
+        }
+      }
+    }
+    h4{
+      border-left:2px solid #666;
+      padding-left:10px;
+      font-size: $fontDefault + 4;
+      font-weight: bold;
+      line-height: 1;
+      margin-bottom: 10px;
+      color:#666;
+      margin-left:4px;
+    }
+    a{
+      display: inline-block;
+      color: #666;
+      text-decoration: none;
+      line-height: 25px;
+      @include transition(all .3s ease);
+      position: relative;
+      &:hover{
+       color:$themeColor;
+        margin-left:4px;
+      // font-size:$fontDefault + 2;
+      }
+
+      .hnaui-icon{
+        display: inline-block;
+        margin-right: 4px;
+        top: 3px;
+        position: relative;
+      }
+    }
+  }
+.foot-safe-img{
+  a{
+    display: inline-block;
+    margin:10px;
+  }
+  img{
+    width:auto;
+    height:25px;
+  }
+}
+  .hnaui-foot-box{
+    border-top: 2px solid $border;
+    padding:20px 0;
+    color: #333;
+    text-align: center;
+    background:#d0d0d0;
+    .hnaui-copy-right {
+      p{
+        line-height:1.8;
+      }
+      strong{
+        font-size:$fontDefault + 4;
+      }
+    }
+    .hnaui-friend-link{
+      a{
+        display: inline-block;
+        color:$color;
+        line-height: 20px;
+        &:hover{
+          color:#fff;
+        }
+      }
+      em{
+        display: inline-block;
+        margin:0 5px;
+      }
+    }
+  }
+}
+

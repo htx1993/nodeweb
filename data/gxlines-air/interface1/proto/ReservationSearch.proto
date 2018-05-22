@@ -1,0 +1,57 @@
+syntax = "proto3";
+
+package reservation;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.air.reservation";
+option java_outer_classname = "ReservationSearchProto";
+
+service ReservationSearch {
+    rpc reservationSearch (ReservationSearchRQ) returns (ReservationSearchRS) {
+    }
+}
+
+message ReservationSearchRQ {
+    string reservationCode = 1;
+    string status = 2;
+    string flightNumber = 3;
+    string startDate = 4;
+    string endDate = 5;
+    string firstName = 6;
+    string lastName = 7;
+    string ticketNo = 8;
+    int32 pageNum = 9;
+    int32 pageSize = 10;
+}
+
+message ReservationSearchRS {
+    int32 pageSize = 1;
+    int32 pageNo = 2;
+    int32 upPage = 3;
+    int32 nextPage = 4;
+    int64 totalCount = 5;
+    int32 totalPage = 6;
+
+    message Snapshot {
+        string code = 1;
+        string creationDate = 2;
+        string status = 3;
+        string profileId = 4;
+        string description = 5;
+        string source = 6;
+        string departureDateTime = 7;
+        string arrivalAirportCode = 8;
+        string primaryAirRecordLocator = 9;
+        string customerLastName = 10;
+        string firstFlightAirlineCode = 11;
+        string firstFlightFlightNumber = 12;
+        string salesCurrency = 13;
+        message Segment{
+            string departure = 1;
+            string arrival = 2;
+        }
+        repeated Segment segments = 14;
+
+    }
+    repeated Snapshot datas = 7;
+}

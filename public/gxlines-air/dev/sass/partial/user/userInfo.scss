@@ -1,0 +1,57 @@
+$labelW: 120px;
+.user-info-content {
+  .hnaui-form input[readonly=readonly] {
+    background: #fbfbfb;
+    color:#c5c5c5;
+  }
+  .update-passenger-panel,.update-address-panel,.add-address-panel,.add-passenger-panel{
+    padding-top:20px;
+  }
+  .uAddress, .dPassenger {
+    position: relative;
+  }
+  .dPassenger .hnaui-table a.hna-purpe{
+      margin:0 8px;
+  }
+  .hnaui-form-item {
+    .hnaui-form-label {
+      width: $labelW;
+    }
+    .hnaui-input-block {
+      margin-left: $labelW;
+    }
+  }
+
+  .hna-mmv {
+    display: inline-block;
+    left: 20px;
+  }
+
+}
+
+//优惠券相关样式
+.hnaui-coupon-content{
+  p{
+    color: #666;
+    line-height: 26px;
+  }
+}
+.hnaui-coupon-detail li{
+  float: left;
+  width: 50%;
+  p{
+    text-align: left;
+    line-height: 35px;
+  }
+}
+
+
+.update-address-btn {
+  margin-right: 5px;
+}
+
+
+
+.address-info{
+  padding-top:10px;
+}

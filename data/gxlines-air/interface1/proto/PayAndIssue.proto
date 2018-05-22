@@ -1,0 +1,309 @@
+syntax = "proto3";
+
+package ticket;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.pay";
+option java_outer_classname = "PayRSProto";
+
+service Pay {
+
+    //出票接口，出票成功后，返回订单信息
+    rpc payAndIssue (PayAndIssueRQ) returns (PayAndIssueRS) {
+    }
+
+    //获取支付信息
+    rpc checkOut (CheckoutRQ) returns (CheckoutRS) {
+    }
+
+    //支付订单
+    rpc payOrder (PayOrderRQ) returns (PayOrderRS) {
+    }
+
+	//获取微信支付状态
+    rpc wxpayState (WxpayStateRQ) returns (WxpayStateRS) {
+    }
+    
+    //获取订单出票状态
+    rpc issueStatus (IssueStatusRQ) returns (IssueStatusRS) {
+    }
+    
+    //获取订单支付信息
+    rpc orderPaid (OrderPaidRQ) returns (OrderPaidRS) {
+    }
+    
+    //获取支付手续费
+    rpc matchRule (MatchRuleRQ) returns (MatchRuleRS) {
+    }
+    
+    //不需要支付的改期操作
+    rpc noPayIssue (NoPayIssueRQ) returns (NoPayIssueRS) {
+    }
+}
+
+message PayOrderRQ {
+    string reservationCode = 1;
+    string totalAmount = 2;
+    string bankId = 3;
+    string userName = 4;
+    string payPurpose = 5;
+    string returnUrl = 6;
+    string fareFamilyCode = 7;
+    string intDom = 8;
+}
+
+message PayOrderRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    string url = 4;
+    int32 wxStateId = 5;
+
+}
+
+message CheckoutRQ {
+    string reservationCode = 1;
+}
+
+message CheckoutRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+
+    message ShopCart {
+        string reservationCode = 1;
+        string payPurpose = 2;
+        string tripType = 3;
+        repeated PassengerInfo passengers = 4;
+        int32 ff = 5;
+        int64 payRestTime = 6;
+        ShopCartAirItineraryPrice unPaidItineraryPrice = 7;
+        repeated ShopCartAnciOrInsuPrice unPaidInsurances = 8;
+        repeated ShopCartAnciOrInsuPrice unPaidAncillaries = 9;
+        repeated ShopCartAirItinerarySegment itinerarySegments = 10;
+        repeated ShopCartAirItinerarySegment changedItinerarySegments = 11;
+        ShopCartAirItineraryPrice changedItineraryPrice = 12;
+        string changeFee = 13;
+        repeated BankInfo bankInfos = 14;
+        repeated BankInfo bankInfoOthers = 15;
+        string unPaidTotalAmount = 16;
+		string ffCode = 17;
+
+    }
+    ShopCart shopCart = 4;
+}
+
+message BankInfo {
+    int32 id = 1;
+    int32 deleteFlag = 2;
+    string createTime = 3;
+
+    string bankName = 4;
+    //string aliBankCode;
+    //string yeeBankCode;
+    //string easyBankCode;
+    int32 status = 5;
+    int32 seq = 6;
+    //string picUrl;
+    string intDom = 7;
+    string isBank = 8;
+    double merchantFeeRate = 9;
+    string bankCode = 10;
+    string paymentType = 11;
+}
+
+message ShopCartAnciOrInsuPrice {
+    string type = 1;
+    string typeName = 2;
+    string totalAmount = 3;
+    repeated ShopCartAnciOrInsuPriceItem priceItems = 4;
+}
+
+message ShopCartAnciOrInsuPriceItem {
+    string name = 1;
+    string price = 2;
+    string quantity = 3;
+    string taxFee = 4;
+}
+
+message ShopCartAirItinerarySegment {
+    string carrierCode = 1;
+    string flightNumber = 2;
+    string departureDate = 3;
+    string departureWeek = 4;
+    string departureTime = 5;
+    string startAirportCode = 6;
+    string startAirportName = 7;
+    string departureTerminal = 8;
+    string arrivalDate = 9;
+    string arrivalWeek = 10;
+    string arrivalTime = 11;
+    string endAirportCode = 12;
+    string endAirportName = 13;
+    string arrivalTerminal = 14;
+}
+
+
+message ShopCartAirItineraryPrice {
+    string adtPrice = 1;
+    string adtQuantity = 2;
+    string cnnPrice = 3;
+    string cnnQuantity = 4;
+    string infPrice = 5;
+    string infQuantity = 6;
+    repeated ShopCartAirItineraryTax taxes = 7;
+    string totalAmount = 8;
+}
+
+message ShopCartAirItineraryTax {
+    string chineseName = 1;
+    string englishName = 2;
+    string fee = 3;
+    bool valid = 4;
+}
+
+
+message PassengerInfo {
+    string contactName = 1;
+    string cardType = 2;
+    string cardNo = 3;
+    string ageType = 4;
+    string mobilePhone = 5;
+    string description = 6;
+    double unPaidTotalAmount = 7;
+    double changeFee = 8;
+
+}
+
+message PayAndIssueRQ {
+    string reservationCode = 1;
+    string tradeNo = 2;
+    string paymentSeq = 3;
+    string merchantFee = 4;
+    string amount = 5;
+    string currencyCode = 6;
+    string payTime = 7;
+    string bankGroupCode = 8;
+    string bankGroupID = 9;
+    string bankCode = 10;
+    string bankID = 11;
+    string creditCardCompanyCode = 12;
+    enum IntDom {
+        INT = 0;
+        DOM = 1;
+    }
+    enum PayPurpose{
+        PAY_FOR_ORDER = 0;
+        PAY_FOR_CHANGE = 1;
+        PAY_FOR_ANCILLARY = 2;
+    }
+    PayPurpose payPurpose = 13;
+    IntDom intDom = 14;
+}
+
+message PayAndIssueRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    repeated TicketInfo data = 4;
+}
+
+message TicketInfo {
+    string name = 1;
+    string ticketNo = 2;
+}
+
+message WxpayStateRQ {
+    int32 wxStateId = 1;
+}
+
+message WxpayStateRS {
+	string status = 1;
+    string code = 2;
+    string message = 3;
+}
+
+message IssueStatusRQ {
+    string reservationCode = 1;
+}
+
+message IssueStatusRS {
+	string status = 1;
+    string code = 2;
+    string message = 3;
+}
+
+message OrderPaidRQ {
+    string reservationCode = 1;
+}
+
+message OrderPaidRS {
+	string status = 1;
+    string code = 2;
+    string message = 3;
+    
+    message Payment {
+        int32 id = 1;
+		int64 createTime = 2;
+		int64 lastUpdateTime = 3;
+		int32 deleteFlag = 4;
+		string nextStep = 5;
+		string status = 6;
+		string reservationCode = 7;
+		string tradeSeq = 8;
+		string paymentSeq = 9;
+		string amount = 10;
+		string currencyCode = 11;
+		string payDate = 12;
+		string payTime = 13;
+		string paymentType = 14;
+		string userName = 15;
+		int32 invoiceSequence = 16;
+		bool smsSend = 17;
+		bool emailSend = 18;
+		string type = 19;
+		string payPurpose = 20;
+		int32 handleStatus = 21;
+		int32 hasCancelled = 22;
+		string intDom = 23;
+		bool locked = 24;
+		bool syncIssure = 25;
+		int32 merchantFee = 26;
+		string ticketInfo = 27;
+		string otacode = 28;
+		int32 retryTimes = 29;
+    }
+    repeated Payment data = 4;
+}
+
+message MatchRuleRQ {
+    string fareFamilyCode = 1;
+	string bankId = 2;
+	string intDom = 3;
+	string payPurpose = 4;
+}
+
+message MatchRuleRS {
+	string status = 1;
+    string code = 2;
+    string message = 3;
+    double merchantFeeRate = 4;
+}
+
+message NoPayIssueRQ {
+    string reservationCode = 1;
+    string totalAmount = 2;
+    string bankId = 3;
+    string userName = 4;
+    string payPurpose = 5;
+    string returnUrl = 6;
+    string fareFamilyCode = 7;
+    string intDom = 8;
+}
+
+message NoPayIssueRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+
+}

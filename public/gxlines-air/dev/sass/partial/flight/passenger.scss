@@ -1,0 +1,551 @@
+.passenger-content{
+  .hnaui-chapter,.hnaui-section{
+    font-weight: bold;
+    line-height: 50px;
+  }
+  thead{
+    background: #e6e6e6;
+  }
+  tr,td,th{
+    &:hover{
+      background: none !important;
+    }
+  }
+  /*确认协议相关样式*/
+  .hnaui-error-box{
+    margin-left:2%;
+  }
+/*
+.adt,.inf,.cnn{
+  min-height:330px;
+}
+*/
+
+
+
+
+.hnaui-form-item{
+    margin-bottom:0 !important;
+  }
+  .passenger-content{
+    .container{
+      margin-top:0 !important;
+    }
+    input[type="text"]{
+      font-size: $fontDefault + 2;
+    }
+
+    .hnaui-mobile-pre{
+      display: inline-block;
+      position: absolute !important;
+      width: 60px !important;
+      left: 0;
+    }
+    .hnaui-mobile-next{
+      margin-left: 64px !important;
+    }
+    .hnaui-mobile-pre + .hnaui-mobile-next{
+      width: 73.9% !important;
+    }
+  }
+  .p-panel {
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 22px;
+    background-color: $themePanelBg;
+    .p-panel-heading {
+      position: relative;
+      color: #333;
+      padding-top:20px;
+    }
+    .p-panel-title {
+      display: inline-block;
+      margin-left:-30px;
+      height:30px;
+      line-height:30px;
+      font-size:$fontDefault + 4;
+       span.p-index{
+        background: $themeColor;
+        color: #fff;
+        width:30px;
+        text-align: center;
+        display: inline-block;
+      }
+      strong{
+        color: #333;
+        padding:0 10px;
+        font-size:$fontDefault;
+        background-color: $border;
+        display: inline-block;
+        vertical-align: top;
+        font-weight:normal;
+      }
+    }
+    .p-index {
+      display: inline-block;
+    }
+    .p-panel-title-arrow {
+      float: left;
+      width: 0;
+      height: 0;
+      border-top: 15px solid transparent;
+      border-bottom: 20px solid transparent;
+      border-left: 15px solid $themeColor;
+    }
+
+    .p-panel-btn-right {
+      display: inline-block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      .hnaui-btn{
+        border-radius:0;
+        box-shadow: none;
+        padding:0 10px;
+        height:35px;
+        line-height:35px;
+      }
+    }
+
+    .hnaui-remove-traveller{
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      right: 40px;
+      width: 35px;
+      height: 35px;
+      line-height: 35px;
+      background: $darkthemColor;
+      text-align: center;
+      cursor: pointer;
+      .hnaui-icon {
+        display: inline-block;
+        font-size: 24px;
+        color: #fff;
+        pointer-events: none;
+      }
+      &:hover {
+        color: #fff;
+        opacity: .8;
+        filter: alpha(opacity=80);
+      }
+    }
+    .p-panel-body {
+      padding: 15px 0 15px 50px;
+      min-height: 100px;
+      width:100%;
+      .input-icon{
+        width:25%;
+        margin:0 3%;
+        float:left;
+        min-height:71px;
+      }
+      .hnaui-input-inline{
+        .hnaui-icon{
+          display: none;
+        }
+      }
+
+
+      .hnaui-input-inline {
+        position: relative;
+        width: 100%;
+        margin-bottom: 18px !important;
+        margin-left: 0;
+      }
+    }
+  }
+  .passenger-rule {
+    position: relative;
+    margin-top: 10px;
+    background-color: #fff;
+    .hnaui-colla-title {
+      background-color: $bodyBg;
+    }
+    b {
+      display: inline-block;
+      margin-top: 6px;
+    }
+  }
+  .hnaui-site-tips-content {
+    margin-top: 10px;
+  }
+  /*注意事项面板 */
+  .hnaui-flight-attention .hnaui-panel-content{
+    border: none !important;
+  }
+  .flight-attention-panel{
+    padding:0 15px;
+    .title,ul{
+      display: inline-block;
+    }
+    .title{
+      font-size:$fontDefault + 2;
+      color:#333;
+      margin-right:15px;
+      font-weight:bold;
+    }
+    ul.hnaui-attention{
+      li{
+        display: inline-block;
+        line-height: 31px;
+        font-size: 12px;
+        a{
+          display: block;
+          padding: 5px 10px;
+          cursor: pointer;
+          &:hover{
+            color: $themeColor;
+          }
+          &.hnaui-attention-active{
+            background: #fff;
+            color: $themeColor !important;
+          }
+        }
+      }
+    }
+    .hnaui-panel-title{
+      margin-left:-15px;
+      margin-right:-15px;
+      padding:0 15px;
+      background: $border;
+    }
+    p {
+      margin-bottom: 4px;
+      text-indent: 2em;
+    }
+    .hnaui-attention-content{
+      .notice-detail{
+        display: none;
+      }
+      .hna-img-center{
+        display:block;
+        position:relative;
+        margin:auto;
+      }
+    }
+    .hnaui-panel-content {
+      position: relative;
+      max-height: 260px;
+      padding:10px;
+    }
+    .hnaui-panel-footer{
+      margin-top: 6px !important;
+      padding:10px 0 15px 0;
+    }
+  }
+
+  .hna-synchro-contacts{
+    .hnaui-icon{
+      margin-right:5px;
+    }
+  }
+
+  //优惠券面板
+
+
+  .hna-mmv-puzzle{
+    z-index: 90;
+  }
+  .hna-mmv-track{
+    z-index: 1;
+  }
+  .coupon-panel{
+    position: relative;
+    .hnaui-coupon-input,.coupon-mmv,.hnaui-coupon-btn{
+      width:31.33%;
+      margin:0 1%;
+      float:left;
+      .hna-mmv{
+        width:100% !important;
+      }
+    }
+    .coupon-mmv{
+      width:41.33%;
+    }
+    .hnaui-coupon-btn{
+      width:21.33%;
+    }
+    .search-loading{
+      display: none;
+    }
+    .hnaui-placeholder .hnaui-input{
+      margin:0 !important;
+    }
+    .hnaui-placeholder .hnaui-input-icon{
+      font-size:$fontDefault + 2;
+      color:#c2c2c2;
+      cursor: pointer;
+    }
+    .msgtext{
+      padding-top:20px;
+      color:#666;
+    }
+  }
+  .hnaui-coupon{
+    color: #666;
+    position: relative;
+    .input-icon,dl{
+      padding-left:0 !important;
+      padding-right:0 !important;
+    }
+    dl{
+      display: none;
+      position: absolute;
+      left:22px;
+      top: 105px;
+      z-index: 10;
+      border: 1px solid $border;
+      max-height: 180px;
+      overflow-y: auto;
+      background-color: #fff;
+      width:31.33%;
+      @include css3(border-radius, 2px);
+      dd{
+        padding: 0 10px;
+        line-height: 36px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: #333;
+        &:hover{
+          background-color: #f2f2f2;
+        }
+      }
+    }
+  }
+
+  .input-icon{
+    position: relative;
+  }
+
+  .hnaui-border-style{
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+  }
+  .hnaui-select-line{
+    height:.5px;
+    width: 100%;
+    background: $border;
+  }
+  .hnaui-passenger-box{
+    .re-search-btn{
+      position: absolute;
+      right:15px;
+      top:20px;
+    }
+    padding:15px 15px 15px 45px;
+    min-height:80px;
+    .p-panel-title{
+      position: absolute;
+      left:0;
+      span{
+        height:50px;
+        line-height:50px;
+      }
+      strong{
+        line-height:20px;
+        padding:5px 10px;
+      }
+
+
+    }
+    .p-panel-title strong{
+      //width:45px;
+      display: inline-block;
+    }
+  }
+  .hnaui-select-box{
+    position: relative;
+    margin-left:30px;
+    display: inline-block;
+    width:95%;
+    h3,ul{
+      display: inline-block;
+      vertical-align: top;
+    }
+    h3{
+      color: $themeColor;
+      font-size: $fontDefault;
+      margin-right:5px;
+      padding-top:3px;
+    }
+    ul{
+      width:80%;
+    }
+    li{
+      font-size: $fontDefault + 2;
+      cursor: pointer;
+      min-width: 73px;
+      padding:0 10px;
+      height: 28px;
+      line-height: 28px;
+      @include border-radius(5px);
+      text-align: center;
+      position: relative;
+      border: .5px solid $border;
+      color: $subColor;
+      float: left;
+      z-index: 21 !important;
+      margin:0 5px 10px 5px;
+      i{
+        display: none;
+        font-size:$fontDefault;
+      }
+      &.hnaui-select-active{
+        border: 1px solid $themeColor !important;
+        color:$themeColor;
+        font-weight: bold;
+        i{
+          display: block !important;
+          position: absolute;
+          font-size: $fontDefault;
+          bottom: -7px;
+          right: 0;
+          color: white;
+          opacity: 1;
+          z-index: 20;
+        }
+        &:after{
+          content: '\20';
+          *zoom: 1;
+          display: block;
+          position: absolute;
+          opacity: 1;
+          bottom:0;
+          right: 0;
+          width:0;
+          height:0;
+          border-width:10px;
+          border-style:solid;
+          border-bottom-right-radius: 3px;
+          border-color:transparent $themeColor $themeColor transparent;
+        }
+
+      }
+    }
+
+
+  }
+
+  .hnaui-title-font{
+    margin-left: 10px;
+    font-size: $fontDefault + 2;
+    height: 30px;
+    line-height: 30px;
+    color: $themeColor;
+  }
+  .contacts{
+    .rule-font{
+      margin-left:20px !important;
+    }
+  }
+  .rule-font{
+    position: relative;
+    color: #666;
+    font-size: 12px;
+    margin-left: 30px;
+    text-decoration: underline;
+    cursor: pointer;
+    &:hover{
+      .hnaui-rule-box{
+        display: block;
+      }
+    }
+  }
+  .hnaui-rule-box{
+    display: none;
+    position: absolute;
+    left:0;
+    top: 25px;
+    z-index: 10000;
+    width:300px;
+    background: #fff;
+    border:4px solid $border;
+    &:before{
+      content:'';
+      position: absolute;
+      top:-12px;
+      left:30px;
+      border-bottom:12px solid $border;
+      border-left:12px solid transparent;
+      border-right:12px solid transparent;
+    }
+    .content{
+      padding:20px 15px;
+      //max-height:405px;
+      overflow-y:auto;
+      color:#666;
+    }
+  }
+
+
+
+  .hnaui-site-tips{
+    border: none!important;
+  }
+  .passenger-content .hnaui-form-checkbox[hna-skin="primary"] {
+    span{
+      font-size: $fontDefault;
+      color:black;
+    }
+    i{
+      border-color:$themeColor;
+    }
+  }
+  /*错误文本框显示样式*/
+  .hnaui-error-active{
+    input{
+      /*color:#e2000c !important;
+      border-bottom: 2px solid #e2000c !important;*/
+    }
+    .hnaui-input-title{
+      //color: #e2000c;
+    }
+  }
+  /*空占位标签*/
+  .hnaui-seat{
+    display: block;
+    height: 71px
+  }
+  /*姓名规则样式 及 购票说明 联系人规则样式 错误面板样式*/
+  .hnaui-error-style{
+    color:$themeColor;
+  }
+  .hnaui-rule-box p,.hnaui-error-style{
+    position: relative;
+    padding-left: 10px;
+    &:after{
+      content: '\20';
+      *zoom: 1;
+      display: block;
+      position: absolute;
+      opacity: 1;
+      top:9px;
+      left: 0;
+      width:4px;
+      height:4px;
+      background:$themeColor;
+    }
+
+  }
+  .hnaui-contact-rule{
+    color:#666;
+    span{
+      float:left;
+      color: #e2000c;
+      font-size: 26px;
+      margin: 5px 5px 0 0;
+    }
+  }
+
+}
+.passenger-content {
+  .hna-info-content{
+    img{
+      width: 49%;
+    }
+  }
+}
+

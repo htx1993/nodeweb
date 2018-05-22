@@ -1,0 +1,54 @@
+
+.chang-order-content {
+  .tax-table{
+    .hnaui-icon{
+      right: -20px;
+    }
+  }
+  .submit-btn-panel{
+    margin-bottom: 15px;
+  }
+  .search-btn, .submit-btn {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .hna-new-flight {
+    display: none;
+  }
+}
+
+.td-text{
+  .hnaui-icon{
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: top;
+  }
+}
+
+
+.hnaui-table[hna-even] tr:nth-child(even), .hnaui-table tr:hover {
+  background-color: transparent;
+}
+.new-flight-form{
+  .hnaui-tab-content{
+    padding:0 !important;
+  }
+}
+
+.tr-hide{
+  display: none;
+}
+
+.td-hr{
+  height: 0 !important;
+  min-height: 0 !important;
+  line-height: 0 !important;
+}
+
+.change-confirm-layer {
+  .hnaui-tax-detail {
+    height: 200px;
+  }
+}
+

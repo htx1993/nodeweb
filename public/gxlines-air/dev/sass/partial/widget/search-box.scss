@@ -1,0 +1,116 @@
+.search-box {
+  .hnaui-placeholder .hnaui-input-title{
+    color:#333;
+  }
+  .hnaui-placeholder .hnaui-input-icon{
+    right:0 !important;
+  }
+  display: none;
+  margin-bottom: 12px;
+  //padding: 15px;
+  line-height: 22px;
+  //background-color: #ececec;
+  background-color: $themePanelBg;
+
+  .hnaui-input-inline {
+    position: relative;
+    margin-bottom: 18px !important;
+    margin-left: 0 !important;
+  }
+
+  .search-btn {
+    height: 45px;
+    line-height: 45px;
+    margin-top:18px;
+    &.hnaui-btn-disabled {
+      .hnaui-icon {
+        display: inline-block;
+        animation: searching 1s linear infinite alternate;
+        -webkit-animation: searching 1s linear infinite alternate;
+        transform: translate(-50%, -50%);
+      }
+    }
+    @keyframes searching {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(20px);
+      }
+    }
+
+    @-webkit-keyframes searching {
+      0% {
+        -webkit-transform: translateX(0);
+      }
+      100% {
+        -webkit-transform: translateX(20px);
+      }
+    }
+  }
+}
+
+.disabled-date {
+  .hnaui-input-title,.hnaui-icon,.hnaui-form-label{
+    color:#ccc !important;
+  }
+  input{
+    border-botttom:1px solid #f2f2f2 !important;
+  }
+}
+//乘机人类型
+.guest-types {
+  .hnaui-type{
+    float:left;
+    width:33.33%;
+    text-align: left;
+    p{
+      margin-top:5px;
+    }
+    .title{
+      text-align: left;
+      //margin-left:30px;
+    }
+  }
+  .hnaui-input-num{
+    .cut,.add,.num{
+      text-align: center;
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle;
+      border:1px solid $border;
+      background: $border;
+      height:29px;
+      line-height:29px;
+      overflow: hidden;
+      width:28px;
+      cursor: pointer;
+      color:#999;
+      @include user-select(none);
+    }
+    .add{
+      font-size:$fontDefault + 6;
+    }
+    .num{
+      width:80px;
+      border-left:0;
+      border-right:0;
+      cursor: default;
+      font-size:$fontDefault + 4;
+      color:$themeColor;
+      background: none;
+    }
+  }
+}
+//航班选择--重新查询
+.flight-select-content{
+  .guest-types{
+    margin-left:-30px;
+    .num{
+      width:60px;
+    }
+  }
+  .search-box .lang-button .search-btn{
+    //width:30% !important;
+  }
+}

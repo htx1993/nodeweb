@@ -1,0 +1,430 @@
+syntax = "proto3";
+
+package refund;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.refund";
+option java_outer_classname = "RefundProto";
+
+service Refund {
+
+    //退票查询接口
+    rpc refundDetail (RefundDetailRQ) returns (RefundDetailRS) {
+    }
+
+    //退票费计算接口
+    rpc refundCalculate (RefundCalculateRQ) returns (RefundCalculateRS) {
+    }
+
+    //申请退票接口
+    rpc refundApply (RefundApplyRQ) returns (RefundApplyRS) {
+    }
+
+    //退保险退辅营
+    rpc viewAncillaryAndInsurance (ViewAncillaryAndInsuranceRQ) returns (ViewAncillaryAndInsuranceRS) {
+    }
+
+    //退保险退辅营
+    rpc refundAncillaryAndInsurance (RefundAncillaryAndInsuranceRQ) returns (RefundAncillaryAndInsuranceRS) {
+    }
+
+    rpc cancelReservation (ReservationCancelRQ) returns (ReservationCancelRS) {
+    }
+
+    rpc reimburses (ReimbursesRQ) returns (ReimbursesRS) {
+
+    }
+}
+
+message ReimbursesRQ {
+    string reservationCode = 1;
+}
+
+message ReimbursesRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    message RefundInfo {
+        int32 id = 1;
+        string type = 2;
+        string refundNo = 3;
+        string createTime = 4;
+        string createUser = 5;
+        double poundage = 6;
+        double refund = 7;
+        string ticketStatus = 8;
+        string remark = 9;
+        string operateTime = 10;
+        repeated AuditDetail auditDetailList = 11;
+    }
+
+    repeated RefundInfo refundList = 4;
+}
+
+
+message AuditDetail {
+    string status = 1;
+    string description = 2;
+    string operateTime = 3;
+}
+
+message RefundDetailRQ {
+    string resCode = 1;
+}
+
+message Order {
+    string orderNo = 1;
+    string source = 2;
+    string status = 3;
+
+    message Customer {
+        string firstName = 1;
+        string lastName = 2;
+        string phone = 3;
+        string email = 4;
+        string userId = 5;
+    }
+
+    Customer customer = 4;
+    message Guest {
+        string sequence = 1;
+        string name = 2;
+        string type = 3;
+        string phone = 4;
+        string docNumber = 5;
+        string docType = 6;
+        message Pax {
+            string name = 1;
+            string type = 2;
+            string id = 3;
+            string org = 4;
+            string dst = 5;
+            string flightNo = 6;
+            string flightDate = 7;
+            string depTime = 8;
+            string resStatus = 9;
+            string ticketNo = 10;
+            string ticketStatus = 11;
+            string guestSeq = 12;
+            string cabin = 13;
+            string refundRule = 14;
+            string interTicket = 15;
+            string taxFees = 16;
+            string frontTicketStatus = 17;
+        }
+        repeated Pax paxs = 7;
+        string guestFirstName =8;
+        string guestLastName = 9;
+    }
+
+    repeated Guest guests = 5;
+
+    message Fare {
+        string org = 1;
+        string dst = 2;
+        string code = 3;
+        string description = 4;
+    }
+
+    repeated Fare fares = 6;
+
+    message PaymentVo {
+        string createTime = 1;
+        string paymentNo = 2;
+        string tradeNo = 3;
+        string payChannel = 4;
+        float payAmount = 5;
+        float totalPaidAmount = 6;
+        float tradeAmount = 7;
+        string requestDate = 8;
+        string responseDate = 9;
+        string payStatus = 10;
+        string orderVo = 11;
+        string orderType = 12;
+        string failureReason = 13;
+        string failureReasonDescription = 14;
+        int32 scheduleSequence = 15;
+        int32 invoiceSequence = 16;
+        string paymentIdentifier = 17;
+        string outTradeNo = 18;
+        string bankGroupCode = 19;
+    }
+
+    repeated PaymentVo paymentVos = 7;
+}
+
+
+message PassengerSegment {
+    string sequence = 1;
+    string cabin = 2;
+    string fareFamilyCode = 3;
+    string airComponentSequence = 4;
+    float poundage = 5;
+    float poundageRate = 6;
+    float marketPrice = 7;
+    float salePrice = 8;
+    string priceRate = 9;
+    float taxFee = 10;
+    float fuelFee = 11;
+    string ticketNo = 12;
+    string documentSequence = 13;
+    string transactionDate = 14;
+    float sellingPrice = 15;
+    string sellingPriceCurrencyCode = 16;
+    string documentResCompUnitLinkSequence = 17;
+    string issueTicketDate = 18;
+    string segmentSequence = 19;
+    string airline = 20;
+    string flightNo = 21;
+    string org = 22;
+    string dst = 23;
+    string depTime = 24;
+    string arrTime = 25;
+    string passengerSequence = 26;
+    string name = 27;
+    string cardType = 28;
+    string cardNo = 29;
+    string passengerType = 30;
+    string gender = 31;
+    string mobile = 32;
+    string pnr = 33;
+
+    message Insurance {
+        int32 pid = 1;
+        int32 deleteFlag = 2;
+        int32 createTime = 3;
+        string sequence = 4;
+        string name = 5;
+        string insuranceNo = 6;
+        string ticketNo = 7;
+        string insuranceNumber = 8;
+        float totalPrice = 9;
+        float price = 10;
+        float poundage = 11;
+        float refundAmount = 12;
+        string type = 13;
+        string endTravelDate = 14;
+        string startTravelDate = 15;
+        string status = 16;
+        string extraInformation = 17;
+
+    }
+
+    repeated Insurance insurances = 34;
+
+    message Ancillary {
+        int32 pid = 1;
+        int32 deleteFlag = 2;
+        int32 createTime = 3;
+        string sequence = 4;
+        string name = 5;
+        string type = 6;
+        float price = 7;
+        float refundAmount = 8;
+        float poundage = 9;
+        string flightNo = 12;
+        string productCode = 13;
+        string effectTime = 14;
+        string extraInformation = 15;
+        string verifyCode = 16;
+    }
+
+    repeated Ancillary ancillaries = 35;
+    bool exchangedSegment = 36;
+    float originalSellingPrice = 37;
+
+    message PaxSegTaxFees {
+        string taxFeeCode = 1;
+        float taxFeeAmount = 2;
+    }
+    repeated PaxSegTaxFeeVo paxSegTaxFeeVos = 38;
+    repeated PaxSegTaxFees paxSegTaxFees = 39;
+    float totalTaxFee = 40;
+
+}
+
+message Reimburses {
+    string paymentNo = 1;
+    string tradeNo = 2;
+    string batchNo = 3;
+    float amount = 4;
+    string requestDate = 5;
+    string responseDate = 6;
+    string failReson = 7;
+    string bankCode = 8;
+    string status = 9;
+    string action = 10;
+    string type = 11;
+}
+
+message RefundInfo {
+    string orderNo = 1;
+    string source = 2;
+    string refundNo = 3;
+    string status = 4;
+    string remark = 5;
+    string refundType = 6;
+    string applicantName = 7;
+    double refundAmount = 8;
+    double totalPoundage = 9;
+    string reimburseType = 10;
+    string refundTicketStatus = 11;
+    string cancelSeatStatus = 12;
+    string insuranceRefundStatus = 13;
+    string ancillaryRefundStatus = 14;
+    bool refundAll = 15;
+    string flightDate = 16;
+    string description = 17;
+    int32 version = 18;
+    string ticketNos = 19;
+    string pnrs = 20;
+    string handleStatus = 21;
+    string handler = 22;
+    string handleTime = 23;
+    repeated PassengerSegment passengerSegments = 24;
+    repeated Reimburses reimburses = 25;
+    double merchantFee = 26;
+    string failReason = 27;
+    bool changed = 28;
+    string cancelSeatTime = 29;
+    string paymentNo = 30;
+    string intDom = 31;
+    string phone = 32;
+    string customerName = 33;
+    message PaymentVo {
+        string orderNo = 1;
+        string paymentNo = 2;
+        string tradeNo = 3;
+        string bankCode = 4;
+        string bankGroupCode = 5;
+        float amount = 6;
+    }
+    PaymentVo payment = 35;
+}
+
+message RefundDetail {
+    Order order = 1;
+    repeated RefundInfo refunds = 2;
+}
+
+message RefundDetailRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    RefundDetail data = 4;
+}
+
+
+message RefundCalculateRQ {
+    string paxIds = 1;
+    string resCode = 2;
+    string refundType = 3;
+}
+
+
+message PaxSegTaxFeeVo {
+    string currencyCode = 1;
+    float taxFeeAmount = 2;
+    string taxFeeDesc = 3;
+    string taxFeeCode = 4;
+    float totalAmount = 5;
+}
+
+message RefundCalculate {
+    float totalPrice = 1;
+    float poundage = 2;
+    float ancillaryPoundage = 3;
+    float totalRefundMoney = 4;
+    float needRefundTicketFee = 5;
+    float totalMarketPrice = 6;
+    float totalTaxFee = 7;
+    float needRefundAncillaryMoney = 8;
+    float totalLuggagePrice = 9;
+    float totalMealPrice = 10;
+    float totalInsurancePrice = 11;
+    float totalOtherPoundage = 12;
+    float totalOtherRefundMoney = 13;
+    float totalBagsMoney = 14;
+    float totalMealsMoney = 15;
+    float totalLoungesMoney = 16;
+    float totalSuitMoney = 17;
+    float totalLifeMoney = 18;
+    float totalDelayMoney = 19;
+    float totalRefundInsuranceMoney = 20;
+    float totalUntypeAncillaryMoney = 21;
+    float ticketRefundMoney = 22;
+    float ticketPoundage = 23;
+    string refundType = 24;
+    string msg = 25;
+    repeated PaxSegTaxFeeVo paxSegTaxFeeVos = 26;
+    float totalSeatMoney = 28;
+    float totalSmsMoney = 29;
+    float totalConvenientMoney = 30;
+    float totalMerchantMoney = 31;
+    float totalItineraryMoney = 32;
+}
+
+message RefundCalculateRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    RefundCalculate data = 4;
+}
+
+
+message RefundApplyRQ {
+    string paxIds = 1;
+    string resCode = 2;
+    string refundType = 3;
+    string remark = 4;
+}
+
+message RefundApplyRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+}
+
+message RefundAncillaryAndInsuranceRQ {
+    string resCode = 1;
+    string paxIds = 2;
+    string resComponentSquences = 3;
+    string applicantName = 4;
+    string refundType = 5;
+}
+
+message RefundAncillaryAndInsuranceRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    string data = 4;
+}
+
+message ViewAncillaryAndInsuranceRQ {
+    string resCode = 1;
+    string paxIds = 2;
+    string resComponentSquences = 3;
+    enum RefundType {
+        VOLUNTARY = 0;
+        INVOLUNTARY = 1;
+    }
+    RefundType refundType = 4;
+    repeated string paxList = 5;
+}
+
+message ViewAncillaryAndInsuranceRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    map<string, string> data = 4;
+}
+
+message ReservationCancelRQ {
+    string reservationCode = 1;
+}
+
+message ReservationCancelRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+}

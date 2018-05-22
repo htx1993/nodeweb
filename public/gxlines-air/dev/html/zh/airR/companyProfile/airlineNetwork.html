@@ -1,0 +1,1666 @@
+<div class="notice-detail">
+    <div class="title"><h2>航线网络</h2></div>
+</div>
+<div class="hna-info-content">
+    <div id="allmap" style="height: 800px"></div>
+</div>
+<script>
+    var infoWindow, map, level = 4,
+        center = {
+            lng: 106.638794,
+            lat: 29.7137
+        },
+        features = [{
+            type: "Marker",
+            name: "南宁吴圩国际机场",
+            desc: "南宁",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 108.171662,
+                lat: 22.609522
+            }
+        }, {
+            type: "Marker",
+            name: "郑州新郑国际机场",
+            desc: "郑州",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 113.84756,
+                lat: 34.524906
+            }
+        }, {
+            type: "Marker",
+            name: "呼和浩特白塔机场",
+            desc: "呼和浩特",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 111.821541,
+                lat: 40.855475
+            }
+        }, {
+            type: "Marker",
+            name: "三亚凤凰国际机场",
+            desc: "三亚",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 109.411983,
+                lat: 18.305528
+            }
+        }, {
+            type: "Marker",
+            name: "长沙黄花国际机场",
+            desc: "长沙",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 113.220291,
+                lat: 28.19127
+            }
+        }, {
+            type: "Marker",
+            name: "临沂沐埠岭机场",
+            desc: "临沂",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 118.42,
+                lat: 35.049111
+            }
+        }, {
+            type: "Marker",
+            name: "毕节飞雄机场",
+            desc: "毕节",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 105.440558,
+                lat: 27.252184
+            }
+        }, {
+            type: "Marker",
+            name: "西安咸阳国际机场",
+            desc: "西安",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 108.760872,
+                lat: 34.439195
+            }
+        }, {
+            type: "Marker",
+            name: "合肥骆岗国际机场",
+            desc: "合肥",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 117.307205,
+                lat: 31.777796
+            }
+        }, {
+            type: "Marker",
+            name: "青岛流亭国际机场",
+            desc: "青岛",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 120.386045,
+                lat: 36.267131
+            }
+        }, {
+            type: "Marker",
+            name: "榆林榆阳机场",
+            desc: "榆林",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 109.601739,
+                lat: 38.361909
+            }
+        }, {
+            type: "Marker",
+            name: "海口美兰国际机场",
+            desc: "海口",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 110.46216,
+                lat: 19.938527
+            }
+        }, {
+            type: "Marker",
+            name: "绵阳南郊机场",
+            desc: "绵阳",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 104.748364,
+                lat: 31.424764
+            }
+        }, {
+            type: "Marker",
+            name: "银川河东国际机场",
+            desc: "银川",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 106.389499,
+                lat: 38.32379
+            }
+        }, {
+            type: "Marker",
+            name: "宜昌三峡机场",
+            desc: "宜昌",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 111.48554,
+                lat: 30.547643
+            }
+        }, {
+            type: "Marker",
+            name: "天津滨海国际机场",
+            desc: "天津",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 117.443848,
+                lat: 39.172659
+            }
+        }, {
+            type: "Marker",
+            name: "泉州晋江机场",
+            desc: "晋江",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 118.592305,
+                lat: 24.79963
+            }
+        }, {
+            type: "Marker",
+            name: "义乌机场",
+            desc: "义乌",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 120.032629,
+                lat: 29.340277
+            }
+        }, {
+            type: "Marker",
+            name: "南昌昌北机场",
+            desc: "南昌",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 115.911942,
+                lat: 28.856101
+            }
+        }, {
+            type: "Marker",
+            name: "南通兴东国际机场",
+            desc: "南通",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 120.980434,
+                lat: 32.070986
+            }
+        }, {
+            type: "Marker",
+            name: "珠海金湾机场",
+            desc: "珠海",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 113.37719,
+                lat: 22.008472
+            }
+        }, {
+            type: "Marker",
+            name: "北京首都机场",
+            desc: "北京",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 116.587922,
+                lat: 40.081577
+            }
+        }, {
+            type: "Marker",
+            name: "杭州萧山机场",
+            desc: "杭州",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 120.436794,
+                lat: 30.232939
+            }
+        }, {
+            type: "Marker",
+            name: "泸州云龙机场",
+            desc: "泸州",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 105.440254,
+                lat: 28.880867
+            }
+        }, {
+            type: "Marker",
+            name: "兰州中川机场",
+            desc: "兰州",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 103.61824,
+                lat: 36.506325
+            }
+        }, {
+            type: "Marker",
+            name: "遵义新舟国际机场",
+            desc: "遵义",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 107.253395,
+                lat: 27.800021
+            }
+        }, {
+            type: "Marker",
+            name: "贵阳龙洞堡国际机场",
+            desc: "贵阳",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 106.800182,
+                lat: 26.540647
+            }
+        }, {
+            type: "Marker",
+            name: "重庆江北国际机场",
+            desc: "重庆",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 106.638794,
+                lat: 29.7137
+            }
+        }, {
+            type: "Marker",
+            name: "昆明长水国际机场",
+            desc: "昆明",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 102.928293,
+                lat: 25.096153
+            }
+        }, {
+            type: "Marker",
+            name: "太原武宿国际机场",
+            desc: "太原",
+            color: "red",
+            icon: "cir",
+            offset: {
+                x: -9,
+                y: -31
+            },
+            lnglat: {
+                lng: 112.70874,
+                lat: 37.827141
+            }
+        }, {
+            type: "Polyline",
+            name: "南宁郑州",
+            desc: "南宁郑州",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 113.84756,
+                lat: 34.524906
+            }]
+        }, {
+            type: "Polyline",
+            name: "郑州呼和浩特",
+            desc: "郑州呼和浩特",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 113.84756,
+                lat: 34.524906
+            }, {
+                lng: 111.821541,
+                lat: 40.855475
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁呼和浩特",
+            desc: "南宁呼和浩特",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 111.821541,
+                lat: 40.855475
+            }]
+        }, {
+            type: "Polyline",
+            name: "呼和浩特郑州",
+            desc: "呼和浩特郑州",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 111.821541,
+                lat: 40.855475
+            }, {
+                lng: 113.84756,
+                lat: 34.524906
+            }]
+        }, {
+            type: "Polyline",
+            name: "郑州南宁",
+            desc: "郑州南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 113.84756,
+                lat: 34.524906
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "呼和浩特南宁",
+            desc: "呼和浩特南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 111.821541,
+                lat: 40.855475
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁三亚",
+            desc: "南宁三亚",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 109.411983,
+                lat: 18.305528
+            }]
+        }, {
+            type: "Polyline",
+            name: "三亚南宁",
+            desc: "三亚南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 109.411983,
+                lat: 18.305528
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁长沙",
+            desc: "南宁长沙",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 113.220291,
+                lat: 28.19127
+            }]
+        }, {
+            type: "Polyline",
+            name: "长沙临沂",
+            desc: "长沙临沂",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 113.220291,
+                lat: 28.19127
+            }, {
+                lng: 118.42,
+                lat: 35.049111
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁临沂",
+            desc: "南宁临沂",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 118.42,
+                lat: 35.049111
+            }]
+        }, {
+            type: "Polyline",
+            name: "临沂长沙",
+            desc: "临沂长沙",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 118.42,
+                lat: 35.049111
+            }, {
+                lng: 113.220291,
+                lat: 28.19127
+            }]
+        }, {
+            type: "Polyline",
+            name: "长沙南宁",
+            desc: "长沙南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 113.220291,
+                lat: 28.19127
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "临沂南宁",
+            desc: "临沂南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 118.42,
+                lat: 35.049111
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁毕节",
+            desc: "南宁毕节",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 105.440558,
+                lat: 27.252184
+            }]
+        }, {
+            type: "Polyline",
+            name: "毕节西安",
+            desc: "毕节西安",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 105.440558,
+                lat: 27.252184
+            }, {
+                lng: 108.760872,
+                lat: 34.439195
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁西安",
+            desc: "南宁西安",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 108.760872,
+                lat: 34.439195
+            }]
+        }, {
+            type: "Polyline",
+            name: "西安毕节",
+            desc: "西安毕节",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.760872,
+                lat: 34.439195
+            }, {
+                lng: 105.440558,
+                lat: 27.252184
+            }]
+        }, {
+            type: "Polyline",
+            name: "毕节南宁",
+            desc: "毕节南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 105.440558,
+                lat: 27.252184
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "西安南宁",
+            desc: "西安南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.760872,
+                lat: 34.439195
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁合肥",
+            desc: "南宁合肥",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 117.307205,
+                lat: 31.777796
+            }]
+        }, {
+            type: "Polyline",
+            name: "合肥青岛",
+            desc: "合肥青岛",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 117.307205,
+                lat: 31.777796
+            }, {
+                lng: 120.386045,
+                lat: 36.267131
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁青岛",
+            desc: "南宁青岛",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 120.386045,
+                lat: 36.267131
+            }]
+        }, {
+            type: "Polyline",
+            name: "青岛合肥",
+            desc: "青岛合肥",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 120.386045,
+                lat: 36.267131
+            }, {
+                lng: 117.307205,
+                lat: 31.777796
+            }]
+        }, {
+            type: "Polyline",
+            name: "合肥南宁",
+            desc: "合肥南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 117.307205,
+                lat: 31.777796
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "青岛南宁",
+            desc: "青岛南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 120.386045,
+                lat: 36.267131
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "西安榆林",
+            desc: "西安榆林",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.760872,
+                lat: 34.439195
+            }, {
+                lng: 109.601739,
+                lat: 38.361909
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁榆林",
+            desc: "南宁榆林",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 109.601739,
+                lat: 38.361909
+            }]
+        }, {
+            type: "Polyline",
+            name: "榆林西安",
+            desc: "榆林西安",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 109.601739,
+                lat: 38.361909
+            }, {
+                lng: 108.760872,
+                lat: 34.439195
+            }]
+        }, {
+            type: "Polyline",
+            name: "榆林南宁",
+            desc: "榆林南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 109.601739,
+                lat: 38.361909
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁海口",
+            desc: "南宁海口",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 110.46216,
+                lat: 19.938527
+            }]
+        }, {
+            type: "Polyline",
+            name: "海口南宁",
+            desc: "海口南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 110.46216,
+                lat: 19.938527
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁绵阳",
+            desc: "南宁绵阳",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 104.748364,
+                lat: 31.424764
+            }]
+        }, {
+            type: "Polyline",
+            name: "绵阳银川",
+            desc: "绵阳银川",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 104.748364,
+                lat: 31.424764
+            }, {
+                lng: 106.389499,
+                lat: 38.32379
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁银川",
+            desc: "南宁银川",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 106.389499,
+                lat: 38.32379
+            }]
+        }, {
+            type: "Polyline",
+            name: "银川绵阳",
+            desc: "银川绵阳",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 106.389499,
+                lat: 38.32379
+            }, {
+                lng: 104.748364,
+                lat: 31.424764
+            }]
+        }, {
+            type: "Polyline",
+            name: "绵阳南宁",
+            desc: "绵阳南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 104.748364,
+                lat: 31.424764
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "银川南宁",
+            desc: "银川南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 106.389499,
+                lat: 38.32379
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁宜昌",
+            desc: "南宁宜昌",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 111.48554,
+                lat: 30.547643
+            }]
+        }, {
+            type: "Polyline",
+            name: "宜昌天津",
+            desc: "宜昌天津",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 111.48554,
+                lat: 30.547643
+            }, {
+                lng: 117.443848,
+                lat: 39.172659
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁天津",
+            desc: "南宁天津",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 117.443848,
+                lat: 39.172659
+            }]
+        }, {
+            type: "Polyline",
+            name: "天津宜昌",
+            desc: "天津宜昌",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 117.443848,
+                lat: 39.172659
+            }, {
+                lng: 111.48554,
+                lat: 30.547643
+            }]
+        }, {
+            type: "Polyline",
+            name: "宜昌南宁",
+            desc: "宜昌南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 111.48554,
+                lat: 30.547643
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "天津南宁",
+            desc: "天津南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 117.443848,
+                lat: 39.172659
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁晋江",
+            desc: "南宁晋江",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 118.592305,
+                lat: 24.79963
+            }]
+        }, {
+            type: "Polyline",
+            name: "晋江义乌",
+            desc: "晋江义乌",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 118.592305,
+                lat: 24.79963
+            }, {
+                lng: 120.032629,
+                lat: 29.340277
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁义乌",
+            desc: "南宁义乌",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 120.032629,
+                lat: 29.340277
+            }]
+        }, {
+            type: "Polyline",
+            name: "义乌晋江",
+            desc: "义乌晋江",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 120.032629,
+                lat: 29.340277
+            }, {
+                lng: 118.592305,
+                lat: 24.79963
+            }]
+        }, {
+            type: "Polyline",
+            name: "晋江南宁",
+            desc: "晋江南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 118.592305,
+                lat: 24.79963
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "义乌南宁",
+            desc: "义乌南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 120.032629,
+                lat: 29.340277
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁南昌",
+            desc: "南宁南昌",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 115.911942,
+                lat: 28.856101
+            }]
+        }, {
+            type: "Polyline",
+            name: "南昌南通",
+            desc: "南昌南通",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 115.911942,
+                lat: 28.856101
+            }, {
+                lng: 120.980434,
+                lat: 32.070986
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁南通",
+            desc: "南宁南通",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 120.980434,
+                lat: 32.070986
+            }]
+        }, {
+            type: "Polyline",
+            name: "南通南昌",
+            desc: "南通南昌",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 120.980434,
+                lat: 32.070986
+            }, {
+                lng: 115.911942,
+                lat: 28.856101
+            }]
+        }, {
+            type: "Polyline",
+            name: "南昌南宁",
+            desc: "南昌南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 115.911942,
+                lat: 28.856101
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南通南宁",
+            desc: "南通南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 120.980434,
+                lat: 32.070986
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁珠海",
+            desc: "南宁珠海",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 113.37719,
+                lat: 22.008472
+            }]
+        }, {
+            type: "Polyline",
+            name: "珠海南宁",
+            desc: "珠海南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 113.37719,
+                lat: 22.008472
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "北京南宁",
+            desc: "北京南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 116.587922,
+                lat: 40.081577
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁北京",
+            desc: "南宁北京",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 116.587922,
+                lat: 40.081577
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁杭州",
+            desc: "南宁杭州",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 120.436794,
+                lat: 30.232939
+            }]
+        }, {
+            type: "Polyline",
+            name: "杭州南宁",
+            desc: "杭州南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 120.436794,
+                lat: 30.232939
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁泸州",
+            desc: "南宁泸州",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 105.440254,
+                lat: 28.880867
+            }]
+        }, {
+            type: "Polyline",
+            name: "泸州兰州",
+            desc: "泸州兰州",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 105.440254,
+                lat: 28.880867
+            }, {
+                lng: 103.61824,
+                lat: 36.506325
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁兰州",
+            desc: "南宁兰州",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 103.61824,
+                lat: 36.506325
+            }]
+        }, {
+            type: "Polyline",
+            name: "兰州泸州",
+            desc: "兰州泸州",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 103.61824,
+                lat: 36.506325
+            }, {
+                lng: 105.440254,
+                lat: 28.880867
+            }]
+        }, {
+            type: "Polyline",
+            name: "泸州南宁",
+            desc: "泸州南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 105.440254,
+                lat: 28.880867
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "兰州南宁",
+            desc: "兰州南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 103.61824,
+                lat: 36.506325
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁遵义",
+            desc: "南宁遵义",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 107.253395,
+                lat: 27.800021
+            }]
+        }, {
+            type: "Polyline",
+            name: "遵义南宁",
+            desc: "遵义南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 107.253395,
+                lat: 27.800021
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "贵阳南宁",
+            desc: "贵阳南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 106.800182,
+                lat: 26.540647
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁贵阳",
+            desc: "南宁贵阳",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 106.800182,
+                lat: 26.540647
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁重庆",
+            desc: "南宁重庆",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 106.638794,
+                lat: 29.7137
+            }]
+        }, {
+            type: "Polyline",
+            name: "重庆南宁",
+            desc: "重庆南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 106.638794,
+                lat: 29.7137
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁昆明",
+            desc: "南宁昆明",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 102.928293,
+                lat: 25.096153
+            }]
+        }, {
+            type: "Polyline",
+            name: "昆明南宁",
+            desc: "昆明南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 102.928293,
+                lat: 25.096153
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "贵阳太原",
+            desc: "贵阳太原",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 106.800182,
+                lat: 26.540647
+            }, {
+                lng: 112.70874,
+                lat: 37.827141
+            }]
+        }, {
+            type: "Polyline",
+            name: "太原南宁",
+            desc: "太原南宁",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 112.70874,
+                lat: 37.827141
+            }, {
+                lng: 108.171662,
+                lat: 22.609522
+            }]
+        }, {
+            type: "Polyline",
+            name: "南宁太原",
+            desc: "南宁太原",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 108.171662,
+                lat: 22.609522
+            }, {
+                lng: 112.70874,
+                lat: 37.827141
+            }]
+        }, {
+            type: "Polyline",
+            name: "太原贵阳",
+            desc: "太原贵阳",
+            strokeWeight: 2,
+            strokeColor: "#19A4EB",
+            strokeOpacity: 0.8,
+            lnglat: [{
+                lng: 112.70874,
+                lat: 37.827141
+            }, {
+                lng: 106.800182,
+                lat: 26.540647
+            }]
+        }];
+
+    function loadFeatures(len) {
+        for (var feature, data, i = 0, j, jl, path; i < len; i++) {
+            data = features[i];
+            switch (data.type) {
+                case "Marker":
+                    feature = new AMap.Marker({
+                        map: map,
+                        position: new AMap.LngLat(data.lnglat.lng, data.lnglat.lat),
+                        zIndex: 3,
+                        extData: data,
+                        title: data.name
+                    });
+                    break;
+                case "Polygon":
+                    for (j = 0, jl = data.lnglat.length, path = []; j < jl; j++) {
+                        path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat))
+                    }
+                    feature = new AMap.Polygon({
+                        map: map,
+                        path: path,
+                        extData: data,
+                        zIndex: 1,
+                        strokeWeight: data.strokeWeight,
+                        strokeColor: data.strokeColor,
+                        strokeOpacity: data.strokeOpacity,
+                        fillColor: data.fillColor,
+                        fillOpacity: data.fillOpacity
+                    });
+                    break;
+                default:
+                    feature = null
+            }
+            if (feature) {
+                AMap.event.addListener(feature, "click", mapFeatureClick)
+            }
+        }
+    }
+    var feature = [];
+
+    function mapFeatureClick(e) {
+        if (!infoWindow) {
+            infoWindow = new AMap.InfoWindow({
+                offset: new AMap.Pixel(4, -22)
+            })
+        }
+        var extData = e.target.getExtData();
+        infoWindow.setContent("<h5>" + extData.name + "</h5><div>" + extData.desc + "</div>");
+        infoWindow.open(map, new AMap.LngLat(extData.lnglat.lng, extData.lnglat.lat));
+        var featureload = features;
+        var name = extData.desc.toString();
+        var extname = extData.name.toString();
+        if (feature.length > 0) {
+            for (var i = 0 ;i<feature.length;i++) {
+                feature[i].hide()
+            }
+            feature.length = 0
+        }
+        for (var data, i = 0, len = features.length, j, jl, path; i < len; i++) {
+            data = features[i];
+            if (data.name.indexOf(name) > -1) {
+                for (j = 0, jl = data.lnglat.length, path = []; j < jl; j++) {
+                    path.push(new AMap.LngLat(data.lnglat[j].lng, data.lnglat[j].lat))
+                }
+                feature.push(new AMap.Polyline({
+                    map: map,
+                    path: path,
+                    extData: data,
+                    zIndex: 2,
+                    strokeWeight: data.strokeWeight,
+                    strokeColor: data.strokeColor,
+                    strokeOpacity: data.strokeOpacity
+                }))
+            }
+        }
+        if (map.getZoom() < 5) {
+            map.setZoom(5)
+        }
+        map.setCenter(new AMap.LngLat(extData.lnglat.lng, extData.lnglat.lat))
+    }
+    map = new AMap.Map("allmap", {
+        view: new AMap.View2D({
+            center: new AMap.LngLat(center.lng, center.lat),
+            zoom: level
+        }),
+        lang: 'zh_en'
+    });
+    loadFeatures(1);
+    map.plugin(["AMap.MouseTool"], function() {
+        var mousetool = new AMap.MouseTool(map);
+        mousetool.marker();
+        mousetool.polyline();
+        mousetool.close()
+    });
+    map.plugin(["AMap.ToolBar", "AMap.OverView", "AMap.Scale"], function() {
+        map.addControl(new AMap.ToolBar);
+        map.addControl(new AMap.Scale)
+    });
+    var z = false;
+    AMap.event.addListener(map, 'zoomchange', function() {
+        var zoom = map.getZoom();
+        if (zoom > 4) {
+            if (!z) {
+                loadFeatures(features.length);
+                z = true
+            }
+        } else {
+            map.clearMap();
+            loadFeatures(1);
+            z = false
+        }
+    })
+</script>

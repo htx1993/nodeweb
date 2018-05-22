@@ -1,0 +1,145 @@
+syntax = "proto3";
+
+package flights;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.air.lfs";
+
+
+service AirLowFareSearch {
+    rpc airLowFareSearch (AirLowFareSearchRQ) returns (AirLowFareSearchRS) {
+    } // 最低票价搜索
+    rpc unLockAirLowFareSearch (UnLockAirLowFareSearchRQ) returns (UnLockAirLowFareSearchRS) {
+    } // 解除查询次数锁定
+}
+
+// 最低票价搜索请求对象
+message AirLowFareSearchRQ {
+    message OriginDestination {
+        string origin = 1;
+        string destination = 2;
+        string departureDate = 3;
+    }
+    repeated OriginDestination originDestinations = 1;
+    string passenger = 2; // 乘机人类型数量
+    string cabin = 3; // 舱位
+    bool flexible = 4; // 是否灵活搜索
+    int32 offset = 5; // 提供日期前后N天最低价格
+}
+
+// 最低票价搜索响应对象
+message AirLowFareSearchRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    string id = 4;
+    message Criteria {
+        string searchType = 1;
+        bool flexible = 2;
+        bool roundtrip = 3;
+        string cabin = 4;
+        repeated string travelerCompositions = 5;
+    }
+    Criteria criteria = 5;
+    message OriginDestination {
+        string origin = 1;
+        string destination = 2;
+        string departureDate = 3;
+        string originName = 4;
+        string destinationName = 5;
+        repeated DepartureDate departureDates = 6;
+        repeated AirItinerary airItineraries = 7;
+    }
+    repeated OriginDestination originDestinations = 7;
+    bool replaceable = 8;
+}
+
+message DepartureDate {
+    string date = 1;
+    string minPrice = 2;
+    string currency = 3;
+}
+
+message AirItinerary {
+    string id = 1;
+    int32 duration = 2;
+    int32 arrivalOffset = 3;
+    repeated FlightSegment flightSegments = 4;
+    repeated AirItineraryPrice airItineraryPrices = 5;
+
+}
+
+message AirItineraryPrice {
+    string id = 1;
+    string fareFamilyCode = 2;
+    string fareFamilyName = 3;
+
+    repeated Benefit benefits = 4;
+    repeated TravelerPrice travelerPrices = 5;
+}
+
+message TravelerPrice {
+    string travelerType = 1;
+    string baseFare = 2;
+    string baseFareCurrency = 3;
+    string totalFare = 4;
+    string totalFareCurrency = 5;
+    repeated FarePrice farePrices = 6;
+    
+    message FarePrice {
+        string baseFare = 1;
+        string baseFareCurrency = 2;
+        string basisFareCode = 3;
+        string bookingClass = 4;
+        string cabinClass = 5;
+        int32 inventoryQuantity = 6;
+        string inventoryStatus = 7;
+        string totalFare = 8;
+        string totalFareCurrency = 9;
+    }
+}
+
+message Benefit {
+    string id = 1;
+    string code = 2;
+    string name = 3;
+    string text = 4;
+    string language = 5;
+}
+
+message FlightSegment {
+    string id = 1;
+    string flightNumber = 2;
+    int32 duration = 3;
+    int32 layover = 4;
+    string marketingAirlineCode = 5;
+    string marketingAirlineName = 6;
+    string operatingAirlineCode = 7;
+    string operatingAirlineName = 8;
+    string departureDate = 9;
+    string departureTime = 10;
+    string departureTerminal = 11;
+    string departureGate = 12;
+    string departureAirportCode = 13;
+    string departureAirportName = 14;
+    string arrivalDate = 15;
+    string arrivalTime = 16;
+    string arrivalTerminal = 17;
+    string arrivalGate = 18;
+    string arrivalAirportCode = 19;
+    string arrivalAirportName = 20;
+    string aircraftCode = 21;
+    string aircraftName = 22;
+    int32 stopQuantity = 23;
+    repeated string stopCitys = 24;
+}
+
+message UnLockAirLowFareSearchRQ {
+    string userSessionId = 1;
+}
+
+message UnLockAirLowFareSearchRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+}

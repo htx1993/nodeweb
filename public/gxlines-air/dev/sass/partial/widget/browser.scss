@@ -1,0 +1,24 @@
+
+
+.hnaui-bowser-recommend{
+  margin:10px 0 0 10px;
+  font-weight: 600;
+}
+.hnaui-bowser-download {
+  width: 210px;
+  height: 36px;
+  line-height: 36px;
+  text-decoration: underline;
+}
+.hnaui-bowser-download:hover{
+  text-decoration:none;
+}
+.hnaui-bowser-download:hover a {
+  color: red;
+}
+
+.hnaui-bowser-download .hnaui-icon {
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+}

@@ -1,0 +1,307 @@
+.cart_box_con{
+  margin-bottom: 20px;
+  background-color: $themePanelBg;
+  .hnaui-ow,.hnaui-rt{
+   // color:$themeColor;
+    font-weight:bold;
+    font-size:$fontDefault + 2 !important;
+  }
+}
+.cart_box{
+  position: relative;
+  .hnaui-icon{
+    display: inline-block;
+    vertical-align: middle;
+    font-size: $fontDefault + 6;
+    color: #fff;
+    pointer-events: none;
+  }
+}
+.cart_title{
+  background: #fff;
+  border-bottom:.5px solid $border;
+  padding: 5px 10px;
+  font-size:$fontDefault + 4;
+  margin: 0;
+  line-height: 30px;
+  //display: none;
+  .hnaui-icon{
+    margin-right: 6px;
+    color:#333;
+
+  }
+}
+.cart-toggle_btn{
+  display: none;
+  position: absolute;
+  right:0;
+  padding:3px;
+  background: $themeColor;
+  cursor: pointer;
+  z-index:3;
+  text-align: center;
+  &:hover{
+    background: $themeColorHover;
+  }
+  .up{
+    display: inline-block;
+  }
+  .down{
+    display: none;
+  }
+  &.up{
+    .up{
+      display: none;
+    }
+    .down{
+      display: inline-block;
+    }
+  }
+}
+.cart-content{
+  position: relative;
+  .cart-detail{
+    position: relative;
+    max-height: 517px;
+    padding:0 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .trip-detail,.cost-detail{
+    position: relative;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+  .trip-detail{
+    border-bottom:1px dotted $border;
+  }
+  .trip-type{
+    margin:10px 0;
+    font-size:$fontDefault;
+    span{
+      margin:0 5px;
+      color: $themeColor;
+    }
+  }
+ .cost-title{
+    margin: 0 0 5px;
+   font-weight:bold;
+   // color: $themeColor;
+    font-size:$fontDefault + 2;
+  }
+  .trip-date,.trip-flight-no,.trip-city,.trip-time{
+    padding: 2px 0;
+  }
+  .trip-date,.trip-flight-no{
+    display: inline-block;
+    width:48%;
+  }
+  .trip-flight-no{
+    text-align: center;
+  }
+  .trip-city{
+    position: relative;
+    min-height:35px;
+  }
+  .trip-city-icon{
+    width:10%;
+    height:1px;
+    background: $border;
+  }
+  .trip-time>span{
+    float:left;
+    width: 50%;
+  }
+
+  .trip-city>span,.trip-city i.trip-city-icon{
+   display: inline-block;
+    color:#333;
+    padding: 0 2%;
+    text-align: center;
+    vertical-align: middle;
+    em{
+      display: block;
+      font-style: normal;
+      font-size:$fontDefault + 10;
+
+    }
+  }
+  .trip-city>span{
+    width:40%;
+  }
+  .cart-loading{
+    display: none;
+    position: absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom: 0;
+  }
+  .cart-loading-mask{
+    width: 100%;
+    height: 100%;
+    background:$themePanelBg;
+    @include opacity(.9);
+  }
+  .cart-loading-content{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    margin-left: -20px;
+    border: none;
+    background-color: transparent;
+    z-index: 1000;
+    .loading-icon{
+      display: inline-block;
+      font-size: 46px;
+      color:#000;
+    }
+  }
+
+  .cart-total{
+    position: relative;
+    font-size: 16px;
+    border-top:.5px solid $border;
+    .cart-total-title{
+      float:left;
+    }
+    .totalPackage{
+      font-size: 18px;
+    }
+  }
+}
+.cart-item{
+  position: relative;
+  line-height: 24px;
+  color: #444;
+  &.total-num{
+    //font-weight: 700;
+    font-size: 14px;
+    text-align: right;
+  }
+}
+.cart-item-right{
+  position: absolute;
+  right:0;
+}
+.cart-total-amount,.currency{
+  //color: #fff;
+  font-weight: 700;
+}
+.cart-total-amount{
+  font-size:$fontDefault + 8;
+}
+.cart-no-detail{
+  margin: 10px 0;
+  text-align: center;
+}
+
+/***************************飞行加**********************************/
+$flightPlus:#faf7f4;
+$textColor:#8f7766;
+.cart-flight-info{
+  position: relative;
+  margin:15px 0 10px 0;
+  &:after{
+    content:'';
+    left:0;
+    top:-5px;
+    position: absolute;
+    width:100%;
+    border-top:1px dashed $themeColor;
+  }
+}
+.cart-plus-icon{
+  .hnaui-icon{
+    color:$textColor !important;
+  }
+}
+.cart-user-info{
+  p{
+    position: relative;
+    padding:5px 0;
+    .cart-item-right{
+      bottom:6px;
+    }
+  }
+  dfn,em{
+    font-style: normal;
+  }
+  .hnaui-icon{
+    color:$themeColor;
+    margin:0 5px;
+  }
+  h3{
+    font-size: $fontDefault + 2;
+    color: #fff;
+    background: $themeColor;
+    padding:8px;
+    margin-bottom:10px;
+  }
+}
+
+
+/**************************************************/
+.cart-mobile-btn{//购物车图标
+  display: none;
+  position: fixed;
+  right: 10px;
+  top: 100px;
+  z-index: 99999;
+
+  width:30px;
+  height:30px;
+  text-align: center;
+  line-height:32px;
+
+  @include border-radius(50%);
+  background-color: $lightthemColor;
+  //@include opacity(.7);
+  .hnaui-icon{
+    color: #fff;
+    font-size: $fontDefault + 8;
+    pointer-events: none;
+  }
+}
+.cart-goback{
+    display: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    height: 24px;
+    z-index: 9;
+    width: 24px;
+    cursor: pointer;
+}
+
+
+
+.hnaui-taxs{
+  display: inline-block;
+}
+
+.cost-detail-list,.market-cost-detail,.cart-total{
+ padding:10px;
+  background: #fff;
+}
+.cart-total{
+  //background: $themeColor;
+  .cart-total-title{
+  //  color:#fff;
+  }
+
+}
+.cost-detail-list,.market-cost-detail{
+  margin-left:-10px;
+  margin-right:-10px;
+}
+.market-cost-detail{
+  margin-bottom:0 !important;
+  padding-bottom: 0 !important;
+  .cost-info{
+    padding-bottom:10px;
+  }
+}

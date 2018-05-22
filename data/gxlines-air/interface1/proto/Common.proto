@@ -1,0 +1,245 @@
+syntax = "proto3";
+
+package common;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.air.common";
+option java_outer_classname = "CommonProto";
+
+message ShoppingCart {
+    string shoppingCartId = 1;
+    repeated Bound bounds = 2;
+    repeated Taxs taxs = 3;
+    string totalPrice = 4;
+    string currency = 5;
+    repeated TravelerInfo travelerInfo = 6;
+    AirTaxFeeCalculateOffer airTaxFeeCalculateoffer = 7;
+    repeated AncillaryPriceOffer ancillaryPriceOffer = 8;
+    repeated PriceInfo priceInfo = 9;
+}
+
+message Bound {
+    string flightNumber = 1;
+    string inBoundDate = 2;
+    string origin = 3;
+    string destination = 4;
+    string departureDate = 5;
+    string arrivalDate = 6;
+    string flightUrl = 7;
+    string aircraftCode = 8;
+    string aircraftName = 9;
+    string bookingClass = 10;
+    string cabinClass = 11;
+    string fareFamilyCode = 12;
+    string fareFamilyName = 13;
+}
+
+message Taxs {
+    string taxFare = 1;
+    string code = 2;
+    string name = 3;
+}
+
+message PriceInfo {
+    string travelerType = 1;
+    int32 amount = 2;
+    string fare = 3;
+}
+
+message TravelerInfo {
+    string id = 1;
+    string firstName = 2;
+    string lastName = 3;
+    string type = 4;
+    string idNo = 5;
+    string idNoType = 6;
+}
+
+message AirTaxFeeCalculateOffer {
+    repeated string offerId = 1;
+    repeated TravelerCompositionInfo travelerCompositionInfo = 2;
+}
+
+message TravelerCompositionInfo {
+    string uri = 1;
+    string id = 2;
+    string typeRefId = 3;
+}
+
+message AncillaryPriceOffer {
+    string ancillaryPriceOfferId = 1;
+    string travelerCompositionId = 2;
+    string travelerCompositionUri = 3;
+    string ancillaryName = 4;
+    string ancillaryType = 5;
+    string totalFare = 6;
+    string totalFareCurrency = 7;
+}
+
+message Reservation {
+    string code = 1;
+    string creationDate = 2;
+    string status = 3;
+    string pnr = 4;
+    Customer customer = 5;
+    repeated Traveler travelers = 6;
+    repeated Payment payments = 7;
+
+    string baseFare = 8;
+    string baseFareCurrency = 9;
+    string totalFare = 10;
+    string totalFareCurrency = 11;
+    string paidValue = 12;
+    string paidValueCurrency = 13;
+    string payNowValue = 14;
+    string payNowValueCurrency = 15;
+    string initialDate = 16;
+    string lastUpdatedDate = 17;
+    string expiryDate = 18;
+    string userName = 19;
+    string payTime = 20;
+    string ticketTime = 21;
+    repeated Action actions = 22;
+    string source = 23;
+    repeated OrderFareFamily fareFamilies = 24;
+}
+
+message Customer {
+    string id = 1;
+    string firstName = 2;
+    string lastName = 3;
+    string email = 4;
+    string mobile = 5;
+    string phone = 6;
+}
+
+message Traveler {
+    string id = 1;
+    string uri = 2;
+    string firstName = 3;
+    string lastName = 4;
+    string gender = 5;
+    string dateOfBirth = 6;
+    string type = 7;
+    string email = 8;
+    string mobile = 9;
+    string phone = 10;
+    string idNo = 11;
+    string idNoEffectiveDate = 12;
+    string idNoExpiryDate = 13;
+    string idNoType = 14;
+    string idNoCountryCode = 15;
+    string countryCode = 16;
+
+    repeated OrderFlightSegment flightSegments = 17;
+    repeated AncillaryOffer ancillaryOffers = 18;
+    repeated InsuranceOffer insuranceOffers = 19;
+
+}
+
+message OrderFlightSegment {
+    string id = 1;
+    string uri = 2;
+    string flightNumber = 3;
+    int32 duration = 4;
+    int32 layover = 5;
+    string marketingAirlineCode = 6;
+    string marketingAirlineName = 7;
+    string departureDate = 8;
+    string departureTerminal = 9;
+    string departureGate = 10;
+    string departureAirportCode = 11;
+    string departureAirportName = 12;
+    string arrivalDate = 13;
+    string arrivalTerminal = 14;
+    string arrivalGate = 15;
+    string arrivalAirportCode = 16;
+    string arrivalAirportName = 17;
+    string aircraftCode = 18;
+    string aircraftName = 19;
+    int32 stopQuantity = 20;
+    string baseFare = 21;
+    string baseFareCurrency = 22;
+    string totalFare = 23;
+    string totalFareCurrency = 24;
+    repeated Tax taxs = 25;
+    repeated Tax fees = 26;
+    string fareFamilyCode = 27;
+    string fareFamilyName = 28;
+    string itemUri = 29;
+    string originDestinationUri = 30;
+    string status = 31;
+    string ticketNumber = 32;
+    string ticketStatus = 33;
+    string bookingClass = 34;
+    string cabinClass = 35;
+}
+
+message Tax {
+    string code = 1;
+    string amount = 2;
+    string currency = 3;
+    string description = 4;
+}
+
+message AncillaryOffer {
+    string id = 1;
+    string code = 2;
+    string type = 3;
+    string name = 4;
+    string status = 5;
+    string baseFare = 6;
+    string baseFareCurrency = 7;
+    string totalFare = 8;
+    string totalFareCurrency = 9;
+    string description = 10;
+    string flightNumber = 11;
+    string departureDate = 12;
+    string seatNum = 13;
+}
+
+message Payment {
+    string id = 1;
+    string status = 2;
+    string amount = 3;
+    string currency = 4;
+}
+
+message Action {
+    bool enable = 1;
+    string code = 2;
+    string description = 3;
+}
+
+message InsuranceOffer {
+    string insuranceId = 1;
+    string code = 2;
+    string name = 3;
+    string status = 4;
+    string companyCode = 5;
+    string companyName = 6;
+    string premium = 7;
+    string repay = 8;
+    string protocol = 9;
+    string protocolProductName = 10;
+    string description = 11;
+    string baseFare = 12;
+    string baseFareCurrency = 13;
+    string totalFare = 14;
+    string totalFareCurrency = 15;
+    repeated Tax taxs = 16;
+    repeated Tax fees = 17;
+}
+
+message OrderFareFamily {
+    int32 sequence = 1;
+    string code = 2;
+    string name = 3;
+    repeated Benefit benefits = 4;
+}
+
+message Benefit {
+    string code = 1;
+    string name = 2;
+    string text = 3;
+}

@@ -1,0 +1,117 @@
+.left-navcontent.home-block{
+  .content{
+    margin-top: 30px;
+  }
+}
+.search-loading{
+  display: block;
+}
+.search-submit{
+  display: block;
+}
+.order-detail-content,.refund-ticket-content,.chang-order-content,.order-list-content{
+  .hnaui-panel{
+    padding:15px;
+    background: #fff;
+  }
+  .hnaui-panel-title{
+    padding:0;
+    margin-bottom:15px;
+  }
+}
+
+.hna-tax{
+  display: block;
+  position: relative;
+  span{
+    color:blue;
+    cursor: pointer;
+  }
+  .tax-table{
+    display: none;
+    padding:2px;
+    background:#d2d2d2 ;
+    min-width: 170px;
+    position: absolute;
+    right: 111%;
+    top:0;
+    z-index: 10;
+    font-weight:normal;
+
+    .hnaui-icon{
+      color: #d2d2d2;
+      padding: 0;
+      font-size: 25px;
+      position: absolute;
+      top:2px;
+      right:-20px;
+      text-align: center;
+    }
+
+
+    .hnaui-tax-detail{
+      width: 240px;
+      background: #fefefe;
+      max-height: 400px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      dl{
+        border-bottom:1px solid #e2e2e2;
+        zoom:1;
+        overflow:hidden;
+        &:nth-child(even){
+          background: #f5f5f5;
+        }
+      }
+
+      dd,dt{
+        float:left;
+        padding:9px 2px;
+      }
+      dd{
+        width: 80px;
+        font-size:12px;
+        text-align: left;
+        dfn{
+          color:$themeColor;
+          font-style: normal;
+          font-size:$fontDefault + 4;
+        }
+      }
+      dt{
+        width: 160px;
+        text-align: right;
+        white-space:pre-wrap;
+        word-wrap: break-word;
+        background: none;
+      }
+    }
+  }
+}
+.hna-ff{
+  .tax-table{
+    left:-415px;
+    right:auto;
+    min-width: 400px;
+  }
+  .hnaui-tax-detail{
+    padding: 10px;
+    width: 400px !important;
+    >p{
+      padding: 5px 0;
+    }
+  }
+}
+
+.hna-traveller-price{
+  .tax-table{
+    min-width: 300px;
+    .hnaui-tax-detail{
+      width: 300px;
+      padding: 10px;
+    }
+    p{
+      padding: 5px 0;
+    }
+  }
+}

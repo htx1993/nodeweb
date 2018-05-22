@@ -1,0 +1,300 @@
+
+.passenger-service-checkin {
+  .container {
+    background: #fff !important;
+    padding: 0 !important;
+  }
+  .text-info {
+    line-height: 1.8;
+  }
+  //进度条
+  .flight-step {
+    li {
+      width: 20%;
+    }
+  }
+  //进度1
+  .hnaui-edit-panel {
+    position: relative;
+  }
+  .hnaui-user-panel {
+    position: relative;
+    margin-bottom: 20px;
+  }
+  //订单查询表头
+  .hnaui-user-panel h1 {
+    padding: 15px 0;
+    font-size: 16px;
+    color: $themeColor;
+  }
+  .hnaui-user-panel h1 i {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 22px;
+    margin-right: 5px;
+  }
+
+  //表单
+  .hnaui-edit-panel .hnaui-panel-content {
+    margin: 10px 0;
+    .p-checkbox {
+      clear: both;
+    }
+  }
+  .hnaui-edit-panel .hnaui-panel-content.list-group {
+    padding: 0 0 20px 0;
+    p {
+      margin-bottom: 10px;
+      color: #666;
+      line-height:1.8;
+      span{
+        color:$themeColor;
+      }
+    }
+  }
+  .p-input,.p-select,.hnaui-form-pane {
+    position: relative;
+    .hnaui-form-item{
+      position: relative;
+      .hnaui-form-label {
+        width: 80px;
+      }
+      .hnaui-input-block {
+        position: relative;
+        margin-left: 80px;
+        .hnaui-input {
+          padding-right: 25px;
+        }
+      }
+    }
+  }
+  .p-select {
+    .hnaui-form-label {
+      text-align: right;
+    }
+  }
+
+  .onlineCheckin-form {
+    .hnaui-warning {
+      max-width: 400px;
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 20;
+      height: 38px;
+      padding: 0 8px;
+      font-size: 12px;
+      line-height: 38px;
+      color: #e60012;
+      background: #eee;
+    }
+    .hnaui-warning > i {
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+    }
+    @keyframes bounceInRight {
+      from, 60%, 75%, 90%, to {
+        animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+      }
+      from {
+        opacity: 0;
+        transform: translate3d(200px, 0, 0);
+      }
+      60% {
+        transform: translate3d(-25px, 0, 0);
+      }
+      75% {
+        transform: translate3d(10px, 0, 0);
+      }
+      90% {
+        transform: translate3d(-5px, 0, 0);
+      }
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    .bounceInRight {
+      animation: bounceInRight .5s;
+    }
+  }
+
+  //手机号码
+  .hnaui-mobile-pre {
+    left: 79px;
+  }
+  .hnaui-mobile-next {
+    margin-left: 80px !important;
+    .hnaui-input {
+      padding-left: 90px;
+    }
+  }
+
+  //动态口令
+  .hnaui-verifybtn {
+    position: absolute;
+    background: #e2000c;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    height: 28px;
+    line-height: 28px;
+    right: 5px;
+    top: 5px;
+    i{
+      display: inline-block;
+    }
+  }
+  /* .hnaui-verifybtn:hover {
+     color: #666;
+   }*/
+
+  //查询按钮
+  .search-submit {
+    display: block;
+    text-align: center;
+    margin: 0;
+    .hnaui-btn {
+      margin: 20px;
+    }
+  }
+  .hnaui-btn-model {
+    margin: 0;
+  }
+
+  //右侧文字描述
+  .hanui-panel-content {
+    .list-group-item,li{
+      margin-top: 10px;
+      color: #666;
+      strong{
+        color:$themeColor;
+      }
+    }
+    .guide-tip {
+      position: absolute;
+      margin:-48px 0 0 90px;
+      a {
+        margin:10px;
+        padding: 8px 10px;
+        background-color:$bodyBg;
+        @include border-radius(8px);
+        &:hover{
+          background: $themeColor;
+          color:#fff;
+        }
+      }
+    }
+  }
+  //表单验证错误提示
+  .hnaui-warning > .verify-ok {
+    color: #1ca905;
+  }
+
+  //人机验证
+  .p-mmv .hnaui-form-label {
+    position: relative;
+    text-align: right;
+  }
+  .container_full .hna-mmv {
+    display: inline-block;
+    left: 5px;
+  }
+
+  .hnaui-form-pane .hnaui-form-checkbox {
+    margin: 4px 0;
+  }
+
+  //进度2
+  .content-nav {
+    font-size: 14px;
+    padding-left: 2px;
+    font-weight: 600;
+  }
+  .hnaui-table-mobile {
+    td, th {
+      text-align: center;
+      .hnaui-form-radio {
+        margin-right: 0;
+        padding-right: 0;
+        i {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+
+  //进度--3
+  //座位选择页面只读不可用按钮
+  .hnaui-readonly, .hnaui-disabled {
+    color: #e2000c !important;
+    opacity: .5;
+    filter: alpha(opacity=50);
+  }
+  .container_full {
+    .choose-seat {
+      padding:30px 0 20px 40px;
+      min-height: 280px;
+      position: relative;
+      margin-bottom: 50px;
+      z-index: 3;
+      background: $bodyBg;
+      margin-left:15px;
+      &:after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        bottom: -20px;
+        background: #fff;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        border: 2px solid $border;
+      }
+    }
+  }
+  .user-right h1{
+    margin-top:25px;
+  }
+  //没有天气信息
+  .no-weatherInfo {
+    padding: 20px 0;
+    text-align: center;
+    font-size: 16px;
+    color: #000;
+  }
+  // .weatherInfo {
+  .icon-div {
+    text-align: center;
+    padding: 50px 0;
+    .hnaui-icon {
+      font-size: 30px;
+      display: inline-block;
+    }
+  }
+  // }
+
+  //座位颜色
+  .hnaui-flight-seat {
+    .icon-seat-normal {
+      color: #a1d767;
+    }
+    .icon-seat-selected {
+      color: #fe0003;
+    }
+  }
+
+  .online-check .download-link{
+    text-align: center;
+    a{
+      color: #337ab7;
+      text-decoration: none;
+    }
+  }
+}
+

@@ -1,0 +1,51 @@
+{
+  "name": "nodeweb",
+  "version": "1.0.0",
+  "description": "web node",
+  "keywords": [
+    "node.js",
+    "javascript"
+  ],
+  "scripts": {
+    "start": "node app",
+    "debug": "node-debug app.js",
+    "publish": "git diff --name-only HEAD 3b29448459310ff5514d62f8075f97addb3636a8 | xargs zip 20171128-1.zip"
+  },
+  "author": "aichen",
+  "contributors": [
+    {
+      "name": "g.zhou",
+      "email": "g.zhou@hnair.com"
+    }
+  ],
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "latest",
+    "connect-redis": "^3.3.0",
+    "cookie-parser": "latest",
+    "domain": "0.0.1",
+    "express": "latest",
+    "express-session": "latest",
+    "npm -v": "^1.4.1",
+    "hbs": "latest",
+    "ioredis": "^3.1.2",
+    "log4js": "^1.1.1",
+    "mockjs": "^1.0.1-beta3",
+    "moment": "^2.18.1",
+    "mysql": "latest",
+    "request": "^2.81.0",
+    "serve-favicon": "latest"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.5",
+    "gulp": "latest",
+    "gulp-concat": "latest",
+    "gulp-jshint": "^2.0.4",
+    "gulp-sass": "latest",
+    "gulp-uglify": "^3.0.0",
+    "jshint": "^2.9.5",
+    "node-sass": "latest",
+    "nodemailer": "^2.7.0",
+    "outils": "^1.1.1"
+  }
+}

@@ -1,0 +1,138 @@
+/** 基础通用 **/
+/* 消除第三方ui可能造成的冲突 */
+.hnaui-box, .hnaui-box * {
+  @include box-sizing(content-box !important);
+}
+
+.hnaui-border-box, .hnaui-border-box * {
+  @include box-sizing(border-box !important);
+}
+
+/* 清除浮动*/
+.hnaui-clear,
+.container {
+  clear: both;
+  *zoom: 1;
+}
+
+.hnaui-clear:after,
+.container:after {
+  content: '\20';
+  clear: both;
+  *zoom: 1;
+  display: block;
+  height: 0;
+}
+
+.hnaui-inline {
+  position: relative;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+}
+
+/* 三角形 */
+.hnaui-edge {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: dashed;
+  border-color: transparent;
+  overflow: hidden;
+}
+
+/* 单行溢出省略 */
+.hnaui-elip {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* 屏蔽选中 */
+.hnaui-icon,
+.hnaui-btn,
+img,
+.hnaui-change-icon,
+.hnaui-unselect,
+.hnaui-hnapage{
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Chrome/Safari/Opera */
+  -khtml-user-select: none; /* Konqueror */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.hnaui-disabled, .hnaui-disabled:hover {
+  color: #666 !important;
+  cursor: not-allowed !important;
+}
+
+/* 纯圆角 */
+.hnaui-circle {
+  @include border-radius(50%);
+}
+
+/* 显示 */
+.hnaui-show {
+  display: block !important;
+}
+
+/* 隐藏 */
+.hnaui-hide {
+  display: none !important;
+}
+
+/* 文字左对齐 */
+.hnaui-push-left {
+  text-align: left !important;
+}
+
+/* 文右对齐 */
+.hnaui-push-right {
+  text-align: right !important;
+}
+
+/* 文字居中 */
+.hnaui-push-center {
+  text-align: center !important;
+}
+
+/* 左浮动 */
+.hnaui-left {
+  float: left !important;
+}
+
+/* 右浮动 */
+.hnaui-right {
+  float: right !important;
+}
+
+.hnaui-site-tips {
+  margin-bottom: 10px;
+  padding: 15px;
+  line-height: 22px;
+  border-left: 5px solid $themeColor;
+  background-color: $themePanelBg;
+}
+
+.hnaui-site-tips-title {
+  color: $themeColor;
+  font-size: 16px;
+  margin-bottom: 15px;
+  .hnaui-icon {
+    position: relative;
+    top: 2px;
+    margin-right: 10px;
+    color: #8735b1;
+    font-size: 20px;
+  }
+}
+
+/* 模块阴影 */
+/*
+.hnaui-shadow {
+  background-color: $themePanelBg;
+  @include box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12));
+}*/

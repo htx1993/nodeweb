@@ -1,0 +1,32 @@
+.hnaui-num-input{
+    position: relative;
+    margin-left: 0 !important;
+    width: 100px;
+    height: 30px !important;
+    .hnaui-input{
+        width: 41px;
+        height: 30px;
+        margin-left: 30px;
+        text-align: center;
+        border: 1px solid #ececec;
+    }
+}
+
+.hnaui-num-up,.hnaui-num-down{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    line-height: 30px;
+    background: #ececec;
+}
+.hnaui-num-up{
+    right: 0;
+    cursor: pointer;
+}
+.hnaui-num-down{
+    left: 0;
+    cursor: pointer;
+}

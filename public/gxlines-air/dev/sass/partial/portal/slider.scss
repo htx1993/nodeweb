@@ -1,0 +1,81 @@
+.hnaui-slider{
+  position: relative;
+  width: 100%;
+  height:490px;
+  overflow: hidden;
+  .btnleft,.btnright{
+    width: 100px;
+    height:inherit;
+    position: absolute;
+    top:0;
+    left:0;
+    cursor:pointer;
+    z-index: 6;
+    &:hover{
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+      background-image:-webkit-linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.0001) 100%);
+      background-image:linear-gradient(to right, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.0001) 100%);
+    }
+  }
+  .btnright{
+    left:auto;
+    right: 0;
+    &:hover{
+      filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+      background-image:-webkit-linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.0001) 100%);
+      background-image:linear-gradient(to left, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.0001) 100%);
+
+    }
+  }
+  .director{
+    z-index:98;
+    position: absolute;
+    bottom: 4%;
+    right: 0;
+    width:100%;
+    text-align: center;
+    cursor:pointer;}
+  .director span{
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin:0 3px;
+    background:#666;
+    @include border-radius(50%);
+  }
+  .director span.current{
+    background: $themeColor;
+  }
+  img{
+    width:100%;
+    //min-height:485px;
+  }
+  li{
+   // display: none;
+    width:100%;
+    z-index: 1;
+    position:absolute;
+    filter:alpha(opacity=0);
+    opacity:0;
+    @include transition(opacity .8s);
+    &.show{
+      //display: block;
+      opacity:1;
+      z-index: 5;
+      filter:alpha(opacity=100);
+    }
+    a{
+      height: 490px;
+      background-position: top center;
+      background-repeat:no-repeat;
+      -webkit-background-size:cover;
+      background-size:cover;
+      display:block ;
+    }
+
+  }
+  .slider-load{
+    height:inherit;width:100%;
+    background:url("#{$imgUrl}/ajax-loading.gif") center center  no-repeat;
+  }
+}

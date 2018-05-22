@@ -1,0 +1,24 @@
+{{css base.css}}
+
+<div class="content flight-search-content">
+
+    <div class="container">
+        <div class="row">
+            {{> flight/flightState}}
+            <div class="search-box hnaui-shadow hnaui-form hnaui-border-box hnaui-clear">
+                    
+            </div>
+            <div class="hnaui-content row hnaui-clear" id="hnaui_ticket_content">
+                {{> base/searchLoading}}
+                <div class="hnaui-panel-title">推荐机票</div>
+            </div>
+
+                <form class="hnaui-form" action="">
+                     {{> base/searchLoading}}
+                </form>
+
+        </div>
+    </div>
+</div>
+
+{{js base.jsPageId}}

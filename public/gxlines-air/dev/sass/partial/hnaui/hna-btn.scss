@@ -1,0 +1,212 @@
+/* 按钮 */
+.hnaui-btn {
+  display: inline-block;
+  vertical-align: middle;
+  height: $btnH;
+  line-height: $btnH;
+  padding: 0 18px;
+  background-color: $themeColor;
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  font-size: $fontDefault + 2;
+  border: none;
+  @include border-radius(2px);
+  cursor: pointer;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  @include box-shadow(0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12));
+}
+
+.hnaui-btn:hover {
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  color: #fff;
+}
+
+.hnaui-btn:active {
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.hnaui-btn + .hnaui-btn {
+  margin-left: 10px;
+}
+
+/* 圆角 */
+.hnaui-btn-radius {
+  @include border-radius(100px);
+}
+
+.hnaui-btn .hnaui-icon {
+  font-size: 18px;
+  vertical-align: bottom;
+  pointer-events: none;
+}
+
+/* 原始 */
+.hnaui-btn-primary {
+  border: 1px solid $themeColor;
+  background-color: #fff;
+  color: #555;
+}
+.hnaui-btn-primary {
+  .hnaui-icon{
+    height:42px;
+    line-height:42px;
+  }
+}
+.hnaui-btn-primary:hover {
+  border-color: $themeColor;
+  color: #333
+}
+
+/* 主题 */
+.hnaui-btn-theme {
+  background-color: $themeColor;
+}
+
+/* 百搭 */
+.hnaui-btn-normal {
+  background-color: #1E9FFF;
+}
+
+/* 暖色 */
+.hnaui-btn-warm {
+  background-color: #F7B824;
+}
+
+/* 警告 */
+.hnaui-btn-danger {
+  background-color: #FF5722;
+}
+
+/* 禁用 */
+.hnaui-btn-disabled, .hnaui-btn-disabled:hover, .hnaui-btn-disabled:active {
+  //border: 1px solid #e6e6e6;
+  //background-color: #FBFBFB;
+  //color: #C9C9C9;
+  cursor: not-allowed;
+  opacity: .4;
+  filter: alpha(opacity=40);
+}
+
+.hnaui-btn-model {
+  position: relative;
+  margin:0 0 30px 0;
+  height:44px;
+  line-height:44px;
+  width: 160px;
+  padding-right: 40px;
+  font-size:$fontDefault + 4;
+  background: #fff !important;
+  border:1px solid $themeColor;
+  color:#333;
+  &:hover{
+    color:#333;
+  }
+  .hnaui-icon {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    font-size: $fontDefault + 8;
+    top: 0;
+    background: $themeColor;
+    color: #fff;
+    line-height:42px;
+  }
+}
+.next-btn{
+  background: $themeColor !important;
+  color:#fff;
+  &:hover{
+    color:#fff;
+  }
+  .hnaui-icon {
+    background: $darkthemColor;
+  }
+}
+/* 大型 */
+.hnaui-btn-big {
+  height: 44px;
+  line-height: 44px;
+  padding: 0 25px;
+  font-size: $fontDefault + 4;
+}
+
+/* 小型 */
+.hnaui-btn-small {
+  height: 30px;
+  line-height: 30px;
+  padding: 0 10px;
+  font-size: $fontDefault;
+}
+
+.hnaui-btn-small i {
+  font-size: $fontDefault + 4 !important;
+}
+
+/* 迷你 */
+.hnaui-btn-mini {
+  height: 22px;
+  line-height: 22px;
+  padding: 0 5px;
+  font-size: $fontDefault;
+}
+
+.hnaui-btn-mini i {
+  font-size: $fontDefault + 2 !important;
+}
+
+/* 按钮组 */
+.hnaui-btn-group {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+}
+
+.hnaui-btn-group .hnaui-btn {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  border-left: 1px solid rgba(255, 255, 255, .5);
+  @include border-radius(0);
+}
+
+.hnaui-btn-group .hnaui-btn-primary {
+  border-left: none;
+}
+
+.hnaui-btn-group .hnaui-btn-primary:hover {
+  border-color: #C9C9C9;
+  color: $themeColor;
+}
+
+.hnaui-btn-group .hnaui-btn:first-child {
+  border-left: none;
+  @include border-radius(2px 0 0 2px);
+}
+
+.hnaui-btn-group .hnaui-btn-primary:first-child {
+  border-left: 1px solid #c9c9c9;
+}
+
+.hnaui-btn-group .hnaui-btn:last-child {
+  @include border-radius(0 2px 2px 0);
+}
+
+.hnaui-btn-group .hnaui-btn + .hnaui-btn {
+  margin-left: 0;
+}
+
+.hnaui-btn-group + .hnaui-btn-group {
+  margin-left: 10px;
+}
+
+//按钮字体图片间距
+.search-btn .hnaui-icon{
+  margin-left:5px;
+  vertical-align: middle;
+}

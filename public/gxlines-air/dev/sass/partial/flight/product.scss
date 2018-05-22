@@ -1,0 +1,477 @@
+.pr-20{
+  padding-right: 20px;
+}
+.product-content{
+
+  .rule-font{
+    position: relative;
+    font-size: $fontDefault;
+    cursor: pointer;
+    background: $border;
+    color:#333;
+    padding:5px 10px;
+    &:hover{
+      .hnaui-rule-box{
+        display: block;
+      }
+    }
+    .hnaui-rule-box{
+      position: absolute;
+      top:-24px;
+      left:68px;
+      padding-top: 24px;
+      z-index: 10000;
+      display: none;
+      .content{
+        color: #666!important;
+        background: #fff;
+        padding: 15px;
+        width: 350px;
+        max-height: 500px;
+        overflow-y: auto;
+        border: 2px solid $border;
+        text-align: left;
+        line-height:1.8;
+        a{
+          color:blue;
+        }
+        p{
+          font-size:$fontDefault;
+          margin:0;
+        }
+        &:before{
+          position: absolute;
+          content: '';
+          border-right: 12px solid transparent;
+          border-top: 12px solid transparent;
+          border-bottom: 12px solid transparent;
+          border-left: 12px solid $border;
+          left: 0;
+          top:24px;
+        }
+      }
+    }
+  }
+  .hnaui-panel-title{
+    text-align: center;
+    background: none;
+    .market-name{
+      color:#333;
+      font-size:$fontDefault + 4;
+    }
+  }
+  .hnaui-form-select {
+    .hnaui-select-title{
+      border-bottom:1px solid #ececec;
+      .hnaui-input{
+        border:0;
+        padding-right:40%;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+    }
+    .hnaui-select-price{
+      position: absolute;
+      right: 30px;
+      top: 4px;
+      color: $themeColor;
+      font-size: 16px;
+    }
+    input[value='你还没有选择主食'],input[value='你还没有选择小吃'],input[value='你还没有选择饮料'],input[value='你还没有选择促销']{
+      font-size: $fontDefault;
+      color: #666;
+    }
+  }
+  .hnaui-meals li{
+    width:46% !important;
+  }
+  .meals-sytle-box{
+    float:left;
+    //width:47%;
+    width: 100%;
+    margin-right:3%;
+    margin-bottom:15px;
+  }
+  .main-food{
+    display: inline-block;
+    margin-right:5px;
+    vertical-align: middle;
+  }
+  .hnaui-select-meals{
+    display: inline-block;
+    clear:none;
+    //width:80%;
+    width: 100%;
+    dl{
+      width:400px;
+      z-index:9999;
+    }
+  }
+
+  i{
+    font-style: normal;
+  }
+  .hnaui-form-checked[hna-skin="primary"] i,.hnaui-form-checkbox[hna-skin="primary"] i,.hnaui-form-checkbox[hna-skin="primary"] i:hover{
+    border-color: $themeColor;
+  }
+  .hnaui-rule{
+    .hnaui-form-checkbox span{
+      font-size:$fontDefault;
+    }
+    a{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .hnaui-auxiliary{
+    .hnaui-form-select dl{
+      top:32px !important;
+    }
+    .hnaui-form-item{
+      margin-bottom:0 !important;
+    }
+
+    h3.tit{
+      color:$themeColor;
+      span{
+        background: $themeColor;
+        color:#fff;
+        font-size:$fontDefault;
+        padding:3px 15px 4px 15px;
+        margin-right:10px;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+    .hnaui-content{
+      padding:20px 0;
+    }
+    .hnaui-img{
+      position: relative;
+      float:left;
+      width:18%;
+      text-align: center;
+      img{
+        width:110px;
+      }
+    }
+    .hnaui-info{
+      float:right;
+      width:80%;
+      padding-left:30px;
+      border-left:1px solid $bodyBg;
+      .hnaui-form-select dl dd.hnaui-this,.hnaui-form-select dl dd.hnaui-this p{
+        color:#fff;
+      }
+      .line{
+        border:.5px dashed $border;
+        height:0;
+        width:93%;
+        margin:20px 0;
+      }
+
+    }
+    .tit-name{
+      margin:20px 0 5px 0;
+      span{
+        display: inline-block;
+        max-width:100%;
+        color:$themeColor;
+        font-size:$fontDefault + 2;
+        text-overflow:ellipsis;
+        overflow:hidden;
+        white-space:nowrap;
+      }
+      span{
+        color:$yellowColor;
+        margin-left:10px;
+        font-size:$fontDefault;
+      }
+    }
+    ul{
+      margin-bottom:25px;
+    }
+    li{
+      float:left;
+      width:29.33%;
+      margin-right:4%;
+    }
+    .hnaui-input{
+      border:0;
+      border-bottom:1px solid $border;
+      padding:0;
+      height:30px !important;
+      line-height:30px !important;
+    }
+  }
+  .hnaui-meals{
+    .tit-name{
+      margin:20px 0 10px 0;
+    }
+    .hnaui-input{
+      font-size:$fontDefault + 2;
+    }
+  }
+  .hnaui-safe,.hnaui-viphall,.hnaui-facilities {
+    font-size:$fontDefault + 2;
+    p{
+      margin:10px 0;
+    }
+
+    .hnaui-icon{
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .hnaui-msgicon{
+      color:$darkthemColor;
+      font-size:$fontDefault + 1;
+      cursor: pointer;
+    }
+  }
+
+  .submit-btn-panel{
+    margin-top: 30px;
+  }
+
+  .hnaui-picture{
+    i{
+      vertical-align: middle;
+      color: $themeColor;
+      margin-right: 5px;
+    }
+  }
+
+  .safe-type{
+    position: relative;
+    background: $bodyBg;
+    padding:10px;
+    .hnaui-form-checkbox{
+      position: static;
+      span{
+        float:none !important;
+        //color:$themeColor;
+        font-size:$fontDefault + 4;
+      }
+
+    }
+    .hnaui-form-checked[hna-skin="primary"] i, .hnaui-form-checkbox[hna-skin="primary"] i, .hnaui-form-checkbox[hna-skin="primary"] i:hover{
+      border-color:$border;
+      position: absolute;
+      top:0;
+      right:0;
+      width:20px;
+      height:inherit;
+      line-height:20px;
+    }
+  }
+}
+.hnaui-auxiliary,.hnaui-order-generation{
+  h3{
+    background: $bodyBg;
+    padding:5px 0;
+    margin-right:26px;
+    em{
+      display: inline-block;
+      position: relative;
+      width:30px;
+      height:1px;
+      background: #cecece;
+      margin:0 10px;
+      vertical-align: middle;
+      &:after{
+        content:'';
+        position: absolute;
+        right:-5px;
+        top:-3px;
+        border-right:5px solid transparent;
+        border-left:5px solid #cecece;
+        border-top:3px solid transparent;
+      }
+    }
+  }
+  .hnaui-ow,.hnaui-rt{
+    background:$themeColor;
+    color:#fff;
+    display: inline-block;
+    vertical-align: middle;
+    padding:6px 3px;
+    margin-right:5px;
+    font-size:$fontDefault;
+    margin-top:-10px;
+    margin-bottom:-5px;
+  }
+  .hnaui-rt{
+    background: $lightthemColor;
+  }
+}
+//弹出层--订单信息
+.hnaui-order-generation{
+  display: block;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:999999;
+  h3{
+    margin-right:0 !important;
+  }
+  .gencontent{
+    background: #fff;
+    width:400px;
+    left:50%;
+    margin-left:-200px;
+    position: fixed;
+    top:50%;
+    margin-top:-250px;
+    z-index:9999991;
+  }
+  .gencontent-content{
+    max-height: 400px;
+    overflow-y:auto;
+    padding:25px;
+
+    li.market-item{
+      margin:15px 0;
+      padding-bottom:5px;
+      border-bottom:.5px dashed $border;
+      &:last-child{
+        border:0;
+      }
+    }
+  }
+  .hnaui-push-center{
+    background: #6f6f6f;
+    z-index:1;
+    overflow: hidden;
+    p{
+      float:left;
+      width:50%;
+      padding:0 !important;
+      margin:0 !important;
+      background: none;
+      box-shadow:none;
+      border:0;
+      border-radius:0;
+      &.re-choose-btn,&.passenger-btn,&.cancel-order-btn{
+        border-right:1px solid #fff !important;
+        color:#fff;
+      }
+      &.payment-btn,&.re-search-btn,&.continue-payment-btn{
+      background: $themeColor;
+      color:#fff;
+    }
+    }
+  }
+.hna-flight-order{
+  span{
+    display: inline-block;
+    margin-right:15px;
+  }
+}
+  p,li{
+    position: relative;
+    margin:10px 0;
+    .hnaui-icon{
+      position: absolute;
+      right:0;
+      top:0;
+      color:$greenColor;
+    }
+    em{
+      display: inline-block;
+      position: relative;
+      width:30px;
+      height:1px;
+      background: #cecece;
+      margin:0 10px;
+      vertical-align: middle;
+      &:after{
+        content:'';
+        position: absolute;
+        right:-5px;
+        top:-3px;
+        border-right:5px solid transparent;
+        border-left:5px solid #cecece;
+        border-top:3px solid transparent;
+      }
+    }
+  }
+  li{
+    .name{
+      display: block;
+      //width: 120px;
+    }
+    .id-no{
+    //  color:red;
+    }
+  }
+  h2{
+    padding:12px 0;
+    background: $themeColor;
+    color:#fff;
+    text-align: center;
+    .hnaui-icon{
+      display: inline-block;
+      margin-left: 10px;
+    }
+  }
+  .tit{
+    text-align: center;
+    position: relative;
+    margin:10px 0;
+    &:after{
+      content: '';
+      position: absolute;
+      top:50%;
+      left:0;
+      width:100%;
+      height:1px;
+      background: $border;
+      z-index:-1;
+    }
+    span{
+      display: inline-block;
+      padding:0 5px;
+      background: #fff;
+      color:#000;
+    }
+  }
+  .flight-info{
+    li{
+      margin-bottom: 15px;
+    }
+  }
+
+  .flight-name{
+    position: relative;
+    .hnaui-ow {
+      background: #ff848b;
+    }
+  }
+  .btn-tips{
+    padding:0 25px;
+  }
+}
+
+
+.hnaui-address-market{
+  font-size:14px;
+  .hnaui-panel-content{
+    padding: 20px 0;
+  }
+  .hnaui-img{
+    width: 28%;
+    text-align: center;
+  }
+  .hnaui-info{
+    width: 72%;
+    padding-right: 40px;
+  }
+  .address-panel{
+    margin-top: 20px;
+  }
+}

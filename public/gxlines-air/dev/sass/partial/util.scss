@@ -1,0 +1,34 @@
+@mixin css3($property, $value) {
+  @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+    #{$prefix}#{$property}: $value;
+  }
+}
+@mixin user-select($select) {
+  @include css3(user-select, $select);
+}
+@mixin box-sizing($sizing...) {
+  @include css3(box-sizing, $sizing);
+}
+
+@mixin box-shadow($shadow...) {
+  @include css3(box-shadow, $shadow);
+}
+
+@mixin border-radius($radius...) {
+  @include css3(border-radius, $radius);
+}
+
+@mixin transition($transition...) {
+  @include css3(transition, $transition);
+}
+
+@mixin transform($transform...) {
+  @include css3(transform, $transform);
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+

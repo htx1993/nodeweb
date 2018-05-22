@@ -1,0 +1,75 @@
+/* 布局 */
+.hnaui-main {
+  position: relative;
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.hnaui-header {
+  position: relative;
+  z-index: 1000;
+  height: 60px;
+}
+
+.hnaui-header a:hover {
+  transition: all .5s;
+  -webkit-transition: all .5s;
+}
+
+.hnaui-side {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 999;
+  width: 200px;
+  overflow-x: hidden;
+}
+
+.hnaui-side-scroll {
+  width: 220px;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.hnaui-body {
+  position: absolute;
+  left: 200px;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 998;
+  width: auto;
+  overflow: hidden;
+  overflow-y: auto;
+  @include box-sizing(border-box);
+}
+
+/* 后台布局风格 */
+.hnaui-layout-admin .hnaui-header {
+  background-color: $themeColor;
+}
+
+.hnaui-layout-admin .hnaui-side {
+  top: 60px;
+  width: 200px;
+  overflow-x: hidden;
+}
+
+.hnaui-layout-admin .hnaui-body {
+  top: 60px;
+  bottom: 44px;
+}
+
+.hnaui-layout-admin .hnaui-main {
+  width: auto;
+  margin: 0 15px;
+}
+
+.hnaui-layout-admin .hnaui-footer {
+  position: fixed;
+  left: 200px;
+  right: 0;
+  bottom: 0;
+  height: 44px;
+  background-color: #eee;
+}

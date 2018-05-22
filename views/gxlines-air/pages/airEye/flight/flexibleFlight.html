@@ -1,0 +1,48 @@
+{{css base.css}}
+
+<div class="content flight-flexible-content">
+
+    <div class="container">
+        <div class="row">
+            {{> flight/flightState}}
+            <div class="container_full">
+                <form class="hnaui-form" action="">
+                    {{> base/searchLoading}}
+                    <div class="hnaui-panel hnaui-shadow">
+                        <div class="hnaui-panel-title">
+                            <i class="hnaui-icon">&#xe637;</i>
+                            日期选择
+                        </div>
+                        <!--航班信息-->
+                        <div class="search-title hnaui-clear">
+
+                        </div>
+                        <!--价格日历-->
+                        <div class="search-price hnaui-panel-content">
+                            <!--价格日历的头部-->
+                            <table class="hnaui-table page-table">
+                                <thead>
+                                    <tr>
+                                        <th width="14%">星期日</th>
+                                        <th width="14%">星期一</th>
+                                        <th width="14%">星期二</th>
+                                        <th width="14%">星期三</th>
+                                        <th width="14%">星期四</th>
+                                        <th width="14%">星期五</th>
+                                        <th width="14%">星期六</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <div class="flight-info"></div>
+                        </div>
+                    </div>
+                    <div class="search-submit hnaui-clear hnaui-push-right"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{js base.jsPageId}}

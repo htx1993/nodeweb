@@ -1,0 +1,21 @@
+{{css base.css}}
+
+<div class="content payment-info">
+    <div class="container">
+        <div class="row">
+            {{> flight/flightState}}
+            <div class="container_full hnaui-shadow">
+                {{> base/searchLoading}}
+            </div>
+            <div id="paymentContent" style="display: none;">
+                <div class="container_right">
+                    {{> shoppingCart/cart}}
+                </div>
+                <div class="container_left ">
+                    <div class="search-result"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{js base.jsPageId}}

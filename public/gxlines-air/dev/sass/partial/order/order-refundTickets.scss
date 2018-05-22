@@ -1,0 +1,130 @@
+.refund-ticket-content{
+  .hnaui-btn{
+    margin: 5px 0;
+  }
+
+  .search-submit{
+    .refund-type-select,.next-btn,.back-btn{
+      display: inline-block;
+      margin: 10px 0;
+    }
+    .hnaui-form-label{
+      width:120px;
+    }
+    .refund-type-select{
+      position: absolute;
+      right:180px;
+      top:4px;
+      margin-right: 20px;
+    }
+    .back-btn{
+      .hnaui-icon{
+        font-size: $fontDefault + 8;
+      }
+    }
+
+  }
+  .mmb-step li{
+    width: 33.33%;
+  }
+  .refund-step-info{
+    padding:10px;
+    background: #e6e6e6;
+    li{
+      line-height: 26px;
+    }
+    span{
+      color:$themeColor;
+      font-weight:bold;
+    }
+  }
+  .refund-info{
+    color: $subColor;
+  }
+
+
+  .hna-voluntary-refund,
+  .hna-involuntary-refund,
+  .hnaui-refund-cost{
+    display: none;
+  }
+  .hna-involuntary-refund{
+    .refund-step-info{
+      padding:0;
+      background: none;
+    }
+    .a-link {
+      color: #333;
+    }
+  }
+
+  .hnaui-refund-cost {
+    .hnaui-table{
+      td{
+        padding:0;
+        text-align: center;
+        vertical-align: top;
+      }
+      ul{
+        width:100%;
+
+      }
+
+      li{
+        padding:10px;
+        font-size:$fontDefault + 2px;
+        &.tit{
+          margin-bottom:10px;
+          background: #e2e2e2;
+          font-weight:bold;
+          border-bottom:1px solid $border;
+
+        }
+        span{
+          float: left;
+          display: inline-block;
+          width:150px;
+          text-align: left;
+          font-weight:bold;
+          color:#666;
+        }
+        dfn{
+          float: right;
+          display: inline-block;
+          width:100px;
+          text-align: right;
+          font-style:normal;
+        }
+      }
+
+      .pj{
+        width: 30%   ;
+        text-align: right;
+        background-color: #ff5356;
+      }
+      .fy{
+        width: 30%;
+        text-align: left;
+
+      }
+    }
+  }
+  .hnaui-total-price{
+    padding:15px;
+    font-size:$fontDefault + 2;
+    background: $bodyBg;
+    em{
+      margin:0 5px;
+    }
+  }
+
+}
+.hna-order-num{
+  margin-top:15px;
+  padding:15px;
+  font-size:$fontDefault + 4;
+  background: #fff;
+  strong{
+    color:$themeColor;
+  }
+}

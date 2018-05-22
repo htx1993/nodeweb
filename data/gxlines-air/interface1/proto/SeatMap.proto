@@ -1,0 +1,158 @@
+syntax = "proto3";
+
+package seatmap;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.air.seat";
+option java_outer_classname = "SeatMapProto";
+
+import "Common.proto";
+
+service SeatMap {
+
+    // 获取选座信息
+    rpc getSeatMap (SeatMapRQ) returns (SeatMapRS) {
+    }
+
+    rpc seatMapPrice (SeatMapPriceRQ) returns (SeatMapPriceRS) {
+
+    }
+
+    rpc addSeatMap (AddSeatMapRQ) returns (AddSeatMapRS) {
+
+    }
+
+}
+
+message SeatMapPriceRQ{
+    repeated SelectSeat selectSeat =1;
+    string shoppingCartId = 2;
+}
+
+message SelectSeat{
+    string travelerId = 1;
+    string seatRef = 2;
+}
+
+message SeatMapPriceRS{
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    common.ShoppingCart shoppingCart = 4;
+}
+
+message AddSeatMapRQ {
+    string reservationCode = 1;
+    repeated ChooseSeat seats = 2;
+}
+
+message ChooseSeat {
+    string ancillaryPriceId = 1;
+    string travelerId = 2;
+    string seatMapId = 3;
+    string seatId = 4;
+}
+
+message AddSeatMapRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    common.Reservation reservation = 4;
+}
+
+message SeatMapRQ {
+    string flightSegmentId = 1;
+}
+
+message SeatMapRS {
+
+    string status = 1;
+
+    string code = 2;
+
+    string message = 3;
+
+    string id = 4;
+
+    message FlightSegment {
+        string flightNumber = 1;
+        int32 stopQuantity = 2;
+        string departureDate = 3;
+        string marketingAirlineCode = 4;
+        string departureAirportCode = 5;
+        string departureAirportName = 6;
+        string arrivalAirportCode = 7;
+        string arrivalAirportName = 8;
+        string aircraftCode = 9;
+        string aircraftName = 10;
+    }
+    FlightSegment flightSegment = 5;
+    Aircraft aircraft = 6;
+    repeated AirSeatMap seatMaps = 7;
+}
+
+message AirSeatMap {
+    string id = 1;
+    string number = 2;
+    string row = 3;
+    string column = 4;
+    string availability = 5;
+    string description = 6;
+    repeated string characteristics = 7;
+    string baseFare = 8;
+    string baseFareCurrency = 9;
+    string totalFare = 10;
+    string totalFareCurrency = 11;
+    string code = 12;
+    string type = 13;
+    string productType = 14;
+    string productGroup = 15;
+    string productSubGroup = 16;
+    string uri = 17;
+    string ref = 18;
+
+}
+
+message Aircraft {
+    string code = 1;
+    string name = 2;
+    repeated Deck duck = 3;
+}
+
+message Deck {
+    string code = 1;
+    string name = 2;
+    repeated SeatCabin seatCabins = 3;
+}
+
+message SeatCabin {
+    string sittingClass = 1;
+    repeated Section sections = 2;
+    repeated Column column = 3;
+    repeated Row row = 4;
+}
+
+message Section {
+    string position = 1;
+    repeated Index columnRef = 2;
+}
+
+message Column {
+    string id = 1;
+    string label = 2;
+    repeated Index seatRef = 3;
+
+}
+
+message Row {
+    string id = 1;
+    string number = 2;
+    repeated Index seatRef = 3;
+
+}
+
+message Index {
+    string id = 1;
+    string index = 2;
+}
+

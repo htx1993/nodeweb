@@ -1,0 +1,264 @@
+$nav-li-width:120px;
+.header-block {
+  position: relative;
+  z-index: 99;
+  border-bottom:2px solid $themeColor;
+  background-color: #fff;
+  .hnaui-logo {
+    width:20%;
+    z-index:9;
+    margin-top:15px;
+    a{
+      display:inline-block;
+    }
+    img{
+      width:264px;
+    }
+  }
+  .hnaui-right-box{
+    width:80%;
+  }
+  .topnav{
+    width:1200px;
+    margin:0 auto;
+    .hnaui-login-phone{
+      text-align: right;
+      margin-top:5px;
+    }
+    .com-phone{
+      display: inline-block;
+      padding-left:30px;
+      height:32px;
+      line-height:32px;
+    //  background: url("#{$imgUrl}/phoneicon.png") left center no-repeat;
+      strong{
+        font-size:$fontDefault + 4;
+        color:$themeColor;
+        margin-right:30px;
+      }
+    }
+  }
+
+  .hna-pos {
+    position: relative;
+  }
+  .hna-menu,
+  .hna-menuclose {
+    display: none;
+  }
+  .hnaui-nav *{
+    font-size:$fontDefault + 4;
+  }
+  .hnaui-nav {
+    background: none;
+    padding: 0;
+    text-align: right;
+    li {
+      width: 100px;
+      height:40px;
+      line-height:40px;
+      margin-left:20px;
+      .hnaui-icon{
+        display: block;
+        font-size:$fontDefault + 15;
+        margin-bottom:5px;
+      }
+      &.nav-0{
+        .hnaui-nav-child{
+          left:0;
+        }
+      }
+      &.nav-1{
+        .hnaui-nav-child{
+          left: -$nav-li-width;
+        }
+      }
+      &.nav-2{
+        .hnaui-nav-child{
+          left:-$nav-li-width * 2;
+        }
+      }
+      &.nav-3{
+        .hnaui-nav-child{
+          left:-$nav-li-width * 3;
+        }
+      }
+      &.nav-4{
+        .hnaui-nav-child{
+          left:-$nav-li-width * 4;
+        }
+      }
+      &.nav-5{
+        .hnaui-nav-child{
+          left:-$nav-li-width * 4;
+        }
+      }
+      a{
+        color:#333;
+      }
+      &.hnaui-this,
+      &:hover {
+       span{
+         color:$themeColor;
+        // font-size:$fontDefault + 5 !important;
+         display: inline-block;
+         animation:pulse .5s;
+        &.hnaui-nav-more{
+           display: none;
+         }
+       }
+
+      }
+      .hnaui-nav-more {
+        display: none;
+      }
+      .hnaui-nav-child {
+        top: 42px;
+        padding:10px 10px 0 10px;
+        @include border-radius(0);
+        border: 2px solid #fff;
+        text-align: left;
+        width:600px;
+        a {
+          font-size:$fontDefault + 2 !important;
+          font-weight:normal;
+          color: #999;
+          line-height:normal;
+          &:hover{
+            animation:bounceIn .5s;
+            background: none;
+            color:$themeColor;
+         }
+        }
+        dd{
+          display: inline-block;
+          width:85px;
+          text-align: center;
+        }
+        dd.hnaui-this {
+          background: none;
+          color: #666;
+        }
+      }
+
+    }
+    .hnaui-this:after {
+      background: none;
+    }
+    .hnaui-nav-item a {
+      padding: 0;
+      font-weight:bold;
+    }
+  }
+  .hnaui-nav-bar {
+    background: none;
+  }
+  .hna-subColor,
+  a.hna-subColor,
+  .hna-subColor a ,.hna-indexloginbtn,
+  a.hna-indexloginbtn,
+  .hna-indexloginbtn a{
+    /* background:$yellowColor ;
+    margin-top:17px;
+   height:50px;
+    line-height:50px;
+    min-width:80px;
+    text-align: center;
+    */
+
+    display: inline-block;
+    margin-left:10px;
+  }
+  .hna-indexloginbtn,
+  a.hna-indexloginbtn,
+  .hna-indexloginbtn a {
+    /*background: #fff;*/
+  }
+
+  .hna-btnalink {
+    position: relative;
+    top:-8px;
+    * {
+      font-size: $fontDefault;
+    }
+    a,em{
+      display: inline-block;
+      vertical-align: middle;
+    }
+    em{
+      margin-left:10px;
+
+    }
+    .hna-loginname {
+      vertical-align: top;
+      i{
+        font-size:$fontDefault + 6;
+        color: $themeColor;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right:5px;
+      }
+      span{
+        display: inline-block;
+        max-width:170px;
+        vertical-align: middle;
+      }
+    }
+    .hna-tctext {
+     margin-left:10px;
+    }
+    .hna-tctext:hover {
+      color:$themeColor;
+    }
+  }
+  .hna-language,
+  .hna-btnalink,
+  .hna-nav,
+  .hnaui-attention
+  {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+  }
+  .hna-language {
+    width: 70px;
+    font-size:12px;
+    background: none;
+    .hnaui-input-inline{
+       vertical-align:inherit;
+    }
+    input {
+      background: none;
+      border: 0;
+      color: #999;
+      text-align: center;
+      padding-right: 20px;
+      font-size:12px;
+    }
+    .hnaui-form-select .hnaui-edge {
+      right: 0;
+      margin-top: -3px;
+      border-top-color: #999;
+    }
+    .hnaui-form-select dd {
+    }
+    .hnaui-form-select dl {
+      border: none;
+      top:24px;
+      @include border-radius(0);
+      background: #fff;
+      text-align: center;
+      dd.hnaui-this {
+          background: $subColor;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+    }
+
+  }
+}
+
+
+

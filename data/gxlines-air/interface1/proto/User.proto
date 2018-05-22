@@ -1,0 +1,627 @@
+syntax = "proto3";
+
+package um;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.um";
+option java_outer_classname = "UserManageProto";
+
+service UserApi {
+
+    //用户登录
+    rpc login (UserLoginRQ) returns (UserLoginRS) {
+    }
+
+    //用户注册接口
+    rpc registerUser (RegisterUserRQ) returns (UserResutRS) {
+    }
+
+    rpc sendMsg (SendMsgRQ) returns (UserResutRS) {
+    }
+
+    rpc sendMail (SendMailRQ) returns (UserResutRS) {
+    }
+
+    //用户名唯一性校验
+    rpc uniCheckByName (UniCheckByNameRQ) returns (UserResutRS) {
+    }
+
+    //email唯一性校验
+    rpc uniCheckByEmail (UniCheckByEmailRQ) returns (UserResutRS) {
+    }
+
+    //手机号唯一性校验
+    rpc uniCheckByMobile (UniCheckByMobileRQ) returns (UserResutRS) {
+    }
+
+    //登录用户用户名唯一性校验
+    rpc uniCheckByNameForLogin (UniCheckByNameForLoginRQ) returns (UserResutRS) {
+    }
+
+    //登录用户email唯一性校验
+    rpc uniCheckByEmailForLogin (UniCheckByEmailForLoginRQ) returns (UserResutRS) {
+    }
+
+    //登录用户手机号唯一性校验
+    rpc uniCheckByMobileForLogin (UniCheckByMobileForLoginRQ) returns (UserResutRS) {
+    }
+
+    //根据ID查询用户信息
+    rpc getUserInfoById (GetUserInfoByIdRQ) returns (UserInfoRS) {
+    }
+
+    //修改用户信息
+    rpc saveUserInfo (SaveUserInfoRQ) returns (UserResutRS) {
+    }
+
+    //通过用户名查询用户密保问题
+    rpc findUserExtByName (FindUserExtByNameRQ) returns (FindUserExtByNameRS) {
+    }
+
+    //通过用户名查询用户密保问题
+    rpc checkAnswer (CheckAnswerRQ) returns (UserResutRS) {
+    }
+
+    //发送验证码
+    rpc sendCodes (SendCodeRQ) returns (UserResutRS) {
+    }
+
+    //增加乘机人
+    rpc addUserPassenger (AddUserPassengerRQ) returns (UserResutRS) {
+    }
+
+    //删除乘机人
+    rpc deleteUserPassenger (DeleteUserPassengerRQ) returns (UserResutRS) {
+    }
+
+    //修改乘机人接口
+    rpc updateUserPassenger (UpdateUserPassengerRQ) returns (UserResutRS) {
+    }
+
+    //查看乘机人信息列表接口
+    rpc findUserPassenger (FindUserPassengerRQ) returns (FindUserPassengerRS) {
+    }
+
+    //通过手机号找回密码
+    rpc resetMobilePwd (ResetMobilePwdRQ) returns (UserResutRS) {
+    }
+
+    //通过密保找回密码
+    rpc resetNamePwd (ResetNamePwdRQ) returns (UserResutRS) {
+    }
+
+    //修改密码
+    rpc updatePwd (UpdatePwdRQ) returns (UserResutRS) {
+    }
+
+    //查看所有邮寄地址
+    rpc findMailAddresses (FindMailAddressesRQ) returns (FindMailAddressesRS) {
+    }
+
+    //查看单个邮寄地址
+    rpc findMailAddressById (FindMailAddressByIdRQ) returns (FindMailAddressByIdRS) {
+    }
+
+    //添加邮寄地址
+    rpc addMailAddress (AddMailAddressRQ) returns (UserResutRS) {
+    }
+
+    //修改邮寄地址
+    rpc updateMailAddress (UpdateMailAddressRQ) returns (UserResutRS) {
+    }
+
+    //删除邮寄地址
+    rpc deleteMailAddress (DeleteMailAddressRQ) returns (UserResutRS) {
+    }
+
+    //修改密保
+    rpc updateQuestion (UpdateQuestionRQ) returns (UserResutRS) {
+    }
+
+    //绑定邮箱
+    rpc emailBind (EmailBindRQ) returns (UserResutRS) {
+    }
+
+    //修改邮箱
+    rpc updateEmail (UpdateEmailRQ) returns (UserResutRS) {
+    }
+
+    //修改手机号
+    rpc updateMobile (UpdateMobileRQ) returns (UserResutRS) {
+    }
+
+    //航班动态
+    rpc scheduledFlight (ScheduledFlightRQ) returns (ScheduledFlightRS) {
+    }
+
+    //航班动态
+    rpc flightDetail (FlightDetailRQ) returns (ScheduledFlightRS) {
+    }
+    
+    //第三方登录
+    rpc thirdPartysLogin (UserThirdPartyFormRQ) returns (UserLoginRS) {
+    }
+    
+    //第三方登录绑定手机号
+    rpc thirdPartysBindMobile (UserThirdPartyBindMobileRQ) returns (UserLoginRS) {
+    }
+    
+}
+
+message UserLoginRQ {
+    enum LoginType {
+        nlogin = 0;
+        slogin = 1;
+    }
+    LoginType loginType = 2; // “user”，“email”
+    string loginName = 3;
+    string password = 4;
+}
+
+message UserThirdPartyFormRQ{
+   string thirdPartyId = 1;
+   string appName = 2;
+   string loginName = 3;
+}
+
+message UserThirdPartyBindMobileRQ{
+    string mobile = 1;
+    string mobileCode = 2;
+    int64 userId = 3;
+}
+
+message RegisterUserRQ {
+    string name = 1;
+    string lastName = 2;
+    string firstName = 3;
+    string password = 4;
+    string email = 5;
+    int32 sex = 6;
+    string birthday = 7;
+    int32 idType = 8;
+    string idNo = 9;
+    string phone = 10;
+    string mobile = 11;
+    string question = 12;
+    string answer = 13;
+}
+
+
+message SendMsgRQ {
+    int64 templateId = 1;
+    string mobile = 2;
+    string message = 3;
+}
+
+message SendMailRQ {
+    int64 templateId = 1;
+    string to = 2;
+    string cc = 3;
+    string body = 4;
+}
+
+message UniCheckByNameRQ {
+    string name = 1;
+}
+
+message UniCheckByEmailRQ {
+    string email = 1;
+}
+
+message UniCheckByMobileRQ {
+    string mobile = 1;
+}
+
+message UniCheckByNameForLoginRQ {
+    string name = 1;
+    int64 userId = 2;
+}
+
+message UniCheckByEmailForLoginRQ {
+    string email = 1;
+    int64 userId = 2;
+}
+
+message UniCheckByMobileForLoginRQ {
+    string mobile = 1;
+    int64 userId = 2;
+}
+
+message CheckAnswerRQ {
+    int64 userId = 1;
+    string answer = 2;
+}
+
+message GetUserInfoByIdRQ {
+    int64 userId = 1;
+}
+
+
+message SaveUserInfoRQ {
+    int64 id = 1;
+    string name = 2;
+    string lastName = 3;
+    string firstName = 4;
+    string password = 5;
+    string email = 6;
+    int32 sex = 7;
+    string birthday = 8;
+    int32 idType = 9;
+    string idNo = 10;
+    string mobile = 11;
+    string question = 12;
+    string answer = 13;
+    string phone = 14;
+}
+
+
+message AddUserPassengerRQ {
+    int64 userId = 1;
+    int32 countryType = 2;
+    string passType = 3;
+    string firstName = 4;
+    string lastName = 5;
+    int32 idType = 6;
+    string idNo = 7;
+    int32 sex = 8;
+    string birthday = 9;
+    string mobile = 10;
+    string phone = 11;
+    string email = 12;
+    string country = 13;
+    string cardIssueCountry = 14;
+    string cardValidDate = 15;
+}
+
+message DeleteUserPassengerRQ {
+    int64 id = 1;
+}
+
+message UpdateUserPassengerRQ {
+    int64 id = 1;
+    int64 userId = 2;
+    int32 countryType = 3;
+    string passType = 4;
+    string firstName = 5;
+    string lastName = 6;
+    int32 idType = 7;
+    string idNo = 8;
+    string birthday = 9;
+    string mobile = 10;
+    string phone = 11;
+    string email = 12;
+    string country = 13;
+    string cardIssueCountry = 14;
+    string cardValidDate = 15;
+    string version = 16;
+    int32 sex = 17;
+}
+
+message FindUserPassengerRQ {
+    int64 userId = 1;
+    int32 countryType = 2;
+    int32 pageNumber = 3;
+    int32 pageSize = 4;
+}
+
+
+message ResetMobilePwdRQ {
+    string name = 1;
+    string mobile = 2;
+}
+
+message ResetNamePwdRQ {
+    string name = 1;
+    string answer = 2;
+    string newpwd = 3;
+}
+
+message UpdatePwdRQ {
+    int64 userId = 1;
+    string oldpwd = 2;
+    string newpwd = 3;
+}
+
+message ScheduledFlightRQ {
+    string flightNo = 1;
+    string startCityCode = 2;
+    string destCityCode = 3;
+    int32 date = 4;
+}
+
+
+message FlightDetailRQ {
+    string flightNo = 1;
+    string startCityCode = 2;
+    string destCityCode = 3;
+    string date = 4;
+}
+
+message SendCodeRQ {
+    string codeType = 1;
+    string mobile = 2;
+}
+
+
+message FindMailAddressesRQ {
+    int64 userId = 1;
+}
+
+
+message FindMailAddressByIdRQ {
+    int64 id = 1;
+}
+
+message AddMailAddressRQ {
+    int64 userId = 1;
+    string receiveName = 2;
+    string province = 3;
+    string city = 4;
+    string county = 5;
+    string address = 6;
+    string mobile = 7;
+    string phone = 8;
+    string postCode = 9;
+    string email = 10;
+}
+
+
+message UpdateMailAddressRQ {
+    int64 id = 1;
+    int64 userId = 2;
+    string receiveName = 3;
+    string province = 4;
+    string city = 5;
+    string county = 6;
+    string address = 7;
+    string mobile = 8;
+    string phone = 9;
+    string postCode = 10;
+    string email = 11;
+}
+
+message DeleteMailAddressRQ {
+    int64 id = 1;
+}
+
+message UpdateQuestionRQ {
+    int64 userId = 1;
+    string newQuestion = 2;
+    string newAnswer = 3;
+}
+
+message EmailBindRQ {
+    int64 userId = 1;
+    string email = 2;
+}
+
+message UpdateEmailRQ {
+    int64 userId = 1;
+    string oldEmail = 2;
+    string newEmail = 3;
+}
+
+
+message UpdateMobileRQ {
+    int64 userId = 1;
+    string newMobile = 2;
+    string oldMobile = 3;
+    int32 status = 4;
+}
+
+message FindUserExtByNameRQ {
+    string name = 1;
+}
+
+
+message ScheduledFlightRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    message ScheduledFlightInfo {
+        string datop = 1;
+        string datopChn = 2;
+        string datopLocal = 3;
+        string flightNo = 4;
+        int32 legNo = 5;
+        string depStn = 6;
+        string arrStn = 7;
+        string depStnFourCode = 8;
+        string arrStnFourCode = 9;
+        string depStnCn = 10;
+        string arrStnCn = 11;
+        string depCity = 12;
+        string arrCity = 13;
+        string isDomOrInt = 14;
+        string std = 15;
+        string stdHm = 16;
+        string sta = 17;
+        string staHm = 18;
+        string status = 19;
+        string etd = 20;
+        string etdHm = 21;
+        string eta = 22;
+        string etaHm = 23;
+        string atd = 24;
+        string atdHm = 25;
+        string tOff = 26;
+        string tDwn = 27;
+        string ata = 28;
+        string ataHm = 29;
+        string gate = 30;
+        string depBuilding = 31;
+        string arrBuilding = 32;
+        string acType = 33;
+        string ac = 34;
+        string baggage = 35;
+        string probability = 36;
+        string flightAge = 37;
+        string stc = 38;
+        string vipNum = 39;
+        string remark = 40;
+        string delay1Txt = 41;
+        string delay2Txt = 42;
+        string weathers = 43;
+    }
+
+    repeated ScheduledFlightInfo data = 4;
+
+
+}
+
+message FindMailAddressesRS {
+    message MailAddress {
+        int64 id = 1;
+        int64 userId = 2;
+        string receiveName = 3;
+        string province = 4;
+        string city = 5;
+        string county = 6;
+        string address = 7;
+        string mobile = 8;
+        string phone = 9;
+        string postCode = 10;
+        string email = 11;
+    }
+    repeated MailAddress content = 1;
+    bool first = 2;
+    bool last = 3;
+    int32 number = 4;
+    int32 numberOfElements = 5;
+    int32 size = 6;
+    string sort = 7;
+    int32 totalElements = 8;
+    int32 totalPages = 9;
+}
+
+message FindMailAddressByIdRS {
+    message MailAddress {
+        int64 id = 1;
+        int64 userId = 2;
+        string receiveName = 3;
+        string province = 4;
+        string city = 5;
+        string county = 6;
+        string address = 7;
+        string mobile = 8;
+        string phone = 9;
+        string postCode = 10;
+        string email = 11;
+    }
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    MailAddress data = 4;
+}
+
+
+message FindUserExtByNameRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    message UserExt {
+        int32 id = 1;
+        int32 userId = 2;
+        string securityQuestion = 3;
+        string securityAnswer = 4;
+    }
+    UserExt data = 4;
+}
+
+
+message FindUserPassengerRS {
+    bool first = 2;
+    bool last = 3;
+    int32 number = 4;
+    int32 numberOfElements = 5;
+    int32 size = 6;
+    string sort = 7;
+    int32 totalElements = 8;
+    int32 totalPages = 9;
+
+    message UserPassenger {
+        int64 id = 1;
+        int64 userId = 2;
+        string cardNo = 3;
+        int32 countryType = 4;
+        string passType = 5;
+        string firstName = 6;
+        string lastName = 7;
+        int32 sex = 8;
+        string birthday = 9;
+        int32 idType = 10;
+        string idNo = 11;
+        string mobile = 12;
+        string phone = 13;
+        string email = 14;
+        string country = 15;
+        string cardIssueCountry = 16;
+        string cardValidDate = 17;
+        string version = 18;
+    }
+    repeated UserPassenger content = 10;
+
+}
+
+message UserLoginRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+
+    message UserInfoLogin {
+        string userSessionId = 1;
+        int64 profileId = 2;
+        int64 userId = 3;
+        string name = 4;
+        string firstName = 5;
+        string lastName = 6;
+        string email = 7;
+        int32 sex = 8;
+        string birthday = 9;
+        string idType = 10;
+        string idNo = 11; // 证件号
+        string phone = 12;
+        string mobile = 13;
+        int32 state = 14;
+        bool isEmailBind = 15;
+    }
+
+    UserInfoLogin data = 4;
+}
+
+
+message UserInfoRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+
+    message UserInfo {
+        int64 id = 1;
+        string type = 2;
+        string cid = 3;
+        string name = 4;
+        string lastName = 5;
+        string firstName = 6;
+        string email = 7;
+        int32 sex = 8;
+        string birthday = 9;
+        int32 idType = 10;
+        string idNo = 11;
+        string phone = 12;
+        string mobile = 13;
+        int32 state = 14;
+        string question = 15;
+        string answer = 16;
+        string isEmailBind = 17;
+        bool emailBind = 18;
+    }
+
+    UserInfo data = 4;
+}
+
+//统一响应
+message UserResutRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+}

@@ -1,0 +1,95 @@
+.home-block>.content>.container{
+  background:none;
+  padding-top:0;
+  margin-top:18px;
+}
+.hnaui-book-bar{
+  font-size:$fontDefault + 4;
+
+  i.hnaui-icon{
+    color:#FFF;
+  }
+  .hnaui-form-item{
+    margin-bottom:0;
+  }
+  .hnaui-input-block{
+    margin-left:0;
+  }
+  li{
+    width:33.33%;
+    float:left;
+    padding:15px 10px;
+    background: #e9e9e9;
+    &:last-child{
+      @include border-radius(0 0 0 3px);
+    }
+    &.active,&:hover{
+      background: none;
+    }
+    &.active a, &:hover a{
+      color: $themeColor;
+    }
+    a{
+      display: block;
+      text-align:center;
+      cursor: pointer;
+      color:#333;
+    }
+  }
+}
+
+.hnaui-ticket-notice{
+  padding:0 !important;
+  h2{
+    margin-top:-15px !important;
+  }
+}
+.hnaui-module-box{
+  position:relative;
+  h2{
+    position: relative;
+    font-size:$fontDefault + 6;
+    color:$themeColor;
+    padding:15px 0;
+    background: $bodyBg;
+    strong{
+      display: block;
+      color: $themeColor;
+      font-weight:normal;
+    }
+    i,span{
+      display: inline-block;
+      color:#d6d6d6;
+      vertical-align: middle;
+    }
+    span{
+      color:#d6d6d6;
+    }
+    i{
+      font-size:$fontDefault + 48;
+    }
+  }
+
+  .hnaui-content{
+    position:relative;
+  }
+
+}
+
+.delay-load-img{
+  height:inherit;
+  width:100%;
+  background:url("#{$imgUrl}/ajax-loading.gif") center center  no-repeat;
+}
+
+
+.hnaui-nodata-msg{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  text-align: center;
+  line-height:200px;
+  font-size:18px;
+  color:#999;
+}

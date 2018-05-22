@@ -1,0 +1,1954 @@
+[
+  {
+    "city": "阿勒泰",
+    "name": "阿勒泰机场",
+    "code": "AAT",
+    "english": "Altay Airport\r\n",
+    "pinyin": "ALETAI"
+  },
+  {
+    "city": "黔西南",
+    "name": "黔西南兴义机场",
+    "code": "ACX",
+    "english": "QIANXINAN Xingyi Airport\n",
+    "pinyin": "QIANXINAN"
+  },
+  {
+    "city": "百色",
+    "name": "百色巴马机场",
+    "code": "AEB",
+    "english": "Baise Yangtian Airport",
+    "pinyin": "BAISE"
+  },
+  {
+    "city": "安康",
+    "name": "安康五里铺机场",
+    "code": "AKA",
+    "english": "Ankang Wulipu Airport",
+    "pinyin": "ANKANG"
+  },
+  {
+    "city": "阿克苏",
+    "name": "阿克苏机场",
+    "code": "AKU",
+    "english": "Akesu Airport",
+    "pinyin": "Akesu"
+  },
+  {
+    "city": "鞍山",
+    "name": "鞍山腾鳌机场",
+    "code": "AOG",
+    "english": "Anshan Teng'ao Airport",
+    "pinyin": "ANSHAN"
+  },
+  {
+    "city": "安庆",
+    "name": "安庆天柱山机场",
+    "code": "AQG",
+    "english": "ANQING Tianzhushan Airport",
+    "pinyin": "ANQING"
+  },
+  {
+    "city": "安顺",
+    "name": "安顺黄果树机场",
+    "code": "AVA",
+    "english": "Anshun huangguoshu Airport",
+    "pinyin": "ANSHUN"
+  },
+  {
+    "city": "阿拉善左旗",
+    "name": "阿拉善左旗巴彦浩特机场",
+    "code": "AXF",
+    "english": "BAYANHAOTE Airport",
+    "pinyin": "ALASHANZUOQI"
+  },
+  {
+    "city": "包头",
+    "name": "包头二里半机场",
+    "code": "BAV",
+    "english": "Baotou Airport",
+    "pinyin": "Baotou"
+  },
+  {
+    "city": "毕节",
+    "name": "毕节飞雄机场",
+    "code": "BFJ",
+    "english": "Bijie Feixiong Airport",
+    "pinyin": "Bijie"
+  },
+  {
+    "city": "北海",
+    "name": "北海福成机场",
+    "code": "BHY",
+    "english": "BEIHAI Airport",
+    "pinyin": "BEIHAI"
+  },
+  {
+    "city": "荆州",
+    "name": "荆州沙市机场",
+    "code": "SHS",
+    "english": "JINZHOU Shashi Airport",
+    "pinyin": "JINZHOU"
+  },
+  {
+    "city": "中山",
+    "name": "中山三角机场",
+    "code": "ZIS",
+    "english": "ZHONGSHAN Sanjiao Airport",
+    "pinyin": "ZHONGSHAN"
+  },
+  {
+    "city": "临汾",
+    "name": "临汾乔李机场",
+    "code": "LFQ",
+    "english": "LinFen Qiaoli Airport",
+    "pinyin": "LINFEN"
+  },
+  {
+    "city": "鄯善",
+    "name": "鄯善机场",
+    "code": "SXJ",
+    "english": "Shanshan Airport",
+    "pinyin": "SHANSHAN"
+  },
+  {
+    "city": "西沙",
+    "name": "西沙机场",
+    "code": "YXG",
+    "english": "Xisha Airport",
+    "pinyin": "XISHA"
+  },
+  {
+    "city": "承德",
+    "name": "承德普宁机场",
+    "code": "CDE",
+    "english": "Chengde Puning Airport",
+    "pinyin": "CHENGDE"
+  },
+  {
+    "city": "梁平",
+    "name": "梁平机场",
+    "code": "LIA",
+    "english": "Liangping Airport",
+    "pinyin": "LIANGPING"
+  },
+  {
+    "city": "苏州",
+    "name": "苏州机场",
+    "code": "SZV",
+    "english": "Suzhou Airport",
+    "pinyin": "SUZHOU"
+  },
+  {
+    "city": "老河口",
+    "name": "老河口机场",
+    "code": "LHK",
+    "english": "Laohekou Airport",
+    "pinyin": "LAOHEKOU"
+  },
+  {
+    "city": "广汉",
+    "name": "广汉机场",
+    "code": "GHN",
+    "english": "Guanghan Airport",
+    "pinyin": "GUANGHAN"
+  },
+  {
+    "city": "兴城",
+    "name": "辽宁兴城机场",
+    "code": "XEN",
+    "english": "Liaoning Xingcheng Airport",
+    "pinyin": "XINGCHENG"
+  },
+  {
+    "city": "蚌埠",
+    "name": "蚌埠机场",
+    "code": "BFU",
+    "english": "Bengbu Airport",
+    "pinyin": "BENGBU"
+  },
+  {
+    "city": "日照",
+    "name": "日照山字河国际机场",
+    "code": "RIZ",
+    "english": "Rizhao-Shanzihe International Airport",
+    "pinyin": "Rizhao"
+  },
+  {
+    "city": "博尔塔拉",
+    "name": "博乐阿拉山口机场",
+    "code": "BPL",
+    "english": "Bole Airport",
+    "pinyin": "BOERTALA"
+  },
+  {
+    "city": "昌都",
+    "name": "昌都邦达机场",
+    "code": "BPX",
+    "english": "Changdu Bangda Airport",
+    "pinyin": "CHANGDU"
+  },
+  {
+    "city": "隆阳",
+    "name": "保山云瑞机场",
+    "code": "BSD",
+    "english": "BAOSHAN Airport",
+    "pinyin": "LONGYANG"
+  },
+  {
+    "city": "广州",
+    "name": "广州白云国际机场",
+    "code": "CAN",
+    "english": "Guangzhou Baiyun International Airport",
+    "pinyin": "Guangzhou"
+  },
+  {
+    "city": "常德",
+    "name": "常德桃花源机场",
+    "code": "CGD",
+    "english": "Changde Taohuayuan Airport",
+    "pinyin": "Changde"
+  },
+  {
+    "city": "郑州",
+    "name": "郑州新郑国际机场",
+    "code": "CGO",
+    "english": "Zhengzhou Xinzheng International Airport",
+    "pinyin": "Zhengzhou"
+  },
+  {
+    "city": "长春",
+    "name": "长春龙嘉国际机场",
+    "code": "CGQ",
+    "english": "Changchun Longjia Airport",
+    "pinyin": "Changchun"
+  },
+  {
+    "city": "朝阳",
+    "name": "朝阳机场",
+    "code": "CHG",
+    "english": "CHAOYANG Airport",
+    "pinyin": "CHAOYANG"
+  },
+  {
+    "city": "赤峰",
+    "name": "赤峰玉龙机场",
+    "code": "CIF",
+    "english": "CHIFENG Airport",
+    "pinyin": "CHIFENG"
+  },
+  {
+    "city": "长治",
+    "name": "长治王村机场",
+    "code": "CIH",
+    "english": "CHANGZHI, CHINA",
+    "pinyin": "CHANGZHI"
+  },
+  {
+    "city": "重庆",
+    "name": "重庆江北国际机场",
+    "code": "CKG",
+    "english": "Chongqing Jiangbei International Airport",
+    "pinyin": "Chongqing"
+  },
+  {
+    "city": "长海",
+    "name": "长海大长山岛机场",
+    "code": "CNI",
+    "english": "Changhai Dachangshandao Airport",
+    "pinyin": "CHANGHAI"
+  },
+  {
+    "city": "长沙",
+    "name": "长沙黄花国际机场",
+    "code": "CSX",
+    "english": "Changsha Huanghua International Airport",
+    "pinyin": "Changsha"
+  },
+  {
+    "city": "长沙",
+    "name": "长沙黄花国际机场",
+    "code": "HHA",
+    "english": "Changsha Huanghua International Airport",
+    "pinyin": "Changsha"
+  },
+  {
+    "city": "成都",
+    "name": "成都双流国际机场",
+    "code": "CTU",
+    "english": "Chengdu Shuangliu International Airport",
+    "pinyin": "Chengdu"
+  },
+  {
+    "city": "常州",
+    "name": "常州奔牛机场",
+    "code": "CZX",
+    "english": "CHANGZHU, CHINA",
+    "pinyin": "CHANGZHOU"
+  },
+  {
+    "city": "大同",
+    "name": "大同云冈机场",
+    "code": "DAT",
+    "english": "Datong Yungang Airport",
+    "pinyin": "DATONG"
+  },
+  {
+    "city": "达州",
+    "name": "达州河市机场",
+    "code": "DAX",
+    "english": "Dazhou heshi Airport",
+    "pinyin": "DAZHOU"
+  },
+  {
+    "city": "稻城",
+    "name": "稻城亚丁机场",
+    "code": "DCY",
+    "english": "DaoCheng YaDing Airport",
+    "pinyin": "DAOCHENG"
+  },
+  {
+    "city": "丹东",
+    "name": "丹东浪头机场",
+    "code": "DDG",
+    "english": "DANDONG Airport",
+    "pinyin": "DANDONG"
+  },
+  {
+    "city": "东莞",
+    "name": "东莞机场",
+    "code": "DGM",
+    "english": "Dongguan AirPort",
+    "pinyin": "DONGGUAN"
+  },
+  {
+    "city": "迪庆",
+    "name": "迪庆香格里拉机场",
+    "code": "DIG",
+    "english": "Diqing shangri-la Airport",
+    "pinyin": "DIQING"
+  },
+  {
+    "city": "大连",
+    "name": "大连周水子国际机场",
+    "code": "DLC",
+    "english": "Dalian Zhoushuizi International Airport",
+    "pinyin": "Dalian"
+  },
+  {
+    "city": "大理",
+    "name": "大理机场",
+    "code": "DLU",
+    "english": "Dali Airport",
+    "pinyin": "DALI"
+  },
+  {
+    "city": "敦煌",
+    "name": "敦煌机场",
+    "code": "DNH",
+    "english": "DUNHUANG Airport",
+    "pinyin": "DUNHUANG"
+  },
+  {
+    "city": "东营",
+    "name": "东营胜利机场",
+    "code": "DOY",
+    "english": "  DongYing YongAn Airport",
+    "pinyin": "DONGYING"
+  },
+  {
+    "city": "大庆",
+    "name": "大庆萨尔图机场",
+    "code": "DQA",
+    "english": "Daqing Saertu Airport",
+    "pinyin": "DAQING"
+  },
+  {
+    "city": "鄂尔多斯",
+    "name": "鄂尔多斯伊金霍洛机场",
+    "code": "DSN",
+    "english": "Eerduosi Dongsheng Airport",
+    "pinyin": "EERDUOSI"
+  },
+  {
+    "city": "张家界",
+    "name": "张家界荷花国际机场",
+    "code": "DYG",
+    "english": "Zhangjiajie International Airport",
+    "pinyin": "ZHANGJIAJIE"
+  },
+  {
+    "city": "额济纳旗",
+    "name": "额济纳旗桃来机场",
+    "code": "EJN",
+    "english": "ERJINA Airport",
+    "pinyin": "EJINAQI"
+  },
+  {
+    "city": "恩施",
+    "name": "恩施许家坪机场",
+    "code": "ENH",
+    "english": "Enshi Airport",
+    "pinyin": "ENSHI"
+  },
+  {
+    "city": "延安",
+    "name": "延安二十里堡机场",
+    "code": "ENY",
+    "english": "Yanan Ershilibao Airport",
+    "pinyin": "YANAN"
+  },
+  {
+    "city": "二连浩特",
+    "name": "二连浩特赛乌苏机场",
+    "code": "ERL",
+    "english": "Erenhot Saiwusu International Airport",
+    "pinyin": "ERLIANHAOTE"
+  },
+  {
+    "city": "福州",
+    "name": "福州长乐国际机场",
+    "code": "FOC",
+    "english": "Fuzhou Changle International Airport",
+    "pinyin": "Fuzhou"
+  },
+  {
+    "city": "阜阳",
+    "name": "阜阳西关机场",
+    "code": "FUG",
+    "english": "Fuyang Xiguan Airport",
+    "pinyin": "Fuyang"
+  },
+  {
+    "city": "佛山",
+    "name": "佛山机场",
+    "code": "FUO",
+    "english": "Foshan shati Airport",
+    "pinyin": "FUSHAN"
+  },
+  {
+    "city": "富蕴",
+    "name": "富蕴机场",
+    "code": "FYN",
+    "english": "FUYUN Airport",
+    "pinyin": "FUYUN"
+  },
+  {
+    "city": "格尔木",
+    "name": "格尔木机场",
+    "code": "GOQ",
+    "english": "GOLMUD Airport",
+    "pinyin": "GEERMU"
+  },
+  {
+    "city": "甘南",
+    "name": "甘南夏河机场",
+    "code": "GXH",
+    "english": "Gannan Xiahe Airport",
+    "pinyin": "GANNAN"
+  },
+  {
+    "city": "广元",
+    "name": "广元盘龙机场",
+    "code": "GYS",
+    "english": "Guangyuan Panlong Airport",
+    "pinyin": "Guangyuan"
+  },
+  {
+    "city": "固原",
+    "name": "固原六盘山机场",
+    "code": "GYU",
+    "english": "Guyuan Liupanshan Airport",
+    "pinyin": "GUYUAN"
+  },
+  {
+    "city": "海口",
+    "name": "海口美兰国际机场",
+    "code": "HAK",
+    "english": "Haikou Meilan International Airport",
+    "pinyin": "Haikou"
+  },
+  {
+    "city": "邯郸",
+    "name": "邯郸机场",
+    "code": "HDG",
+    "english": "Handan Airport",
+    "pinyin": "Handan"
+  },
+  {
+    "city": "黑河",
+    "name": "黑河机场",
+    "code": "HEK",
+    "english": "HEIHE Airport",
+    "pinyin": "HEIHE"
+  },
+  {
+    "city": "呼和浩特",
+    "name": "呼和浩特白塔国际机场",
+    "code": "HET",
+    "english": "Hohhot Baita International Airport",
+    "pinyin": "Hohhot"
+  },
+  {
+    "city": "合肥",
+    "name": "合肥新桥国际机场",
+    "code": "HFE",
+    "english": "Hefei Xinqiao International Airport",
+    "pinyin": "Hefei"
+  },
+  {
+    "city": "杭州",
+    "name": "杭州萧山国际机场",
+    "code": "HGH",
+    "english": "Hangzhou Xiaoshan Intl Airport",
+    "pinyin": "Hangzhou"
+  },
+  {
+    "city": "淮安",
+    "name": "涟水国际机场",
+    "code": "HIA",
+    "english": "Huaian Lianshui Airport",
+    "pinyin": "Huaian"
+  },
+  {
+    "city": "怀化",
+    "name": "怀化芷江机场",
+    "code": "HJJ",
+    "english": "Huaihua Zhijiang Airport",
+    "pinyin": "Huaihua"
+  },
+  {
+    "city": "香港",
+    "name": "香港国际机场",
+    "code": "HKG",
+    "english": "Hong Kong International Airport",
+    "pinyin": "XIANGGANG"
+  },
+  {
+    "city": "呼伦贝尔",
+    "name": "呼伦贝尔海拉尔机场",
+    "code": "HLD",
+    "english": "Hulunbuir Hailar Airport",
+    "pinyin": "Hailar"
+  },
+  {
+    "city": "乌兰浩特",
+    "name": "乌兰浩特机场",
+    "code": "HLH",
+    "english": "ULANHOT Airport",
+    "pinyin": "WULANHAOTE"
+  },
+  {
+    "city": "五台山",
+    "name": "五台山机场",
+    "code": "WUT",
+    "english": "Wutaishan Airport",
+    "pinyin": "Wutaishan"
+  },
+  {
+    "city": "哈密",
+    "name": "哈密机场",
+    "code": "HMI",
+    "english": "Hami Airport",
+    "pinyin": "Hami"
+  },
+  {
+    "city": "哈尔滨",
+    "name": "哈尔滨太平国际机场",
+    "code": "HRB",
+    "english": "Harbin Taiping International Airport",
+    "pinyin": "Harbin"
+  },
+  {
+    "city": "韶关",
+    "name": "韶关桂头机场",
+    "code": "HSC",
+    "english": "Shaoguan International Airport",
+    "pinyin": "SHAOGUAN"
+  },
+  {
+    "city": "舟山",
+    "name": "舟山普陀山机场",
+    "code": "HSN",
+    "english": "ZhouShan PuTuoShan Airport",
+    "pinyin": "ZHOUSHAN"
+  },
+  {
+    "city": "和田",
+    "name": "和田机场",
+    "code": "HTN",
+    "english": "Hetan Airport",
+    "pinyin": "Hetian"
+  },
+  {
+    "city": "惠州",
+    "name": "惠州平潭机场",
+    "code": "HUZ",
+    "english": "Huizhou Pingtan Airport",
+    "pinyin": "Huizhou"
+  },
+  {
+    "city": "台州",
+    "name": "台州路桥机场",
+    "code": "HYN",
+    "english": "Taizhou Luqiao Airport",
+    "pinyin": "Taizhou"
+  },
+  {
+    "city": "汉中",
+    "name": "汉中西关机场",
+    "code": "HZG",
+    "english": "Hanzhong Airport",
+    "pinyin": "HANZHONG"
+  },
+  {
+    "city": "黎平",
+    "name": "黎平机场",
+    "code": "HZH",
+    "english": "Liping Airport",
+    "pinyin": "LIPING"
+  },
+  {
+    "city": "霍林郭勒",
+    "name": "霍林郭勒机场",
+    "code": "HUO",
+    "english": "Huolingol Airport",
+    "pinyin": "Huolinguole"
+  },
+  {
+    "city": "银川",
+    "name": "银川河东国际机场",
+    "code": "INC",
+    "english": "Yinchuan Hedong Airport",
+    "pinyin": "Yinchuan"
+  },
+  {
+    "city": "且末",
+    "name": "且末机场",
+    "code": "IQM",
+    "english": "QIEMO Airport",
+    "pinyin": "QIEMO"
+  },
+  {
+    "city": "庆阳",
+    "name": "庆阳机场",
+    "code": "IQN",
+    "english": "Qingyang Airport",
+    "pinyin": "QINGYANG"
+  },
+  {
+    "city": "景德镇",
+    "name": "景德镇罗家机场",
+    "code": "JDZ",
+    "english": "Jingdezhen Luojia Airport",
+    "pinyin": "Jingdezhen"
+  },
+  {
+    "city": "大兴安岭",
+    "name": "加格达奇机场",
+    "code": "JGD",
+    "english": "JiaGeDaQi Airport",
+    "pinyin": "DAXINGANLING"
+  },
+  {
+    "city": "嘉峪关",
+    "name": "嘉峪关机场",
+    "code": "JGN",
+    "english": "JIAYUGUAN Airport",
+    "pinyin": "JIAYUGUAN"
+  },
+  {
+    "city": "吉安",
+    "name": "井冈山机场",
+    "code": "JGS",
+    "english": "JINGGANGSHAN Airport",
+    "pinyin": "JIAN"
+  },
+  {
+    "city": "西双版纳",
+    "name": "西双版纳嘎洒国际机场",
+    "code": "JHG",
+    "english": "Xishuangbanna International Airport",
+    "pinyin": "Xishuangbanna"
+  },
+  {
+    "city": "金昌",
+    "name": "金昌金川机场",
+    "code": "JIC",
+    "english": "JinChang JinChuan Airport",
+    "pinyin": "JINCHANG"
+  },
+  {
+    "city": "黔江",
+    "name": "黔江武陵山机场",
+    "code": "JIQ",
+    "english": "Chongqin Qinjiang Zhoubai Airport",
+    "pinyin": "QIANJIANG"
+  },
+  {
+    "city": "九江",
+    "name": "九江庐山机场",
+    "code": "JIU",
+    "english": "Jiujiang Lushan Airport",
+    "pinyin": "JIUJIANG"
+  },
+  {
+    "city": "泉州",
+    "name": "泉州晋江机场",
+    "code": "JJN",
+    "english": "Quanzhou Jinjiang International Airport",
+    "pinyin": "Quanzhou"
+  },
+  {
+    "city": "佳木斯",
+    "name": "佳木斯东郊机场",
+    "code": "JMU",
+    "english": "Jiamusi Airport",
+    "pinyin": "JIAMUSI"
+  },
+  {
+    "city": "济宁",
+    "name": "济宁曲阜机场",
+    "code": "JNG",
+    "english": "Jining Qufu Airport",
+    "pinyin": "Jining"
+  },
+  {
+    "city": "锦州",
+    "name": "锦州小岭子机场",
+    "code": "JNZ",
+    "english": "JINZHOU Airport",
+    "pinyin": "JINZHOU"
+  },
+  {
+    "city": "池州",
+    "name": "池州九华山机场",
+    "code": "JUH",
+    "english": "Chizhou Jiuhuashan Airport",
+    "pinyin": "Chizhou"
+  },
+  {
+    "city": "衢州",
+    "name": "衢州机场",
+    "code": "JUZ",
+    "english": "Quzhou Airport",
+    "pinyin": "QUZHOU"
+  },
+  {
+    "city": "鸡西",
+    "name": "鸡西兴凯湖机场",
+    "code": "JXA",
+    "english": "Jixi Xingkaihu Airport",
+    "pinyin": "JIXI"
+  },
+  {
+    "city": "九寨沟",
+    "name": "九寨黄龙机场",
+    "code": "JZH",
+    "english": "Jiuzhaigou Huanglong Airport",
+    "pinyin": "Jiuzhaigou"
+  },
+  {
+    "city": "库车",
+    "name": "库车龟兹机场",
+    "code": "KCA",
+    "english": "KUQA Airport",
+    "pinyin": "KUCHE"
+  },
+  {
+    "city": "康定",
+    "name": "甘孜康定机场",
+    "code": "KGT",
+    "english": "Kangding Airport",
+    "pinyin": "KANGDING"
+  },
+  {
+    "city": "喀什",
+    "name": "喀什机场",
+    "code": "KHG",
+    "english": "Kashgar Airport",
+    "pinyin": "Kashi"
+  },
+  {
+    "city": "高雄",
+    "name": "高雄国际机场",
+    "code": "KHH",
+    "english": "Kaohsiung International Airport",
+    "pinyin": "GAOXIONG"
+  },
+  {
+    "city": "南昌",
+    "name": "南昌昌北国际机场",
+    "code": "KHN",
+    "english": "Nanchang Changbei International Airport",
+    "pinyin": "Nanchang"
+  },
+  {
+    "city": "凯里",
+    "name": "凯里黄平机场",
+    "code": "KJH",
+    "english": "Kaili Huangping Airport",
+    "pinyin": "Kaili"
+  },
+  {
+    "city": "布尔津",
+    "name": "布尔津喀纳斯机场",
+    "code": "KJI",
+    "english": "Kanas Airport",
+    "pinyin": "BUERJIN"
+  },
+  {
+    "city": "昆明",
+    "name": "昆明长水国际机场",
+    "code": "KMG",
+    "english": "Kunming Changshui International Airport",
+    "pinyin": "Kunming"
+  },
+  {
+    "city": "赣州",
+    "name": "赣州黄金机场",
+    "code": "KOW",
+    "english": "Ganzhou Huangjin Airport",
+    "pinyin": "Ganzhou"
+  },
+  {
+    "city": "库尔勒",
+    "name": "库尔勒机场",
+    "code": "KRL",
+    "english": "Korla Airport",
+    "pinyin": "Korla"
+  },
+  {
+    "city": "克拉玛依",
+    "name": "克拉玛依机场",
+    "code": "KRY",
+    "english": "Karamay Airport",
+    "pinyin": "KELAMAYI"
+  },
+  {
+    "city": "贵阳",
+    "name": "贵阳龙洞堡国际机场",
+    "code": "KWE",
+    "english": "Guiyang Longdongbao International Airport",
+    "pinyin": "Guiyang"
+  },
+  {
+    "city": "桂林",
+    "name": "桂林两江国际机场",
+    "code": "KWL",
+    "english": "Guilin Liangjiang International Airport",
+    "pinyin": "Guilin"
+  },
+  {
+    "city": "连城",
+    "name": "连城冠豸山机场",
+    "code": "LCX",
+    "english": "Liancheng Guanzhishan Airport",
+    "pinyin": "LIANCHENG"
+  },
+  {
+    "city": "伊春",
+    "name": "伊春林都机场",
+    "code": "LDS",
+    "english": "Yichun lindu Airport",
+    "pinyin": "YICHUN"
+  },
+  {
+    "city": "兰州",
+    "name": "兰州中川机场",
+    "code": "LHW",
+    "english": "Lanzhou Zhongchuan International Airport",
+    "pinyin": "Lanzhou"
+  },
+  {
+    "city": "兰州",
+    "name": "兰州中川机场",
+    "code": "ZGC",
+    "english": "Lanzhou Zhongchuan International Airport",
+    "pinyin": "Lanzhou"
+  },
+  {
+    "city": "丽江",
+    "name": "丽江三义机场",
+    "code": "LJG",
+    "english": "Lijiang Sanyi Airport",
+    "pinyin": "Lijiang"
+  },
+  {
+    "city": "黔南",
+    "name": "黔南荔波机场",
+    "code": "LLB",
+    "english": "Libo Airport",
+    "pinyin": "QIANNAN"
+  },
+  {
+    "city": "永州",
+    "name": "永州零陵机场",
+    "code": "LLF",
+    "english": "Yongzhou Lingling Airport",
+    "pinyin": "YONGZHOU"
+  },
+  {
+    "city": "吕梁",
+    "name": "吕梁大武机场",
+    "code": "LLV",
+    "english": "Lvliang Dawu Airport",
+    "pinyin": "Lvliang"
+  },
+  {
+    "city": "临沧",
+    "name": "临沧机场",
+    "code": "LNJ",
+    "english": "Lincang Airport",
+    "pinyin": "LINCANG"
+  },
+  {
+    "city": "德宏",
+    "name": "德宏芒市机场",
+    "code": "LUM",
+    "english": "Dehong Mangshi Airport",
+    "pinyin": "DEHONG"
+  },
+  {
+    "city": "拉萨",
+    "name": "拉萨贡嘎机场",
+    "code": "LXA",
+    "english": "Lhasa Gonggar Internationl Airport",
+    "pinyin": "Lhasa"
+  },
+  {
+    "city": "洛阳",
+    "name": "洛阳北郊机场",
+    "code": "LYA",
+    "english": "Luoyang Beijiao Airport",
+    "pinyin": "Luoyang"
+  },
+  {
+    "city": "连云港",
+    "name": "连云港白塔埠机场",
+    "code": "LYG",
+    "english": "Lianyungang Baitabu Airport",
+    "pinyin": "Lianyungang"
+  },
+  {
+    "city": "临沂",
+    "name": "临沂沭埠岭机场",
+    "code": "LYI",
+    "english": "Linyi Airport",
+    "pinyin": "Linyi"
+  },
+  {
+    "city": "柳州",
+    "name": "柳州白莲机场",
+    "code": "LZH",
+    "english": "Lotus Liuzhou Airport",
+    "pinyin": "LIUZHOU"
+  },
+  {
+    "city": "泸州",
+    "name": "泸州蓝田机场",
+    "code": "LZO",
+    "english": "Luzhou Lantian Airport",
+    "pinyin": "LUZHOU"
+  },
+  {
+    "city": "林芝",
+    "name": "林芝米林机场",
+    "code": "LZY",
+    "english": "Nyingchi(Linzhi Milin Airport)",
+    "pinyin": "LINZHI"
+  },
+  {
+    "city": "牡丹江",
+    "name": "牡丹江海浪机场",
+    "code": "MDG",
+    "english": "Mudanjiang Airport",
+    "pinyin": "MUDANJIANG"
+  },
+  {
+    "city": "澳门",
+    "name": "澳门国际机场",
+    "code": "MFM",
+    "english": "Macao International Airport",
+    "pinyin": "AOMEN"
+  },
+  {
+    "city": "绵阳",
+    "name": "绵阳南郊机场",
+    "code": "MIG",
+    "english": "Mianyang Nanjiao Airport",
+    "pinyin": "Mianyang"
+  },
+  {
+    "city": "梅县",
+    "name": "梅县机场",
+    "code": "MXZ",
+    "english": "Meixian Changgangji Airport",
+    "pinyin": "Meixian"
+  },
+  {
+    "city": "南充",
+    "name": "南充高坪机场",
+    "code": "NAO",
+    "english": "Nanchong Gaoping Airport",
+    "pinyin": "Nanchong"
+  },
+  {
+    "city": "北京南苑",
+    "name": "北京南苑机场",
+    "code": "NAY",
+    "english": "Beijing Nanyuan Airport",
+    "pinyin": "BEIJINGNANYUAN"
+  },
+  {
+    "city": "白山",
+    "name": "长白山机场",
+    "code": "NBS",
+    "english": "Baishan Airport",
+    "pinyin": "BAISHAN"
+  },
+  {
+    "city": "齐齐哈尔",
+    "name": "齐齐哈尔三家子机场",
+    "code": "NDG",
+    "english": "Qiqihar Sanjiazi Airport",
+    "pinyin": "QIQIHAER"
+  },
+  {
+    "city": "宁波",
+    "name": "宁波栎社国际机场",
+    "code": "NGB",
+    "english": "Ningbo Lishe International Airport",
+    "pinyin": "Ningbo"
+  },
+  {
+    "city": "阿里",
+    "name": "阿里昆莎机场",
+    "code": "NGQ",
+    "english": "Ngari Kunsha Airport",
+    "pinyin": "ALI"
+  },
+  {
+    "city": "南京",
+    "name": "南京禄口国际机场",
+    "code": "NKG",
+    "english": "Nanjing Lukou International Airport",
+    "pinyin": "Nanjing"
+  },
+  {
+    "city": "新源",
+    "name": "新源那拉提机场",
+    "code": "NLT",
+    "english": "Nalati Airport",
+    "pinyin": "XINYUAN"
+  },
+  {
+    "city": "南宁",
+    "name": "南宁吴圩国际机场",
+    "code": "NNG",
+    "english": "Nanning Wuxu Airport",
+    "pinyin": "Nanning"
+  },
+  {
+    "city": "南阳",
+    "name": "南阳姜营机场",
+    "code": "NNY",
+    "english": "Nanyang Jiangying Airport",
+    "pinyin": "Nanyang"
+  },
+  {
+    "city": "南通",
+    "name": "南通兴东机场",
+    "code": "NTG",
+    "english": "Nantong Xingdong Airport",
+    "pinyin": "Nantong"
+  },
+  {
+    "city": "满洲里",
+    "name": "满洲里西郊机场",
+    "code": "NZH",
+    "english": "Manzhouli Xijiao Airport",
+    "pinyin": "MANZHOULI"
+  },
+  {
+    "city": "漠河",
+    "name": "漠河古莲机场",
+    "code": "OHE",
+    "english": "Mohe gulian Airport",
+    "pinyin": "MOHE"
+  },
+  {
+    "city": "北京",
+    "name": "北京首都国际机场",
+    "code": "PEK",
+    "english": "Beijing Capital Airport",
+    "pinyin": "BEIJING"
+  },
+  {
+    "city": "上海浦东",
+    "name": "上海浦东国际机场",
+    "code": "PVG",
+    "english": "Shanghai Pudong International Airport",
+    "pinyin": "Shanghai Pudong"
+  },
+  {
+    "city": "上海虹桥",
+    "name": "上海虹桥国际机场",
+    "code": "SHA",
+    "english": "Shanghai Hongqiao International Airport",
+    "pinyin": "Shanghai Hongqiao"
+  },
+  {
+    "city": "攀枝花",
+    "name": "攀枝花保安营机场",
+    "code": "PZI",
+    "english": "  PanZhiHua Baoanying Airport",
+    "pinyin": "PANZHIHUA"
+  },
+  {
+    "city": "阿拉善右旗",
+    "name": "阿拉善右旗巴丹吉林机场",
+    "code": "RHT",
+    "english": "BADANJILIN Airport",
+    "pinyin": "ALASHANYOUQI"
+  },
+  {
+    "city": "日喀则",
+    "name": "日喀则和平机场",
+    "code": "RKZ",
+    "english": "Xigaze Peace Airport",
+    "pinyin": "RIKAZE"
+  },
+  {
+    "city": "巴彦淖尔",
+    "name": "巴彦淖尔天吉泰机场",
+    "code": "RLK",
+    "english": "BAYANNUR Airport",
+    "pinyin": "BAYANNEER"
+  },
+  {
+    "city": "上海虹桥",
+    "name": "上海虹桥国际机场",
+    "code": "SHA",
+    "english": "Shanghai-Hongqiao Intl Airport",
+    "pinyin": "SHANGHAIHONGQIAO"
+  },
+  {
+    "city": "沈阳",
+    "name": "沈阳桃仙国际机场",
+    "code": "SHE",
+    "english": "Shenyang Taoxian International Airport",
+    "pinyin": "Shenyang"
+  },
+  {
+    "city": "秦皇岛",
+    "name": "秦皇岛山海关机场",
+    "code": "SHP",
+    "english": "Qinhuangdao Airport",
+    "pinyin": "QINHUANGDAO"
+  },
+  {
+    "city": "石家庄",
+    "name": "石家庄正定国际机场",
+    "code": "SJW",
+    "english": "Shijiazhuang Zhengding Airport",
+    "pinyin": "Shijiazhuang"
+  },
+  {
+    "city": "沙县",
+    "name": "三明沙县机场",
+    "code": "SQJ",
+    "english": "Sanming Shaxian Airport",
+    "pinyin": "SHAXIAN"
+  },
+  {
+    "city": "遂宁",
+    "name": "遂宁机场",
+    "code": "SUN",
+    "english": "Suining Airport",
+    "pinyin": "SUINING"
+  },
+  {
+    "city": "揭阳",
+    "name": "揭阳潮汕机场",
+    "code": "SWA",
+    "english": "Jieyang Chaoshan Airport",
+    "pinyin": "Jieyang"
+  },
+  {
+    "city": "普洱",
+    "name": "普洱思茅机场",
+    "code": "SYM",
+    "english": "PuEr Airport",
+    "pinyin": "PUER"
+  },
+  {
+    "city": "三亚",
+    "name": "三亚凤凰国际机场",
+    "code": "SYX",
+    "english": "Sanya Fenghuang International Airport",
+    "pinyin": "Sanya"
+  },
+  {
+    "city": "深圳",
+    "name": "深圳宝安国际机场",
+    "code": "SZX",
+    "english": "Shenzhen Baoan International Airport",
+    "pinyin": "Shenzhen"
+  },
+  {
+    "city": "莎车",
+    "name": "莎车机场",
+    "code": "QSZ",
+    "english": "Yarkand Airport",
+    "pinyin": "Shache"
+  },
+  {
+    "city": "青岛",
+    "name": "青岛流亭国际机场",
+    "code": "TAO",
+    "english": "Qingdao Liuting International Airport",
+    "pinyin": "Qingdao"
+  },
+  {
+    "city": "塔城",
+    "name": "塔城机场",
+    "code": "TCG",
+    "english": "TACHENG Airport",
+    "pinyin": "TACHENG"
+  },
+  {
+    "city": "腾冲",
+    "name": "腾冲驼峰机场",
+    "code": "TCZ",
+    "english": "Tengchong Tuofeng Airport",
+    "pinyin": "TENGCHONG"
+  },
+  {
+    "city": "铜仁",
+    "name": "铜仁凤凰机场",
+    "code": "TEN",
+    "english": "Tongren Fenghuang Airport",
+    "pinyin": "Tongren"
+  },
+  {
+    "city": "通辽",
+    "name": "通辽机场",
+    "code": "TGO",
+    "english": "Tongliao Airport",
+    "pinyin": "Tongliao"
+  },
+  {
+    "city": "营口",
+    "name": "兰旗机场",
+    "code": "YKH",
+    "english": "Yingkou Lanqi Airport",
+    "pinyin": "Yingkou"
+  },
+  {
+    "city": "天水",
+    "name": "天水麦积山机场",
+    "code": "THQ",
+    "english": "Tianshui Airport",
+    "pinyin": "TIANSHUI"
+  },
+  {
+    "city": "吐鲁番",
+    "name": "吐鲁番交河机场",
+    "code": "TLQ",
+    "english": "Turpan Jiaohe Airport",
+    "pinyin": "TULUFAN"
+  },
+  {
+    "city": "济南",
+    "name": "济南遥墙国际机场",
+    "code": "TNA",
+    "english": "Jinan Yaoqiang International Airport",
+    "pinyin": "Jinan"
+  },
+  {
+    "city": "通化",
+    "name": "通化三源浦机场",
+    "code": "TNH",
+    "english": "TONGHUA Airport",
+    "pinyin": "TONGHUA"
+  },
+  {
+    "city": "桃园",
+    "name": "桃园国际机场",
+    "code": "TPE",
+    "english": "Taibei Taoyuan International Airport",
+    "pinyin": "TAOYUAN"
+  },
+  {
+    "city": "台北",
+    "name": "台北松山机场",
+    "code": "TSA",
+    "english": "Taipei Songshan Airport",
+    "pinyin": "TAIBEI"
+  },
+  {
+    "city": "天津",
+    "name": "天津滨海国际机场",
+    "code": "TSN",
+    "english": "Tianjin Binhai International Airport",
+    "pinyin": "Tianjin"
+  },
+  {
+    "city": "唐山",
+    "name": "唐山三女河机场",
+    "code": "TVS",
+    "english": "Tangshan Sannvhe Airprort",
+    "pinyin": "Tangshan"
+  },
+  {
+    "city": "黄山",
+    "name": "黄山屯溪机场",
+    "code": "TXN",
+    "english": "Huangshan Airport",
+    "pinyin": "HUANGSHAN"
+  },
+  {
+    "city": "太原",
+    "name": "太原武宿国际机场",
+    "code": "TYN",
+    "english": "Taiyuan Wusu International Airport",
+    "pinyin": "Taiyuan"
+  },
+  {
+    "city": "乌鲁木齐",
+    "name": "乌鲁木齐地窝堡国际机场",
+    "code": "URC",
+    "english": "Urumqi Diwopu International Airport",
+    "pinyin": "Wulumiqi"
+  },
+  {
+    "city": "榆林",
+    "name": "榆林榆阳机场",
+    "code": "UYN",
+    "english": "Yulin Yuyang Airport",
+    "pinyin": "Yulin"
+  },
+  {
+    "city": "潍坊",
+    "name": "潍坊机场",
+    "code": "WEF",
+    "english": "Weifang Nanyuan Airport",
+    "pinyin": "Weifang"
+  },
+  {
+    "city": "威海",
+    "name": "威海国际机场",
+    "code": "WEH",
+    "english": "Weihai International Airport",
+    "pinyin": "WEIHAI"
+  },
+  {
+    "city": "文山",
+    "name": "文山普者黑机场",
+    "code": "WNH",
+    "english": "Wenshan Puzhehei Airport",
+    "pinyin": "Wenshan"
+  },
+  {
+    "city": "温州",
+    "name": "温州龙湾国际机场",
+    "code": "WNZ",
+    "english": "Wenzhou Longwan International Airport",
+    "pinyin": "Wenzhou"
+  },
+  {
+    "city": "乌海",
+    "name": "乌海机场",
+    "code": "WUA",
+    "english": "Wu Hai Airport",
+    "pinyin": "WUHAI"
+  },
+  {
+    "city": "武汉",
+    "name": "武汉天河国际机场",
+    "code": "WUH",
+    "english": "Wuhan Tianhe International Airport",
+    "pinyin": "Wuhan"
+  },
+  {
+    "city": "武夷山",
+    "name": "武夷山机场",
+    "code": "WUS",
+    "english": "WUYISHAN Airport",
+    "pinyin": "WUYISHAN"
+  },
+  {
+    "city": "无锡",
+    "name": "无锡苏南硕放国际机场",
+    "code": "WUX",
+    "english": "WUXI SHOUFANG AIRPORT",
+    "pinyin": "WUXI"
+  },
+  {
+    "city": "梧州",
+    "name": "梧州长洲岛机场",
+    "code": "WUZ",
+    "english": "WUZHOU Changzhoudao Airport",
+    "pinyin": "WUZHOU"
+  },
+  {
+    "city": "万州",
+    "name": "万州五桥机场",
+    "code": "WXN",
+    "english": "Wanzhou Wuqiao Airport",
+    "pinyin": "WANZHOU"
+  },
+  {
+    "city": "襄阳",
+    "name": "襄阳刘集机场",
+    "code": "XFN",
+    "english": "Xiangyang Liuji Airport",
+    "pinyin": "Xiangyang"
+  },
+  {
+    "city": "西昌",
+    "name": "西昌青山机场",
+    "code": "XIC",
+    "english": "Xichang Qingshan Airport",
+    "pinyin": "Xichang"
+  },
+  {
+    "city": "锡林浩特",
+    "name": "锡林浩特机场",
+    "code": "XIL",
+    "english": "XILINHOT Airport",
+    "pinyin": "XILINHAOTE"
+  },
+  {
+    "city": "西安",
+    "name": "西安咸阳国际机场",
+    "code": "XIY",
+    "english": "Xi'an Xianyang International Airport",
+    "pinyin": "Xi'an"
+  },
+  {
+    "city": "厦门",
+    "name": "厦门高崎国际机场",
+    "code": "XMN",
+    "english": "Xiamen Gaoqi International Airport",
+    "pinyin": "Xiamen"
+  },
+  {
+    "city": "西宁",
+    "name": "西宁曹家堡机场",
+    "code": "XNN",
+    "english": "Xining Caojiabao Airport",
+    "pinyin": "Xining"
+  },
+  {
+    "city": "邢台",
+    "name": "邢台褡裢机场",
+    "code": "XNT",
+    "english": "Xingtai airport",
+    "pinyin": "XINGTAI"
+  },
+  {
+    "city": "徐州",
+    "name": "徐州观音机场",
+    "code": "XUZ",
+    "english": "Xuzhou GuanYin Intl Airport",
+    "pinyin": "Xuzhou"
+  },
+  {
+    "city": "宜宾",
+    "name": "宜宾菜坝机场",
+    "code": "YBP",
+    "english": "Yibin Caiba Airport",
+    "pinyin": "YIBIN"
+  },
+  {
+    "city": "运城",
+    "name": "运城机场",
+    "code": "YCU",
+    "english": "Yuncheng Guangong Airport",
+    "pinyin": "YUNCHENG"
+  },
+  {
+    "city": "宜春",
+    "name": "宜春明月山机场",
+    "code": "YIC",
+    "english": "Yichun Mingyue Mountain Airport",
+    "pinyin": "YICHUN"
+  },
+  {
+    "city": "阿尔山",
+    "name": "阿尔山伊尔施机场",
+    "code": "YIE",
+    "english": "AERSHAN YIERSHI AIPPORT",
+    "pinyin": "AERSHAN"
+  },
+  {
+    "city": "宜昌",
+    "name": "宜昌三峡机场",
+    "code": "YIH",
+    "english": "Yichang Sanxia Airport",
+    "pinyin": "Yichang"
+  },
+  {
+    "city": "伊宁",
+    "name": "伊宁机场",
+    "code": "YIN",
+    "english": "Yining Airport",
+    "pinyin": "Yining"
+  },
+  {
+    "city": "义乌",
+    "name": "义乌机场",
+    "code": "YIW",
+    "english": "Yiwu Airport",
+    "pinyin": "YIWU"
+  },
+  {
+    "city": "延边",
+    "name": "延吉朝阳川机场",
+    "code": "YNJ",
+    "english": "Yanji Chaoyangchuan Airport",
+    "pinyin": "YANBIAN"
+  },
+  {
+    "city": "烟台",
+    "name": "烟台莱山国际机场",
+    "code": "YNT",
+    "english": "Yantai Penglai Intl Airport",
+    "pinyin": "Yantai"
+  },
+  {
+    "city": "盐城",
+    "name": "盐城南洋机场",
+    "code": "YNZ",
+    "english": "YanCheng NanYang Airport",
+    "pinyin": "Yancheng"
+  },
+  {
+    "city": "扬州",
+    "name": "扬州泰州机场",
+    "code": "YTY",
+    "english": "Yangzhou Taizhou Airport",
+    "pinyin": "YANGZHOU"
+  },
+  {
+    "city": "玉树",
+    "name": "玉树巴塘机场",
+    "code": "YUS",
+    "english": "Yushu Airport",
+    "pinyin": "YUSHU"
+  },
+  {
+    "city": "张掖",
+    "name": "张掖甘州机场",
+    "code": "YZY",
+    "english": "ZhangYe Ganzhou Airport",
+    "pinyin": "ZHANGYE"
+  },
+  {
+    "city": "昭通",
+    "name": "昭通机场",
+    "code": "ZAT",
+    "english": "Zhaotong Airport",
+    "pinyin": "ZHAOTONG"
+  },
+  {
+    "city": "湛江",
+    "name": "湛江机场",
+    "code": "ZHA",
+    "english": "Zhanjiang Airport",
+    "pinyin": "ZHANJIANG"
+  },
+  {
+    "city": "中卫",
+    "name": "中卫沙坡头机场",
+    "code": "ZHY",
+    "english": "Zhongwei Shapotou Airport",
+    "pinyin": "ZHONGWEI"
+  },
+  {
+    "city": "张家口",
+    "name": "张家口宁远机场",
+    "code": "ZQZ",
+    "english": "Zhangjiakou Ningyuan Airport",
+    "pinyin": "ZHANGJIAKOU"
+  },
+  {
+    "city": "珠海",
+    "name": "珠海金湾机场",
+    "code": "ZUH",
+    "english": "Zhuhai Jinwan International Airport",
+    "pinyin": "Zhuhai"
+  },
+  {
+    "city": "遵义",
+    "name": "遵义新舟机场",
+    "code": "ZYI",
+    "english": "Zunyi Xinzhou Airport",
+    "pinyin": "Zunyi"
+  },
+  {
+    "city": "石河子",
+    "name": "石河子花园机场",
+    "code": "SHF",
+    "english": "Shihezi Huayuan Airport",
+    "pinyin": "SHIHEZI"
+  },
+  {
+    "city": "冲绳",
+    "name": "那霸机场",
+    "code": "OKA",
+    "english": "Naha Airport",
+    "pinyin": "ChongShen",
+    "other": true
+  },
+  {
+    "city": "大阪",
+    "name": "大阪关西国际机场",
+    "code": "KIX",
+    "english": "Kansai International Airport",
+    "pinyin": "DaBan",
+    "other": true,
+    "num": 22
+  },
+  {
+    "city": "东京羽田",
+    "name": "东京羽田国际机场",
+    "code": "HND",
+    "english": "Tokyo International AirportHaneda Airport",
+    "pinyin": "DongJingYuTian",
+    "other": true,
+    "num": 21
+  },
+  {
+    "city": "海参崴",
+    "name": "符拉迪沃斯托克国际机场",
+    "code": "VVO",
+    "english": "Vladivostok Airport",
+    "pinyin": "HaiShenWai",
+    "other": true
+  },
+  {
+    "city": "函馆",
+    "name": "函馆机场",
+    "code": "HKD",
+    "english": "Hakodate Airport ",
+    "pinyin": "HanGuan",
+    "other": true
+  },
+  {
+    "city": "济州",
+    "name": "济州国际机场",
+    "code": "CJU",
+    "english": "Jeju International Airport",
+    "pinyin": "JiZhou",
+    "other": true
+  },
+  {
+    "city": "静冈",
+    "name": "富士山静冈机场",
+    "code": "FSZ",
+    "english": "Moutain Fuji Shizuoka Airport",
+    "pinyin": "JingGang",
+    "other": true
+  },
+  {
+    "city": "伦敦",
+    "name": "盖特维克国际机场",
+    "code": "LGW",
+    "english": "London Gatwick Airport",
+    "pinyin": "LunDun",
+    "other": true,
+    "num": 23
+  },
+  {
+    "city": "莫斯科",
+    "name": "谢列梅特沃国际机场",
+    "code": "SVO",
+    "english": "Sheremetyevo International Airport",
+    "pinyin": "MoSiKe",
+    "other": true
+  },
+  {
+    "city": "普吉岛",
+    "name": "普吉国际机场",
+    "code": "HKT",
+    "english": "Phuket International Airport",
+    "pinyin": "PuJiDao",
+    "other": true
+  },
+  {
+    "city": "首尔",
+    "name": "仁川国际机场",
+    "code": "ICN",
+    "english": "Incheon International Airport",
+    "pinyin": "ShouEr",
+    "other": true,
+    "num": 24
+  },
+  {
+    "city": "台中",
+    "name": "台中清泉岗机场",
+    "code": "RMQ",
+    "english": "Taichung Ching Chuang Kang Airport",
+    "pinyin": "TaiZhong",
+    "other": true
+  },
+  {
+    "city": "乌兰巴托",
+    "name": "成吉思汗国际机场",
+    "code": "ULN",
+    "english": "Chinggis Khaan International Airport",
+    "pinyin": "WuLanBaTuo",
+    "other": true
+  },
+  {
+    "city": "伊尔库茨克",
+    "name": "伊尔库茨克国际机场",
+    "code": "IKT",
+    "english": "Irkutsk International Airport",
+    "pinyin": "YiErKuCiKe",
+    "other": true
+  },
+  {
+    "city": "札幌",
+    "name": "新千岁国际机场",
+    "code": "CTS",
+    "english": "New Chitose Airport",
+    "pinyin": "ZhaHuang",
+    "other": true
+  },
+  {
+    "city": "岘港",
+    "name": "岘港机场",
+    "code": "DAD",
+    "english": "DA NANG AIRPORT",
+    "pinyin": "XianGang",
+    "other": true
+  },
+  {
+    "city": "芽庄",
+    "name": "金兰国际机场",
+    "code": "CXR",
+    "english": "Cam Ranh Airport",
+    "pinyin": "YaZhuang",
+    "other": true
+  },
+  {
+    "city": "奥克兰",
+    "name": "奥克兰机场",
+    "code": "AKL",
+    "english": "Oakland International Airport",
+    "pinyin": "AoKeLan",
+    "other": true,
+    "num": 25
+  },
+  {
+    "city": "名古屋",
+    "name": "名古屋中部国际机场",
+    "code": "NGO",
+    "english": "Central Japan International Airport",
+    "pinyin": "MingGuWu",
+    "other": true
+  },
+  {
+    "city": "北九州",
+    "name": "北九州机场",
+    "code": "KKJ",
+    "english": "Kitakyushu Airport",
+    "pinyin": "BeiJiuZhou",
+    "other": true
+  },
+  {
+    "city": "马尼拉",
+    "name": "马尼拉国际机场",
+    "code": "MNL",
+    "english": "Manila International Airport",
+    "pinyin": "MaNiLa",
+    "other": true
+  },
+  {
+    "city": "酒泉",
+    "name": "酒泉机场",
+    "code": "CHW",
+    "english": "JiuQuan Airport",
+    "pinyin": "JIUQUAN"
+  },
+  {
+    "city": "重庆大足",
+    "name": "重庆大足登云桥机场",
+    "code": "DZU",
+    "english": "ChongQing Dazu Dengyunqiao Airport",
+    "pinyin": "ChongQing DAZu"
+  },
+  {
+    "city": "胡志明",
+    "name": "胡志明新山国际机场",
+    "code": "SGN",
+    "english": "Huzhiming Xinshan International Airport",
+    "pinyin": "HUZHIMING",
+    "other": true
+  },
+  {
+    "city": "务安",
+    "name": "务安国际机场",
+    "code": "MWX",
+    "english": "Wuan International Airport",
+    "pinyin": "WUAN",
+    "other": true
+  },
+  {
+    "city": "金边",
+    "name": "金边国际机场",
+    "code": "PNH",
+    "english": "Jinbian International Airport",
+    "pinyin": "JINBIAN",
+    "other": true
+  },
+  {
+    "city": "安阳",
+    "name": "安阳机场",
+    "code": "AYN",
+    "english": "ANYANG Airport",
+    "pinyin": "ANYANG"
+  },
+  {
+    "city": "吉安",
+    "name": "吉安机场",
+    "code": "KNC",
+    "english": "JIAN Airport",
+    "pinyin": "JIAN"
+  },
+  {
+    "city": "曼谷",
+    "name": "曼谷素万那普国际机场",
+    "code": "BKK",
+    "english": "Mangu Suvarnabhumi Airport",
+    "pinyin": "MANGU",
+    "other": true
+  },
+  {
+    "city": "吉林",
+    "name": "吉林二台子机场",
+    "code": "JIL",
+    "english": "JILIN ERTAIZI Airport",
+    "pinyin": "JILIN"
+  },
+  {
+    "city": "松原",
+    "name": "松原查干湖机场",
+    "code": "YSQ",
+    "english": "SONGYUAN CHAGANHU Airport",
+    "pinyin": "SONGYUAN"
+  },
+  {
+    "city": "十堰",
+    "name": "十堰武当山机场",
+    "code": "WDS",
+    "english": "Shiyan Wudangshan Airport",
+    "pinyin": "Shiyan"
+  },
+  {
+    "city": "六盘水",
+    "name": "六盘水月照机场",
+    "code": "LPF",
+    "english": "LIUPANSHUI YUEZHAO Airport",
+    "pinyin": "LIUPANSHUI"
+  },
+  {
+    "city": "墨尔本",
+    "name": "墨尔本机场",
+    "code": "MEL",
+    "english": "MOERBEN Airport",
+    "pinyin": "MOERBEN",
+    "other": true
+  },
+  {
+    "city": "悉尼",
+    "name": "悉尼机场",
+    "code": "SYD",
+    "english": "Sydney (Kingsford Smith) Airport",
+    "pinyin": "XINI",
+    "other": true
+  },
+  {
+    "city": "扎兰屯",
+    "name": "扎兰屯成吉思汗机场",
+    "code": "NZL",
+    "english": "ZHALANDUN CHENGJISIHAN Airport",
+    "pinyin": "ZHALANDUN"
+  },
+  {
+    "city": "元谋",
+    "name": "元谋机场",
+    "code": "YUA",
+    "english": "YUANMOU Airport",
+    "pinyin": "YUANMOU"
+  },
+  {
+    "city": "衡阳",
+    "name": "衡阳机场",
+    "code": "HNY",
+    "english": "HENGYANG Airport",
+    "pinyin": "HENGYANG"
+  },
+  {
+    "city": "北戴河",
+    "name": "秦皇岛北戴河机场",
+    "code": "BPE",
+    "english": "QINHUANGDAO BEIDAIHE Airport",
+    "pinyin": "BEIDAIHE"
+  },
+  {
+    "city": "吴哥",
+    "name": "暹粒吴哥国际机场",
+    "code": "REP",
+    "english": "WUGE Airport",
+    "pinyin": "WUGE",
+    "other": true
+  },
+  {
+    "city": "新加坡",
+    "name": "新加坡国际机场",
+    "code": "SIN",
+    "english": "Singapore Changi Airport",
+    "pinyin": "Singapore",
+    "other": true
+  },
+  {
+    "city": "九江",
+    "name": "九江庐山机场",
+    "code": "LUZ",
+    "english": "JIUJIANG LUSHAN Airport",
+    "pinyin": "JIUJIANG"
+  },
+  {
+    "city": "芜湖",
+    "name": "芜湖宣城机场",
+    "code": "WHU",
+    "english": "WUHU XUANCHENG Airport",
+    "pinyin": "WUHU"
+  },
+  {
+    "city": "大邱",
+    "name": "大邱国际机场",
+    "code": "TAE",
+    "english": "DAQIU Airport",
+    "pinyin": "DAQIU"
+  },
+  {
+    "city": "博鳌",
+    "name": "琼海博鳌国际机场",
+    "code": "BAR",
+    "english": "QIONGHAI BOAO Airport",
+    "pinyin": "BOAO"
+  },
+  {
+    "city": "邵阳",
+    "name": "邵阳武冈机场",
+    "code": "WGN",
+    "english": "SHAOYANG WUGANG Airport",
+    "pinyin": "SHAOYANG"
+  }
+]

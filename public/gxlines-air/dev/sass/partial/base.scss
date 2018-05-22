@@ -1,0 +1,112 @@
+@import './theme';
+@import './util';
+@import '../partial/hnaui/hnaui';
+@import './animate';
+@import '../partial/public/header';
+@import '../partial/public/footer';
+@import '../partial/public/fixbar-btn-list';
+@import '../partial/widget/tooltip';
+@import '../partial/widget/browser';
+
+html, body {
+  height: 100%;
+}
+body {
+  width: 100%;
+  background-color: $bodyBg;
+  font-size: $fontDefault;
+}
+
+.container {
+  @include box-sizing(content-box);
+}
+//表单风格
+::-webkit-input-placeholder {
+  color: #999 !important;
+  font-size: 12px;
+}
+
+:-moz-placeholder {
+  color: #999  !important;
+  font-size: 12px;
+}
+
+::-moz-placeholder {
+  color: #999  !important;
+  font-size: 12px;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  color: #999  !important;
+  font-size: 12px;
+}
+.home-block {
+  position: relative;
+  min-height: 100%;
+  min-width:1200px;
+  > .content {
+    > .container {
+      position: relative;
+      background: $bodyBg;
+      width:1200px;
+      margin:20px auto;
+    }
+  }
+}
+.row{
+  margin:0 !important;
+}
+.hna-filter-error {
+  border: 1px solid red;
+}
+
+.close-btn {
+  display: inline-block;
+  color: #999;
+  cursor: pointer;
+  pointer-events: auto;
+
+  &:hover {
+    color: $subColor;
+  }
+}
+.slider-load {
+  height: 400px;
+  width: 100%;
+  background: url("#{$imgUrl}/ajax-loading.gif") center center no-repeat;
+}
+
+.a-link{
+  color:blue;
+  cursor: pointer;
+}
+.subcolor{
+  color:$subColor;
+}
+.themecolor{
+  color:$themeColor;
+}
+.yellowcolor{
+  color:$yellowColor;
+}
+.greencolor{
+  color:$greenColor;
+}
+.count-down-time{
+  display: inline-block;
+  margin-right: 6px;
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #000;
+}
+
+//去除display:inline-block间距
+.hnaui-topbar .row ,.header-block .hna-language,.header-block .hna-nav,.header-block .hna-btnalink p,.flexible-item,.hnaui-search-box .hnaui-form-item,.hnaui-city{
+  font-size:0;
+  //-webkit-text-size-adjust:none;
+}
+.hnaui-input-inline,.hnaui-form-label,.hnaui-form-item .hnaui-input-block .hnaui-input, .hnaui-form-item .hnaui-input-block .hnaui-textarea, .hnaui-form-item .hnaui-input-block .hnaui-select,.hnaui-city li,.com-phone{
+  font-size:$fontDefault;
+}

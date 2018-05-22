@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+/*  for ie8  */
+
+@import '../partial/theme';
+
+span.placeholder:hover+input{
+  border-bottom-color:$themeColor !important;
+}
+.hnaui-placeholder{
+  &.hnaui-input-focus,&.hnaui-input-active{
+    .hnaui-input-title{
+      font-size: 12px;
+      top: 4px;
+      bottom: auto;
+      transform:none;
+    }
+  }
+}
+.container_right{
+  .hnaui-placeholder{
+    &.hnaui-input-focus,&.hnaui-input-active{
+      .hnaui-input-title{
+        top:-15px !important;
+      }
+    }
+}
+  .hnaui-change-icon{
+    top:8px !important;
+  }
+}
+.content.login-content{
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://localhost:3000/urumqi-air/air/images/loginbg.jpg',sizingMethod='scale');
+}
+
+.cart-content .cart-loading-content,
+.search-loading .search-loading-content{
+  padding-top: 80px;
+  background: transparent url("#{$imgUrl}/ajax-loading.gif") center center  no-repeat;
+  .hnaui-icon{
+    display: none;
+  }
+}
+
+.hnaui-index-search,.hnaui-book-bar{
+  background: #fff;
+  filter:alpha(opacity=90);
+}
+.hnaui-book-bar{
+  border-bottom:1px solid $border;
+}
+
+
+
+.login-content .hnaui-tab-title{
+  line-height:normal;
+}
+
+.login-content .hnaui-form-item{
+  overflow:visible;
+}
+//航班查询进度
+.flight-step{
+  overflow: hidden;
+}
+//填写乘机人信息input
+.hnaui-placeholder {
+  .hnaui-input {
+    height: 26px;
+    line-height: 26px;
+    margin:25px 40px 0 0;
+  }
+}
+
+//航班查询
+.hnaui-table[hna-skin="line"] th, .hnaui-table[hna-skin="line"] td {
+  border: none;
+  border-top: 1px solid #e2e2e2
+}
+.flight-surplus-info td{
+  border: none !important;
+  border-bottom: 1px solid #e2e2e2 !important;
+}
+
+.hnaui-select-title.hnaui-placeholder .hnaui-input-title{
+  top:-20px;
+}
+
+//航班动态input 样式.placeholder错位
+.hnaui-input-state{
+  position: relative;
+}
+.hnaui-input-state span.placeholder{
+  position: absolute;
+  top:10px;
+  left:10px;
+  z-index:999;
+}
+
+.search-box .hnaui-form-select dl,.passenger-content .hnaui-form-select dl{
+  top: 30px;
+}
+.hnaui-form-select dl,.hnaui-nav-child{
+  border:1px solid #ececec !important;
+}
+
+.passenger-content .hnaui-form-select span.placeholder{
+  position: absolute;
+  color:#999;
+}
+//input
+span.placeholder {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  color: #999;
+  font-size: 12px;
+}
+.hnaui-mobile-next{
+  .placeholder {
+    left:80px;
+  }
+}
+//第4 margin值
+.hnaui-product  .pro-list+.pro-list+.pro-list+.pro-list {
+  margin-right:0 !important;
+}

@@ -1,0 +1,34 @@
+.search-loading, .page-loading ,.price-search-loading{
+  position: absolute;
+  min-height: 400px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  color: #000;
+  cursor: pointer;
+  background: $themePanelBg;
+  @include opacity(.9);
+  .search-loading-content {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    width: 280px;
+    margin-left: -140px;
+    padding:10px;
+    border: none;
+    background-color: transparent;
+    text-align: center;
+    z-index: 1000;
+    color: inherit;
+    font-size:18px;
+    .loading-icon {
+      display: inline-block;
+      margin-right: 10px;
+      font-size: 46px;
+      color: inherit;
+      vertical-align: middle;
+    }
+  }
+}

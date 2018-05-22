@@ -1,0 +1,210 @@
+<div class="hnaui-search-box" id="searchFlightBox">
+    <!--出行类型-->
+    <div class="hnaui-form-item trip-type">
+         <div class="hnaui-input-block">
+             <input type="radio" name="tripType" value="OW" class="trip-type-ow" title="单程"
+                    checked="" hna-filter="tripType">
+             <div class="hnaui-unselect hnaui-form-radio hnaui-form-radioed"><i
+                     class="hnaui-anim hnaui-icon"></i><span>单程</span></div>
+             <input type="radio" name="tripType" value="RT" class="trip-type-rt" title="往返"
+                    hna-filter="tripType">
+             <div class="hnaui-unselect hnaui-form-radio"><i
+                     class="hnaui-anim hnaui-icon"></i><span>往返</span></div>
+             <input type="radio" name="tripType" value="MC" class="trip-type-mc" title="多航段"
+                    hna-filter="tripType">
+             <div class="hnaui-unselect hnaui-form-radio"><i
+                     class="hnaui-anim hnaui-icon"></i><span>多航段</span></div>
+         </div>
+     </div>
+    <!--出发到达城市-->
+    <div class="hnaui-city-change">
+        <!--出发城市-->
+        <div class="hnaui-form-item">
+            <div class="hnaui-input-inline">
+                <label class="hnaui-form-label">出发城市：</label>
+                <input type="text" class="hnaui-input p-city" id="originLocationName"
+                       data-focus="#destinationLocationName"
+                       data-related="#originLocationCode" hna-verify="cityName"
+                       autocomplete="off" maxlength="30">
+                <input type="hidden" id="originLocationCode" value="">
+                <input type="hidden" id="oriIsDomestic" value="Y" name="locationDom">
+            </div>
+        </div>
+        <!--到达城市-->
+        <div class="hnaui-form-item">
+            <div class="hnaui-input-inline">
+                <label class="hnaui-form-label">到达城市：</label>
+                <input type="text" class="hnaui-input p-city" id="destinationLocationName"
+                       data-focus="#goDate" data-related="#destinationLocationCode"
+                       hna-verify="cityName" autocomplete="off" maxlength="30">
+                <input type="hidden" id="destinationLocationCode" value="">
+                <input type="hidden" id="desIsDomestic" value="Y" name="locationDom">
+            </div>
+        </div>
+        <div class="hnaui-change-icon"><span class="change-btn click-btn"><i class=" hnaui-icon hnaui-anim hnaui-anim-rotate hnaui-anim-loop change-btn click-btn">&#xe93e;</i></span></div>
+    </div>
+    <!--出发时间-->
+    <div class="hnaui-form-item">
+        <div class="hnaui-input-inline">
+            <label class="hnaui-form-label">出发日期：</label>
+            <input type="text" id="goDate" hna-verify="date" autocomplete="off"
+                   class="hnaui-input f-date o-date" maxlength="10">
+            <i class="hnaui-icon hnaui-input-icon">&#xe903;</i>
+        </div>
+    </div>
+    <!--到达时间-->
+    <div class="hnaui-form-item">
+        <div class="hnaui-input-inline disabled-date">
+            <label class="hnaui-form-label">返回日期：</label>
+            <input type="text" id="backDate" hna-verify="date" autocomplete="off"
+                   class="hnaui-input f-date o-date" maxlength="10">
+            <i class="hnaui-icon hna-dateicon">&#xe903;</i>
+        </div>
+    </div>
+    <!--舱位-->
+    <div class="hnaui-form-item cabin">
+        <label class="hnaui-form-label">舱位选择：</label>
+        <div class="hnaui-input-inline">
+            <select name="cabinClass" hna-filter="cabinClass">
+                <option value=""></option>
+                <option value="Economy" selected="">经济舱</option>
+                <!--<option value="First">头等/商务</option>-->
+            </select>
+            <div class="hnaui-unselect hnaui-form-select">
+                <div class="hnaui-select-title">
+                    <input type="text" placeholder="请选择" value="经济舱" readonly="" class="hnaui-input hnaui-unselect"><i
+                        class="hnaui-edge"></i>
+                </div>
+                <dl class="hnaui-anim hnaui-anim-upbit">
+                    <dd hna-value="Economy" class="hnaui-this">经济舱</dd>
+                    <!-- <dd hna-value="First" class="">头等/商务</dd> -->
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!--币别-->
+    <!--<div class="hnaui-form-item">-->
+    <!--<label class="hnaui-form-label">币  别：</label>-->
+    <!--<div class="hnaui-input-inline">-->
+    <!--<select name="currencyType" hna-filter="currencyType">-->
+    <!--<option value=""></option>-->
+    <!--<option value="CNY" selected="">CNY人民币</option>-->
+    <!--<option value="USD">USD美元</option>-->
+    <!--</select>-->
+    <!--<div class="hnaui-unselect hnaui-form-select">-->
+    <!--<div class="hnaui-select-title">-->
+    <!--<input type="text" placeholder="请选择" value="CNY人民币" readonly="" class="hnaui-input hnaui-unselect"><i class="hnaui-edge"></i>-->
+    <!--</div>-->
+    <!--<dl class="hnaui-anim hnaui-anim-upbit">-->
+    <!--<dd hna-value="CNY" class="hnaui-this">CNY人民币</dd>-->
+    <!--<dd hna-value="USD" class="">USD美元</dd>-->
+    <!--</dl>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--搜索类型-->
+    <div class="hnaui-form-item flexible-item">
+        <div class="hnaui-input-block">
+            <input type="radio" name="flexible" value="N" class="trip-type-false"
+                   title="必须这天成行" checked="" hna-filter="flexible">
+            <div class="hnaui-unselect hnaui-form-radio hnaui-form-radioed"><i
+                    class="hnaui-anim hnaui-icon"></i><span>必须这天成行</span></div>
+            <input type="radio" name="flexible" value="Y" class="trip-type-true"
+                   title="最优惠票价" hna-filter="flexible">
+            <div class="hnaui-unselect hnaui-form-radio"><i
+                    class="hnaui-anim hnaui-icon"></i><span>最优惠票价</span></div>
+        </div>
+    </div>
+    <!--乘机人类型与数量-->
+    <div class="hnaui-form-item hnaui-select-list">
+        <div class="hnaui-input-inline">
+            <div class="hnaui-icon hnaui-typeicon">&#xe60b;
+                <div class="hnaui-msgbox hnaui-shadow">
+                    <p>成人12岁以上（包含12岁）</p>
+                </div>
+            </div>
+
+            <select name="guestTypeAdt" hna-filter="guestTypes">
+                <option value=""></option>
+                <option value="1" selected="">1成人</option>
+                <option value="2">2成人</option>
+                <option value="3">3成人</option>
+                <option value="4">4成人</option>
+            </select>
+            <div class="hnaui-unselect hnaui-form-select">
+                <div class="hnaui-select-title">
+                    <input type="text" placeholder="请选择" value="1成人" readonly="" class="hnaui-input hnaui-unselect"><i
+                        class="hnaui-edge"></i>
+                </div>
+                <dl class="hnaui-anim hnaui-anim-upbit">
+                    <dd hna-value="1" class="hnaui-this">1成人</dd>
+                    <dd hna-value="2" class="">2成人</dd>
+                    <dd hna-value="3" class="">3成人</dd>
+                    <dd hna-value="4" class="">4成人</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="hnaui-input-inline">
+            <div class="hnaui-icon hnaui-typeicon">&#xe60b;
+                <div class="hnaui-msgbox hnaui-shadow">
+                    <p>暂不支持单独购买儿童票</p>
+                    <p>2岁至12岁（不包含12岁）</p>
+                </div>
+            </div>
+            <select name="guestTypeCnn" hna-filter="guestTypes">
+                <option value=""></option>
+                <option value="0" selected="">0儿童</option>
+                <option value="1">1儿童</option>
+                <option value="2">2儿童</option>
+            </select>
+            <div class="hnaui-unselect hnaui-form-select">
+                <div class="hnaui-select-title">
+                    <input type="text" placeholder="请选择" value="0儿童" readonly="" class="hnaui-input hnaui-unselect"><i
+                        class="hnaui-edge"></i>
+                </div>
+                <dl class="hnaui-anim hnaui-anim-upbit">
+                    <dd hna-value="0" class="hnaui-this">0儿童</dd>
+                    <dd hna-value="1" class="">1儿童</dd>
+                    <dd hna-value="2" class="">2儿童</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="hnaui-input-inline">
+            <div class="hnaui-icon hnaui-typeicon">&#xe60b;
+                <div class="hnaui-msgbox hnaui-shadow">
+                    <p>暂不支持单独购买婴儿票</p>
+                    <p>12天至2岁（不包含2岁）</p>
+                </div>
+            </div>
+
+            <select name="guestTypeInf" hna-filter="guestTypes">
+                <option value=""></option>
+                <option value="0" selected="">0婴儿</option>
+                <option value="1">1婴儿</option>
+            </select>
+            <div class="hnaui-unselect hnaui-form-select">
+                <div class="hnaui-select-title">
+                    <input type="text" placeholder="请选择" value="0婴儿" readonly="" class="hnaui-input hnaui-unselect"><i
+                        class="hnaui-edge"></i>
+                </div>
+                <dl class="hnaui-anim hnaui-anim-upbit">
+                    <dd hna-value="0" class="hnaui-this">0婴儿</dd>
+                    <dd hna-value="1" class="">1婴儿</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    <!--搜索按钮-->
+    <div class="hnaui-form-item">
+        <div class="hnaui-left hnaui-msg-text">
+            <p><a href="{{base.server_host}}/airR/rules?type=passengerService#specialPassenger" target="_blank">特殊旅客</a><em>|</em><a href="{{base.server_host}}/airR/rules?type=passengerService#abnormalFlightServicer" target="_blank">不正常航班服务</a></p>
+            <p><a href="{{base.server_host}}/airR/rules?type=singlePage&singleId=fraudNotice" target="_blank">防诈骗须知</a><em>|</em><a href="{{base.server_host}}/airR/rules?type=passengerService#domestticTransport" target="_blank">国内运输总条件</a></p>
+        </div>
+        <div class="hnaui-search-submit hnaui-right">
+            <div class="hnaui-btn hnaui-btn-theme hnaui-btn-big search-btn click-btn">查询 <i class="hnaui-icon click-btn search-btn">&#xe615;</i></div>
+        </div>
+    </div>
+
+</div>

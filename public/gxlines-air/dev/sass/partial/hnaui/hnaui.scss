@@ -1,0 +1,277 @@
+@import 'hna-reset';
+@import 'hna-basics-class';
+@import 'hna-btn';
+@import 'hna-font';
+@import 'hna-form';
+@import 'hna-nav';
+@import 'hna-tab';
+@import 'hna-progress';
+@import 'hna-scrollbar';
+@import 'hna-collapse';
+@import 'hna-breadcrumb';
+@import 'hna-fixbar';
+@import 'hna-layout';
+@import 'hna-panel';
+
+/** 页面元素 **/
+.hnaui-btn,
+.hnaui-input,
+.hnaui-textarea,
+.hnaui-upload-button,
+.hnaui-select {
+  outline: none;
+  -webkit-transition: border-color .3s cubic-bezier(.65, .05, .35, .5);
+  transition: border-color .3s cubic-bezier(.65, .05, .35, .5);
+  @include box-sizing(border-box !important);
+}
+
+/* 引用 */
+.hnaui-elem-quote {
+  margin-bottom: 10px;
+  padding: 15px;
+  line-height: 22px;
+  border-left: 5px solid #009688;
+  @include border-radius(0 2px 2px 0);
+  background-color: #f2f2f2;
+}
+
+.hnaui-quote-nm {
+  border-color: #e2e2e2;
+  border-style: solid;
+  border-width: 1px;
+  border-left-width: 5px;
+  background: none;
+}
+
+/* 字段集合 */
+.hnaui-elem-field {
+  margin-bottom: 10px;
+  padding: 0;
+  border: 1px solid #e2e2e2;
+}
+
+.hnaui-elem-field legend {
+  margin-left: 20px;
+  padding: 0 10px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.hnaui-field-title {
+  margin: 10px 0 20px;
+  border: none;
+  border-top: 1px solid #e2e2e2;
+}
+
+.hnaui-field-box {
+  padding: 10px 15px;
+}
+
+.hnaui-field-title .hnaui-field-box {
+  padding: 10px 0;
+}
+
+/* 背景颜色 */
+.hnaui-bg-red {
+  background-color: #FF5722;
+}
+
+/*赤*/
+.hnaui-bg-orange {
+  background-color: #F7B824;
+}
+
+/*橙*/
+.hnaui-bg-green {
+  background-color: #009688;
+}
+
+/*绿*/
+.hnaui-bg-cyan {
+  background-color: #2F4056;
+}
+
+/*青*/
+.hnaui-bg-blue {
+  background-color: #1E9FFF;
+}
+
+/*蓝*/
+.hnaui-bg-black {
+  background-color: #393D49;
+}
+
+/*黑*/
+.hnaui-bg-gray {
+  background-color: #eee;
+}
+
+/*灰*/
+
+/* 文字 */
+.hnaui-word-aux {
+  font-size: 12px;
+  color: #999;
+  padding: 0 5px;
+}
+
+/** 动画 **/
+.hnaui-anim {
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.hnaui-anim-loop {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes hnaui-rotate { /* 循环旋转 */
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes hnaui-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hnaui-anim-rotate {
+  -webkit-animation-name: hnaui-rotate;
+  animation-name: hnaui-rotate;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+@-webkit-keyframes hnaui-up { /* 从最底部往上滑入 */
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    opacity: 0.3;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes hnaui-up {
+  from {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0.3;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.hnaui-anim-up {
+  -webkit-animation-name: hnaui-up;
+  animation-name: hnaui-up;
+}
+
+@-webkit-keyframes hnaui-upbit { /* 微微往上滑入 */
+  from {
+    -webkit-transform: translate3d(0, 30px, 0);
+    opacity: 0.3;
+  }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+@keyframes hnaui-upbit {
+  from {
+    transform: translate3d(0, 30px, 0);
+    opacity: 0.3;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+.hnaui-anim-upbit {
+  -webkit-animation-name: hnaui-upbit;
+  animation-name: hnaui-upbit;
+}
+
+@-webkit-keyframes hnaui-scale { /* 放大 */
+  0% {
+    opacity: 0.3;
+    -webkit-transform: scale(.5);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes hnaui-scale {
+  0% {
+    opacity: 0.3;
+    -ms-transform: scale(.5);
+    transform: scale(.5);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.hnaui-anim-scale {
+  -webkit-animation-name: hnaui-scale;
+  animation-name: hnaui-scale
+}
+
+@-webkit-keyframes hnaui-scale-spring { /* 弹簧式放大 */
+  0% {
+    opacity: 0.5;
+    -webkit-transform: scale(.5);
+  }
+  80% {
+    opacity: 0.8;
+    -webkit-transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes hnaui-scale-spring {
+  0% {
+    opacity: 0.5;
+    -ms-transform: scale(.5);
+    transform: scale(.5);
+  }
+  80% {
+    opacity: 0.8;
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.hnaui-anim-scaleSpring {
+  -webkit-animation-name: hnaui-scale-spring;
+  animation-name: hnaui-scale-spring
+}

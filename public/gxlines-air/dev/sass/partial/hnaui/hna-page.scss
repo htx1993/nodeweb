@@ -1,0 +1,142 @@
+/** 分页 **/
+.hnaui-hnapage {
+  display: block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  margin: 10px 0;
+}
+
+.hnaui-hnapage > *:first-child,
+.hnaui-hnapage > *:first-child em {
+  @include border-radius(2px 0 0 2px);
+}
+
+.hnaui-hnapage > *:last-child,
+.hnaui-hnapage > *:last-child em {
+  @include border-radius(0 2px 2px 0);
+}
+
+.hnaui-hnapage span,
+.hnaui-hnapage p,
+.hnaui-hnapage a {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: middle;
+  padding: 4px 8px 6px 8px;
+  background-color: $themeColor;
+  color: #fff;
+  i {
+    position: relative;
+    top: 1px;
+    top: 2px \9;
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+.hnaui-hnapage em {
+  font-style: normal;
+}
+
+.hnaui-hnapage span, .hnaui-hnapage p {
+  color: #999;
+  background: none;
+  border: 0;
+}
+
+.hnaui-hnapage p {
+  padding-right: 0;
+}
+
+.hnaui-hnapage a {
+  text-decoration: none;
+
+}
+
+.hnaui-hnapage .hnaui-hnapage-curr {
+  position: relative;
+}
+
+.hnaui-hnapage .hnaui-hnapage-curr em {
+  position: relative;
+  color: #fff;
+  font-weight: 400;
+}
+
+.hnaui-hnapage .hnaui-hnapage-curr .hnaui-hnapage-em {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+  padding: 1px;
+  width: 100%;
+  height: 100%;
+  background-color: #8735b1;
+}
+
+.hnaui-hnapage-em {
+  @include border-radius(2px);
+}
+
+.hnaui-laypage-prev {
+  padding-left: 5px !important;
+  vertical-align: top;
+}
+
+.hnaui-laypage-next {
+  padding-right: 5px !important;
+  vertical-align: top;
+}
+.hnaui-laypage-next i,.hnaui-laypage-prev i{
+  font-size:12px;
+  pointer-events: none;
+}
+
+.hnaui-hnapage-prev em,
+.hnaui-hnapage-next em {
+  font-family: Sim sun;
+  font-size: 16px
+}
+
+.hnaui-hnapage input, .hnaui-hnapage button {
+  height: 26px;
+  line-height: 26px;
+  border: 1px solid #e2e2e2;
+  vertical-align: middle;
+  background-color: #fff;
+  @include box-sizing(border-box !important);
+}
+
+.hnaui-hnapage input {
+  width: 50px;
+  margin: 0 5px;
+  text-align: center;
+}
+
+.hnaui-hnapage button {
+  margin-left: 5px;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.hna-msgtext {
+  padding: 60px 15px;
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+  line-height: 30px;
+}
+
+.hna-redicon {
+  position: relative;
+  top: 0;
+  font-size: 25px;
+  vertical-align: middle;
+  margin-right: 5px;
+  color: $hnaui-redColor;
+}
+
+.page-loading {
+  min-height: 100px !important;
+}

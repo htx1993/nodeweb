@@ -1,0 +1,81 @@
+/** 表格修饰 **/
+.hnaui-table {
+  width: 100%;
+  background-color: #fff;
+  font-size: $fontDefault;
+  border: solid .5px #e2e2e2;
+  border-width: 0 .5px .5px 0;
+}
+
+.hnaui-table tr {
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+
+.hnaui-table thead tr {
+  background-color: #e6e6e6;
+  //color:$themeColor;
+}
+.hnaui-table thead tr:hover{
+ background: #e6e6e6;
+}
+.hnaui-table th {
+  text-align: left;
+}
+
+.hnaui-table th, .hnaui-table td {
+  padding: 9px 5px;
+  min-height: 20px;
+  line-height: 20px;
+  border:solid .5px #e2e2e2;
+  border-width: .5px 0 0 .5px;
+  word-wrap:break-word;
+}
+.hnaui-table th:last-child{
+  border-right:solid .5px #e2e2e2;
+}
+
+.hnaui-table[hna-even] tr:nth-child(even),
+.hnaui-table tr:hover {
+  background-color: #f8f8f8;
+}
+
+
+.hnaui-table[hna-skin="line"], .hnaui-table[hna-skin="row"] {
+  border: .5px solid #e2e2e2;
+}
+
+.hnaui-table[hna-skin="line"] th, .hnaui-table[hna-skin="line"] td {
+  border: none;
+  border-bottom: .5px solid #e2e2e2
+}
+
+.hnaui-table[hna-skin="row"] th, .hnaui-table[hna-skin="row"] td {
+  border: none;
+  border-right: .5px solid #e2e2e2
+}
+
+.hnaui-table[hna-skin="nob"] th, .hnaui-table[hna-skin="nob"] td {
+  border: none;
+}
+
+.hnaui-table a.hna-purpe {
+  display: inline-block;
+  color: $themeColor;
+  text-decoration: underline;
+  &:hover {
+    color: blue;
+  }
+  i {
+    display: inline-block;
+    font-size: $fontDefault + 4;
+    vertical-align: top;
+    margin-right:5px;
+  }
+}
+
+.hnaui-table-mobile {
+  .td-title {
+    display: none;
+  }
+}

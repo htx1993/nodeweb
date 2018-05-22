@@ -1,0 +1,24 @@
+/** 图标字体 **/
+@font-face {
+  font-family: 'hnaui-icon';
+  src:  url('#{$fontUrl}/hnaui-icon.eot?9l6qz0');
+  src:  url('#{$fontUrl}/hnaui-icon.eot?9l6qz0#iefix') format('embedded-opentype'),
+    url('#{$fontUrl}/hnaui-icon.ttf?9l6qz0') format('truetype'),
+    url('#{$fontUrl}/hnaui-icon.woff?9l6qz0') format('woff'),
+    url('#{$fontUrl}/hnaui-icon.svg?9l6qz0#hnaui-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.hnaui-icon {
+  font-family: "hnaui-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+

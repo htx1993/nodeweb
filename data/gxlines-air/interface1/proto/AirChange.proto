@@ -1,0 +1,162 @@
+syntax = "proto3";
+
+package change;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.air.change";
+
+import "Common.proto";
+
+service AirChange {
+
+    rpc changeSearch (ChangeSearchRQ) returns (ChangeSearchRS) {
+    } // 改期搜索
+
+    rpc changePrice (ChangePriceRQ) returns (ChangePriceRS) {
+    } // 价格计算
+
+    rpc changeSet (ChangeSetRQ) returns (ChangeSetRS) {
+    } // 确认改期
+}
+
+message ChangeSearchRQ {
+    string itemId = 1;
+    repeated OriginDestinationChange originDestinationChanges = 2;
+}
+
+message OriginDestinationChange {
+    string departureDate = 1;
+    string origin = 3;
+    string destination = 4;
+    string originDestinationId = 5;
+}
+
+message ChangeSearchRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    message ItineraryChange {
+        string itemId = 1;
+        repeated OriginDestinationChange originDestinationChange = 2;
+    }
+    ItineraryChange itineraryChange = 4;
+    repeated OriginDestinationGroup originDestination = 5;
+}
+
+message OriginDestinationGroup {
+    string departureDate = 1; // 航班日期
+    string departureAirportCode = 2; // 出发机场三字码
+    string arrivalAirportCode = 4; // 到达机场三字码
+    string originDestinationId = 5;
+    repeated DateGroup departureDateGroup = 6;
+    repeated DateGroup arrivalDateGroup = 7;
+}
+
+message DateGroup {
+    string date = 1;
+    string minPrice = 2;
+    string minPriceCurrency = 3;
+    repeated ChangeItinerary changeItinerary = 4;
+}
+
+message ChangeItinerary {
+    string targetUri = 1;
+    string marketingAirlineCode = 2;
+    string marketingAirlineName = 3;
+    string flightNumber = 4;
+    string departureAirportCode = 5;
+    string departureDate = 6;
+    string departureAirportName = 7;
+    string arrivalAirportCode = 8;
+    string arrivalDate = 9;
+    string arrivalAirportName = 10;
+    string aircraftCode = 11;
+    string aircraftName = 12;
+
+    string bookingClass = 13;
+    string cabinClass = 14;
+    string inventoryStatus = 15;
+    string inventoryQuantity = 16;
+    string baseFare = 17;
+    string baseFareCurrency = 18;
+    string totalFare = 19;
+    string totalFareCurrency = 20;
+    string fareFamilyCode = 21;
+    string fareFamilyName = 22;
+    repeated common.Benefit benefits = 23;
+    repeated TravelerPrice TravelerPrice = 24;
+}
+
+message TravelerPrice {
+    string travelerType = 1;
+    string baseFare = 2;
+    string baseFareCurrency = 3;
+    string totalFare = 4;
+    string totalFareCurrency = 5;
+    int32 quantity = 6;
+}
+
+// 改期价格计算请求对象
+message ChangePriceRQ {
+    string itemUri = 1;
+    repeated OriginDestinationChangePrice originDestinationChange = 2;
+}
+
+message OriginDestinationChangePrice {
+    string sourceUri = 1;
+    string targetUri = 2;
+}
+
+message ChangePriceRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    string totalServiceChargeValue = 4;
+    string totalServiceChargeCurrency = 5;
+    string totalPayNowValue = 6;
+    string totalPayNowValueCurrency = 7;
+    string changeSetUri = 8;
+}
+
+message ChangePrice {
+    string uri = 1;
+    string id = 2;
+    string sourceItemId = 3;
+    repeated Penalty penalty = 4;
+    string baseFare = 5;
+    string baseFareCurrency = 6;
+    string totalFare = 7;
+    string totalFareCurrency = 8;
+    string refundValue = 9;
+    string refundCurrency = 10;
+    string payNowValue = 11;
+    string payNowValueCurrency = 12;
+}
+
+message Penalty {
+    string code = 1;
+    string name = 2;
+    string description = 3;
+    string baseFare = 4;
+    string baseFareCurrency = 5;
+    string totalFare = 6;
+    string totalFareCurrency = 7;
+    repeated common.Taxs tax = 8;
+    repeated common.Taxs fee = 9;
+}
+
+message ChangeSetRQ {
+    string reservationCode = 1;
+    repeated string changeSetRef = 2;
+}
+
+message ChangeSetRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    common.Reservation reservation = 4;
+
+
+}
+
+

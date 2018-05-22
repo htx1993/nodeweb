@@ -1,0 +1,99 @@
+.user-menu {
+  position: relative;
+  background: #fff;
+  .hnaui-nav-tree .hnaui-nav-bar{
+    background: $themeColor;
+  }
+}
+
+.user-menu-content {
+  display: block;
+  position: relative;
+  width: 100%;
+  .user-menu-left, .user-menu-right {
+    color: $themeColor;
+  }
+  .user-menu-left {
+    h1 {
+      padding: 15px;
+      font-size:$fontDefault + 2;
+      i {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 22px;
+        margin-right: 5px;
+      }
+    }
+  }
+  .user-menu-right{
+    background: #fff;
+    padding-bottom:30px;
+    .hnaui-tab-title{
+      background: $border;
+      border:0 !important;
+      li{
+        padding:0 !important;
+        border-right:1px solid #fff;
+        .hnaui-icon{
+          margin-right:5px;
+          display: inline-block;
+          vertical-align: middle;
+        }
+      }
+      a{
+        padding:0 20px;
+      }
+    }
+    .hnaui-this{
+      background: #fff;
+      &:after{
+      border:0 !important;
+    }
+      a{
+        color:$themeColor;
+      }
+    }
+
+  }
+ /* .user-menu-right {
+    width: 150px !important;
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    font-size: 14px;
+    cursor: pointer;
+    background: $themeColor;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    > .hnaui-icon {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left:20px;
+
+    }
+      > .hnaui-icon-rotate{
+        transform: rotate(180deg);
+        -ms-transform: rotate(180deg); !* IE 9 *!
+        -webkit-transform: rotate(180deg); !* Safari and Chrome *!
+      }
+  }*/
+  .hnaui-nav {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 36px;
+    width: 150px !important;
+    .hnaui-icon {
+      display: inline-block;
+      position: relative;
+      top: 3px;
+      margin-right: 10px;
+      font-size: 20px;
+    }
+    .hnaui-nav-item{
+      text-align: left;
+    }
+  }
+}

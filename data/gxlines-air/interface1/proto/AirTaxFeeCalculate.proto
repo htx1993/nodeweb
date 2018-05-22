@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package taxfee;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.air.taxfee";
+
+import "Common.proto";
+
+service AirTaxFeeCalculate {
+    rpc price (AirTaxFeeCalculateRQ) returns (AirTaxFeeCalculateRS) {
+    }
+}
+
+message AirTaxFeeCalculateRQ {
+    repeated string itineraryPriceId = 1;
+}
+
+
+message AirTaxFeeCalculateRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+     common.ShoppingCart shoppingCart = 4;
+}

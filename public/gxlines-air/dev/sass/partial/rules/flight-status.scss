@@ -1,0 +1,229 @@
+.flight-status-content{
+  .hnaui-input-state,.hnaui-mobile-icon,.btn-search,.hnaui-form-label,.input-group,.hnaui-flight-con{
+    display: inline-block;
+  }
+  .hnaui-padded{
+    position: relative;
+  }
+  .hnaui-change-icon{
+  display: inline-block;
+  span{
+    display:block;
+    width:35px;
+    height:35px;
+    line-height:28px;
+    text-align: center;
+
+    color:#fff;
+    background: $themeColor;
+    cursor: pointer;
+    border:3px solid #fff;
+    @include border-radius(50%);
+
+  }
+}
+  .hnaui-flight-con{
+    width:78%;
+  }
+  .hnaui-input-state,.input-group{
+    width:35%;
+    vertical-align: top;
+  }
+  .btn-search{
+    vertical-align: top;
+    margin-top:40px;
+  }
+  .hnaui-mobile-icon{
+    width:10%;
+    .city-icon{
+      display: block;
+      font-size:$fontDefault + 18;
+      line-height: 40px;
+      color:$themeColor;
+    }
+  }
+
+
+  .hnaui-form-item .hnaui-input-inline{
+    margin-left:0;
+  }
+  .hnaui-form-label{
+    text-align: left;
+    padding:10px 0;
+  }
+
+  .container{
+    width: 1170px !important;
+    background: #fff !important;
+    padding:15px !important;
+  }
+  .hnaui-panel-title{
+    position: relative;
+    padding:15px 0;
+  }
+
+  label.control-label {
+    float: left;
+
+    height: 34px;
+    margin-bottom: 5px;
+
+    font-size: 12px;
+    line-height: 34px;
+  }
+
+  .no-data-show{
+    height:200px;
+
+    font-size:18px;
+    line-height:200px;
+    text-align: center;
+  }
+  .query-flight{
+    display:none;
+  }
+  .search-btn-content{
+    margin-top:48px;
+  }
+  .input-disabled{
+    @include opacity(.4);
+    cursor:not-allowed;
+  }
+  .form-group{
+    height:38px;
+    margin-top:10px;
+    line-height:38px;
+  }
+  .mobile-time-icon{
+    display: none;
+  }
+  .hnaui-status-header{
+    background: #ececec;
+     li{
+      font-weight:bold;
+    }
+  }
+  .hnaui-status-list{
+    min-height:200px;
+  }
+  .flight-td{
+    color:blue;
+    cursor:pointer;
+  }
+  .status-arr{
+    color:green;
+  }
+  .status-plan{
+    color:blue;
+  }
+  .status-del{
+    color:red;
+  }
+
+  ul {
+    cursor:pointer;
+    border-bottom:1px solid #e2e2e2;
+    zoom:1;
+    overflow: hidden;
+    &:hover{
+      background: $bodyBg;
+    }
+    li{
+      float:left;
+      width:12.5%;
+      padding:10px 5px;
+      text-align:center;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+      //pc需隐藏
+      &.flight-no,&.dep-city,&.arr-city{
+        display: none;
+      }
+    }
+  }
+}
+//弹出框
+.hnaui-view-flight{
+  .hnaui-flight-status{
+    background:#ececec;
+    li{
+      padding:4px 0;
+      font-size:$fontDefault + 2;
+      color:$themeColor;
+      font-weight:bold;
+    }
+  }
+  .flight-details{
+    padding:10px 0;
+  }
+  .flight-details,.hnaui-flight-status{
+    width:100%;
+    li{
+      float:left;
+      width:33.33%;
+      span,em{
+        display: inline-block;
+        font-style:normal;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      span{
+        width:46%;
+        text-align: right;
+
+      }
+      em{
+        width:8%;
+        text-align: center;
+      }
+      span.text-right{
+        text-align: left;
+        position: relative;
+      }
+
+      &.column-one, &.column-two{
+        text-align: right;
+        padding-left:10px;
+      }
+      &.column-two{
+        text-align: center;
+      }
+      &.column-three{
+        text-align: left;
+        padding-right:10px;
+      }
+    }
+
+  }
+  .hnaui-flight-status{
+    .column-one,.column-three{
+      text-align: center !important;
+    }
+  }
+}
+  .weather-icon{
+    display: inline-block;
+    vertical-align: middle;
+    width:auto !important;
+    margin-right: 5px;
+    font-size: $fontDefault + 8;
+    color:$themeColor;
+
+  }
+
+  .select-info{
+    background:#f8f8f8;
+  }
+.hnaui-layer-content .hnaui-hnaer-content{
+  padding:0 !important;
+}
+
+
+.view-content{
+  text-align: center;
+  .hnaui-icon{
+    display: inline-block;;
+  }
+}

@@ -1,0 +1,122 @@
+$labelW: 120px;
+.p-date + .hnaui-icon {
+  pointer-events: none;
+}
+
+.password_re + .hnaui-icon, .password + .hnaui-icon, .oldPassword + .hnaui-icon {
+  cursor: pointer;
+}
+
+.search-submit {
+  display: block;
+  text-align: center;
+}
+
+.hnaui-adver-panel {
+  vertical-align: top;
+}
+
+.update-setting-panel {
+  .hnaui-adver-panel {
+    margin-top: 10px;
+  }
+}
+
+.hnaui-user-panel {
+  position: relative;
+  margin-bottom: 20px;
+  background: #fff;
+  .hnaui-tab-title{
+    margin-bottom:10px;
+    li{
+      line-height:31px !important;
+      padding:0;
+      margin-right:25px;
+    }
+  }
+  .hnaui-tab {
+    margin: 0 !important;
+  }
+  h1 {
+    padding: 20px 0;
+    font-size: $fontDefault + 4;
+    color: $themeColor;
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 22px;
+      margin-right: 5px;
+    }
+  }
+  .hnaui-add-btn {
+    position: absolute;
+    //left: 15px;
+    bottom: 12px;
+  }
+}
+
+.hnaui-edit-panel {
+  padding-top:0 !important;
+  position: relative;
+  background: #fff;
+  .hna-ad-img{
+    margin-top:60px;
+  }
+
+}
+
+
+
+//用户中心页面，注册页面右边广告
+.hna-ad-img li {
+  margin-bottom: 10px;
+}
+
+.hna-ad-img img {
+  width: 100%;
+}
+
+.hna-register-msg {
+  padding: 15px;
+  background: #fbfbfb;
+  border-bottom: 1px dotted #e7e7e7;
+  h3 {
+    color: $themeColor;
+  }
+  ul {
+    margin-top: 5px;
+  }
+  li {
+    width: 49%;
+    position: relative;
+    display: inline-block;
+    padding-left: 10px;
+    color: #666;
+    line-height: 30px;
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 13px;
+      width: 4px;
+      height: 4px;
+      background: #999;
+    }
+  }
+}
+
+.hna-register-msg .hnaui-left {
+  width: 25%;
+  margin-top: 10px;
+  img {
+    width: 100%;
+  }
+}
+
+.hna-register-msg .hnaui-right {
+  width: 70%;
+  margin-top: 10px;
+  li {
+    width: 100%;
+  }
+}

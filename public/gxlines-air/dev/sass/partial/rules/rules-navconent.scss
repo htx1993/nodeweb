@@ -1,0 +1,126 @@
+
+
+.hnaui-flight-title{
+    display: block;
+    border-bottom: 0 !important;
+  }
+
+  .active{
+    .hnaui-collapse{
+      display: block!important;
+    }
+  }
+ .hnaui-rule-right{
+    .left-navcontent{
+     //height: 100%;
+      width: 100%;
+      ul{
+        border: .5px solid #d0d0d0;
+        @include border-radius(0);
+      }
+      .nav-toggle {
+        display: none;
+        position: absolute;
+        top: 0;
+        right:8px;
+        line-height: 40px;
+        background: #ececec;
+        cursor: pointer;
+        .hnaui-icon {
+          display: inline-block;
+          color: #535353;
+          font-size: $fontDefault + 10;
+          pointer-events: none;
+          @include opacity(.8);
+        }
+        .up {
+          display: block;
+        }
+        .down {
+          display: none;
+        }
+        &.down {
+          .up {
+            display: none;
+          }
+          .down {
+            display: block;
+          }
+        }
+        &:hover {
+          color: #fff;
+         @include opacity(.5);
+        }
+      }
+      }
+
+    }
+.hnaui-rule-right {
+  padding:0;
+  .left-navcontent{
+    width:100%;
+    background-color: #ececec;
+  }
+  .hna-fixed {
+    width:inherit;
+    position: fixed;
+    top:0;
+    z-index: 9999;
+  }
+  .hna-absolute {
+    width: 100%;
+    position: absolute;
+  }
+}
+.brand-item{
+  float:left;
+  width: 45%;
+  text-align: center;
+  &:nth-child(2){
+    float: right;
+  }
+}
+
+.hnaui-error {
+  background: #fff;
+  .hnaui-error-cont {
+    width: 550px;
+    margin: 0 auto;
+    padding:15px 15px;
+    line-height: 30px;
+  }
+  a {
+    color: $darkthemColor;
+  }
+  .hnaui-error-text {
+    padding-left: 90px;
+    font-size: 16px;
+    color: #666;
+
+  }
+  .hnaui-error-tit {
+    position: relative;
+    padding-left: 90px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    h2 {
+      font-size: $fontDefault + 6;
+    }
+    .english-text{
+      font-size: $fontDefault + 6;
+    }
+  }
+  .hnaui-btn {
+    margin-top: 20px;
+    color: #fff;
+  }
+  .hnaui-icon {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    margin-right: 20px;
+    font-size: 65px;
+    color: $themeColor;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package shoppingcart;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.air.shoppingCartinfo";
+
+import "Common.proto";
+
+service ShoppingCartInfo {
+
+    // 获取购物车
+    rpc getShoppingCart (ShoppingCartRQ) returns (ShoppingCartRS) {
+    }
+
+
+}
+
+message ShoppingCartRQ {
+    string shoppingCartId = 1;
+}
+
+message ShoppingCartRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    common.ShoppingCart shoppingCart = 4;
+}

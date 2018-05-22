@@ -1,0 +1,86 @@
+/*支付成功失败页面样式*/
+.container_full{
+  min-height:200px;
+}
+.hnaui-payment-result {
+  background: #fff;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 40px;
+  padding:140px 0;
+  .content-success-text{
+    display: inline-block;
+    background: $bodyBg url("#{$imgUrl}/payment/payicon.png") right center no-repeat;
+    padding:50px 180px 100px 20px;
+    border:1px solid $border;
+    position: relative;
+  }
+  .hnaui-payment-tit {
+    position: relative;
+    margin-bottom: 10px;
+    line-height: 30px;
+    margin-right:20px;
+    display: inline-block;
+    h2 {
+      color: #1ca905;
+      font-size: 28px;
+      font-weight: bold;
+    }
+  }
+
+  .hnaui-payment-text {
+    display: inline-block;
+    font-size: 18px;
+    color: #666;
+  }
+  .order-detail{
+    display: inline-block;
+    text-decoration: underline;
+    color: blue;
+    &:hover{
+      color: #777;
+    }
+  }
+  .hnaui-btn {
+    margin-top: 10px;
+    color: #fff;
+  }
+  .hnaui-icon {
+    margin-right: 20px;
+    font-size: 45px;
+    color: #1ca905;
+    vertical-align: middle;
+  }
+}
+.hnaui-ticket-loading{
+  position: relative;
+  padding: 0!important;
+  .search-loading{
+    min-height: 0;
+  }
+  .search-loading-content{
+    line-height: 60px;
+    .hnaui-icon {
+      display: inline-block !important;
+    }
+  }
+}
+.count-down-text{
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 24px;
+  font-weight: 900;
+  vertical-align: top;
+  color: $darkthemColor
+}
+
+/*支付失败页面*/
+.payment-fail{
+  h2{
+    color: #e60012 !important;
+    .hnaui-icon{
+      color: #e60012 !important;
+      font-weight: 900;
+    }
+  }
+}

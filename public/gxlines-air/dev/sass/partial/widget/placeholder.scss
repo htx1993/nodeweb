@@ -1,0 +1,123 @@
+.hnaui-placeholder {
+  //float: left;
+  position: relative;
+  width: 100%;
+  &:after {
+    background-color: $subColor;
+    bottom: 0;
+    content: '';
+    height: 2px;
+    left: 45%;
+    position: absolute;
+    @include transition(.2s);
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+    width: 10px;
+    z-index: 3;
+  }
+  .hnaui-input-title {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 8px;
+    color: #666;
+    pointer-events: none;
+    height: 20px;
+    line-height: 20px;
+    @include transition(all .5s ease);
+  }
+  .hnaui-input {
+    margin: 15px 40px 0 0;
+    padding:0;
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+    background-color: transparent;
+    @include border-radius(0);
+    color: $subColor;
+    font-weight:bold;
+    font-size:$fontDefault + 2;
+  }
+  .hnaui-input-required {
+    border-bottom-color: red !important;
+  }
+  .hnaui-input-icon {
+    position: absolute;
+    right: 10px;
+    font-size: 20px;
+    pointer-events: none;
+    color: #999;
+    bottom: 6px;
+  }
+  .hnaui-edge {
+    top: auto;
+    bottom: 6px;
+    margin-top: 0;
+  }
+  &.hnaui-input-focus {
+    &:after {
+      left: 0;
+      visibility: visible;
+      width: 100%;
+    }
+  }
+  &.hnaui-input-error {
+    &:after {
+      left: 0;
+      visibility: visible;
+      width: 100%;
+      //background: red;
+    }
+  }
+  &.hnaui-input-focus, &.hnaui-input-active {
+    .hnaui-input-title {
+      //color:$themeColor;
+
+      -webkit-transform: translateY(-114%);
+      -webkit-transform-origin: left;
+
+      -moz-transform: translateY(-114%);
+      -moz-transform-origin: left;
+
+      -ms-transform: translateY(-114%);
+      -ms-transform-origin: left;
+
+      transform: translateY(-114%);
+      transform-origin: left;
+    }
+  }
+  //& + dl.hnaui-anim-upbit {
+  //  top: 52px;
+  //}
+
+  &.hnaui-input-number {
+    padding-left: 24px;
+    padding-right: 28px;
+    .hnaui-input {
+      padding-left: 6px;
+      border-top: 1px solid #999;
+      border-bottom: 1px solid #999;
+      background: #fff;
+    }
+  }
+  .hnaui-number-item {
+    position: absolute;
+    bottom: 2px;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    font-size: 20px;
+    background: #bb9999;
+    padding-top: 1px;
+    border: 1px solid #999;
+  }
+  .hnaui-number-add {
+    right: 4px;
+  }
+  .hnaui-number-sub {
+    left: 0px;
+  }
+}

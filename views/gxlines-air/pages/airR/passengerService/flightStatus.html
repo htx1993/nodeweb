@@ -1,0 +1,74 @@
+{{css base.css}}
+
+<div class="content flight-status-content">
+    <div class="container">
+        <div class="row">
+            <div class="container_full">
+                {{> base/searchLoading}}
+                <div class="hnaui-panel hnaui-shadow hnaui-clear">
+                    <div class="hnaui-panel-title"><i class="hnaui-icon">&#xe615;</i>查询航班动态</div>
+                    <div class="hanui-panel-content query-area">
+                        <form class="hnaui-form  search-flight-status">
+                            <div class="col-md-10 col-lg-10 hnaui-flight-con" >
+                                <div class="hnaui-form-item">
+                                    <div class="hnaui-input-inline">
+                                        <input type="radio" name="type" id="city_query" value="city" title="按城市查询"  hna-filter="searchType" checked>
+                                        <input type="radio" id="flight_query" name="type" value="flight" title="按航班查询" hna-filter="searchType">
+                                    </div>
+                                </div>
+                                <div class="hnaui-form-item hnaui-clear hnaui-form-item-short" id="query-by-city">
+                                    <label class="hnaui-form-label">选择城市</label>
+                                    <div class="col-md-9 col-lg-9 hnaui-padded">
+                                        <div class="col-md-5 col-lg-5 hnaui-input-state">
+                                            <input type="text" class="hnaui-input p-city" name="depCity" id="depCity" data-related="#depCode" placeholder="出发城市">
+                                        </div>
+                                        <input type="hidden" name="depCode" id="depCode">
+                                        <div class="col-md-2 col-lg-2 hnaui-change-icon">
+                                            <span class="change-btn click-btn">换</span>
+                                        </div>
+                                        <div class="col-md-5 col-lg-5 hnaui-input-state">
+                                            <input type="text" class="hnaui-input p-city" name="arrCity" id="arrCity" data-related="#arrCode" placeholder="到达城市">
+                                        </div>
+                                        <input type="hidden" name="arrCode" id="arrCode">
+                                    </div>
+                                </div>
+                                <div class="hnaui-form-item hnaui-clear hnaui-form-item-short" id="query-by-flight" style="display: none;">
+                                    <label class="hnaui-form-label">航班号</label>
+                                    <div class="col-md-9 col-lg-9 hnaui-padded">
+                                        <div class="col-md-12 col-lg-12 hnaui-input-state">
+                                            <input type="text" class="hnaui-input" name="flightNo" id="flight_no"  placeholder="航班号，格式如:GX2519">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="hnaui-form-item hnaui-form-item-short">
+                                    <label class="hnaui-form-label">查询日期</label>
+                                    <div class="input-group col-md-9 col-lg-9 col-sm-12 col-xs-12 hnaui-padded">
+                                        <select name="date">
+                                            <option value="-1">昨天</option>
+                                            <option value="0" selected="">今天</option>
+                                            <option value="1">明天</option>
+                                            <option value="2">后天</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hnaui-btn hnaui-btn-theme hnaui-btn-big click-btn btn-search">搜索航班 <i class="hnaui-icon"></i></div>
+
+                        </form>
+                    </div>
+                </div>
+                <div class="hnaui-panel hnaui-shadow hnaui-clear">
+                    <div class="hanui-panel-content flight-info-content">
+                        <div class="hnaui-status-content">
+                            <div class="hnaui-status-list"></div>
+                            <div class="page-content hnaui-clear"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{js base.jsPageId}}

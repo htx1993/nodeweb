@@ -1,0 +1,526 @@
+.plrb15{
+  padding:0 15px 25px 15px;
+}
+.problem-submeunu{
+  padding:10px 0;
+  li{
+    padding:0 15px;
+    color:#fff;
+  }
+  a{
+    color:#fff;
+  }
+}
+.rules-content{
+  >.container{
+    background: #fff !important;
+    padding:0 !important;
+    margin-top:-60px!important;
+  }
+  .hnaui-breadcrumb{
+    border-bottom:1px solid $themeColor;
+    margin-left:-15px;
+    margin-right:-15px;
+    padding:0 25px 10px 25px;
+    margin-top:-5px;
+  }
+.hnaui-rule-right{
+  width:20%;
+  float:right;
+}
+.hnaui-rule-left{
+  width:80%;
+  float:left;
+  background: #fff;
+  padding:20px 15px;
+  position: relative;
+  .goback-list{
+    text-align: center;
+  }
+
+  .hna-img-center{
+    display:block;
+    position:relative;
+    margin:auto;
+  }
+}
+.hna-info{
+  line-height:30px;
+  color:#666;
+  padding:0 10px;
+  .fl li{
+   float: left;
+    margin: 10px 3% ;
+  }
+  .hna-info-content{
+    .img-fl img{
+      float: right;
+      margin: 10px;
+    }
+    .hnaui-tab{
+      margin:0 !important;
+    }
+    .hnaui-tab-title{
+      padding-bottom:10px;
+      margin-bottom:10px;
+    }
+    .hnaui-tab-title,.hnaui-tab-title li{
+      height:31px;
+      line-height:31px;
+      &.hnaui-this:after{
+        border:none;
+      }
+    }
+
+  }
+  .hnaui-hnapage{
+    line-height:20px;
+  }
+  .page-table{
+    td:nth-child(2n){
+      text-align: right;
+      color:#999;
+    }
+    tbody{
+      tr{
+        border-bottom:.5px dotted #e2e2e2;
+      }
+    }
+    .notice-a{
+      position:relative;
+      padding-left:10px;
+      &:hover{
+        color:$themeColor;
+      }
+      &:after{
+        position:absolute;
+        left:0;
+        top:4px;
+        content:'';
+        width:4px;
+        height:4px;
+        background: $themeColor;
+      }
+    }
+  }
+  h3{
+   font-weight:bold;
+  }
+  .notice-detail{
+  .title{
+    h3,h2{
+      margin:30px 0;
+      font-size:$fontDefault + 8;
+      color:$themeColor;
+      position: relative;
+      text-align: center;
+      font-weight:normal;
+    }
+  h2{
+    text-align: left;
+  }
+  }
+
+  }
+}
+.hnaui-tab-title{
+  height: auto !important;
+  white-space: normal;
+  li{
+     background: $bodyBg;
+     margin:3px;
+    font-size:$fontDefault;
+     &.hnaui-this{
+      background: $themeColor;
+      color:#fff !important;
+    }
+  }
+}
+.child-page{
+  position: relative;
+}
+
+.hnaui-title{
+  position:relative;
+  height:49px;
+  font-size:$fontDefault + 8;
+  color:#FFF;
+  padding:0 20px;
+  line-height:49px;
+  background: $themeColor;
+  text-align: right;
+  .hnaui-icon-menu{
+    display: none;
+  }
+
+}
+.hnaui-collapse{
+  border:0;
+}
+.hnaui-colla-item{
+  border-top:0;
+  @include transition(all .3s ease);
+  .hnaui-item-a{
+    color: #535353;
+  }
+  &:hover{
+    .hnaui-colla-title a,.hnaui-colla-title .hnaui-icon{
+      //color:#fff;
+      font-size:$fontDefault + 4;
+    }
+    background: #d0d0d0;
+  }
+  a{
+    display: block;
+  }
+  .hnaui-colla-title{
+    height:35px;
+    padding-left:15px;
+    color:$themeColor;
+    line-height:35px;
+    font-size:$fontDefault;
+    background: none;
+  }
+  .hnaui-colla-content{
+    border:0;
+    padding:0;
+    background: white;
+    li{
+      position: relative;
+      padding:6px 15px;
+      display: block;
+      .hnaui-item-a{
+        color:#333;
+        @include transition(all .3s ease);
+      }
+      &.current:after,
+      &:after{
+        position:absolute;
+        left:0;
+        top:0;
+        content:'';
+        width:2px;
+        height:37px;
+        background: none;
+      }
+      &:after{
+        background: none;
+      }
+      &:hover{
+        a{
+          font-size:$fontDefault + 4;
+        }
+      }
+    }
+  }
+
+  .hnaui-colla-icon{
+    right:10px;
+    left:auto;
+    color:#535353;
+  }
+}
+h2.nav-active{
+
+}
+.hna-img-w100{
+  width: 100%;
+}
+.NL-i{
+  width: 180px;
+  height: 100px
+}
+.ml20{
+  float: left;
+  margin-right: 20px;
+}
+.m10{
+  margin-top: 10px;
+}
+.nav-active{
+  background: #d0d0d0 !important;
+  a{
+    color:#535353;
+    font-size:$fontDefault + 4;
+  }
+}
+.nav-active2{
+  a{
+    color: $themeColor !important;
+  }
+    font-size: $fontDefault + 4;
+  }
+.ma{
+  margin: 0 auto;
+  display: block;
+}
+.NA_w1{
+  width: 196px;
+}
+.hnaui-show .hnaui-colla-content{
+     display:block;
+}
+.han-noticelist{
+  margin:20px 0;
+  li{
+    padding:10px;
+    position: relative;
+    border-bottom:1px dotted #ccc;
+    a:hover{
+      color:$themeColor;
+    }
+    &:after{
+      content:'';
+      width:5px;
+      height:5px;
+      background: $themeColor;
+      position: absolute;
+      left:0;
+      top:22px;
+    }
+    span{
+      color:#888;
+      position: absolute;
+      right:0;
+      top:13px;
+    }
+  }
+}
+//公告
+
+table.hnaui-table.hnaui-table-mobile {
+  width: 100%;
+}
+.lh-ti{
+  line-height: 22px;
+  text-indent: 26px;
+};
+
+.hnaui-push-right{
+  float: left!important;
+}
+.tr{
+  text-align: right
+}
+.fh_lb{
+  margin: 20px 0;
+   text-align: center;
+  a{
+    color:$subColor;
+    text-decoration: underline;
+  }
+}
+.child-page{
+  min-height: 500px;
+}
+.red{
+  color:red;
+}
+
+.hna-notice-list{
+  .hnaui-table{
+    border:0;
+    thead{
+      display: none;
+    }
+    tr,td{
+      border:0 none ;
+      &:hover{
+        background: none;
+      }
+    }
+
+    td{
+      border-bottom:.5px solid #e2e2e2;
+    }
+  }
+}
+.hnaui-table-titbg{
+  background: $themeColor!important;
+  color: #fff !important;
+  text-align: center!important;
+}
+
+/*航空航班时刻表表格样式*/
+.flightSchedule{
+  .hnaui-table{
+    thead tr th{
+      text-align: center;
+    }
+  }
+}
+
+.NA_NT_c{
+  line-height: 22px;
+  text-indent: 26px;
+  text-align: left !important;
+  margin-top: 10px;
+  color:#666 !important;
+}
+.em{
+  text-indent:2em;
+}
+
+//空中商城
+.mt25{
+  margin-top:25px;
+}
+.rows{
+  margin: auto;
+  margin-top:50px;
+  min-height: 500px;
+  /*  border: 1px solid green; */
+  .imgBox{
+    width: 25%;
+    margin: 0 4%;
+    min-height: 200px;
+    float: left;
+  }
+}
+
+div.desc {
+  padding: 12px;
+  font-size: $fontDefault + 4;
+  text-align: center;
+}
+.cirimg {
+  display: block;
+  margin: 0 auto;
+  width:100%;
+  min-height: 200px;
+  padding:10px;
+  border:2px solid $bodyBg;
+  cursor: pointer;
+  &:hover{
+    border:2px solid $lightthemColor;
+    background: $bodyBg;
+  }
+}
+
+/* 弹窗内容 */
+.hnaui-hnaer-close .hnaui-icon{
+  color:#000;
+}
+.hnaui-hnaer-setwin .hnaui-hnaer-close2{
+  top:0;
+  right:-10px;
+}
+.modal-content {
+  background-color: #fefefe;
+  dt,dd{
+    display: inline-block;
+    vertical-align: top;
+  }
+  dt{
+    width:45%;
+    .modal-img {
+      width:  100%;
+      border:1px solid  $border;
+    }
+  }
+  dd{
+    width:53%;
+    padding:0 20px;
+    h2{
+      color:$themeColor;
+    }
+  }
+}
+}
+.hna-info-content{
+  .hnaui-chapter,.hnaui-section{
+    font-weight: bold;
+    line-height: 50px;
+  }
+  .hnaui-airport{
+    font-size: $fontDefault + 4;
+    color: $themeColor;
+    margin-top: 20px;
+    padding: 10px 0;
+  }
+  p{
+    text-indent: 2em;
+  }
+  .hnaui-table{
+    thead{
+      background: #e6e6e6;
+    }
+    tr,td,th{
+      &:hover{
+        background: none !important;
+      }
+    }
+  }
+  .hnaui-partner-pic{
+    li{
+      float: left ;
+      margin-right: 30px;
+      margin-bottom: 10px;
+    }
+  }
+  .hnaui-friend-link{
+    margin-bottom: 10px;
+    border-bottom: 1px solid #C4C5C5;
+  }
+  .hnaui-percent-img{
+    width: 49%;
+    display: inline-block;
+  }
+  .hnaui-dom-title{
+    font-weight: bold;
+    font-size: $fontDefault + 2;
+  }
+  .hnaui-content-left{
+    text-align: right;
+  }
+  .hnaui-catalog-title{
+    h3{
+      margin-bottom: 10px;
+      font-size: $fontDefault + 6;
+
+    }
+  }
+  .hnaui-back{
+    text-align: center;
+    margin: 20px auto;
+   a.hnaui-back-btn{
+     cursor: pointer;
+     font-weight: bold;
+     font-size: $fontDefault + 4;
+     color: black;
+     &:hover{
+       color: $themeColor;
+     }
+   }
+  }
+  .hnaui-catalog{
+    li{
+      position: relative;
+      padding-left: 20px;
+      height: 31px;
+      line-height: 31px;
+      font-size: $fontDefault + 4;
+      &:after{
+        content: '';
+        position: absolute;
+        left: 0px;
+        top: 12px;
+        width: 5px;
+        height: 5px;
+        background: #e2000c;
+      }
+      a{
+        &:hover{
+          color: $themeColor;
+        }
+      }
+
+    }
+  }
+}
+.notice-detail{
+  .hnaui-single-title{
+    padding-top: 30px;
+  }
+}
+

@@ -1,0 +1,28 @@
+{{css base.css}}
+
+<div class="content flight-select-content">
+    <div class="container">
+        <div class="row">
+            {{> flight/flightState}}
+            <div class="container_right">
+                {{> shoppingCart/cart}}
+            </div>
+            <div class="container_left">
+                
+                <form class="hnaui-form">
+                    <div class="search-info hnaui-shadow hnaui-site-tips hnaui-border-box hnaui-clear"></div>
+                    <div class="search-box hnaui-shadow hnaui-form hnaui-border-box hnaui-clear"></div>
+                    {{> base/searchLoading}}
+                    <div class="search-result"></div>
+                    
+                    
+                </form>
+                <div id="price_trend_panel"></div>
+                <div class="flight-attention-panel"></div>
+                <div class="search-submit hnaui-clear hnaui-push-right"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{js base.jsPageId}}

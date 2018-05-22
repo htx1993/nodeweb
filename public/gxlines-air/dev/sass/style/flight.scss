@@ -1,0 +1,19 @@
+@import '../partial/theme';
+@import '../partial/util';
+
+@import '../partial/widget/flight-city';
+@import '../partial/widget/date-panel';
+@import '../partial/widget/seat-map';
+@import '../partial/widget/placeholder';
+
+@import '../partial/flight/flight-base';
+@import '../partial/flight/flight-state';
+@import '../partial/flight/flight-search-box';
+@import '../partial/shopping/cart';
+
+@import '../partial/flight/searchFlight';
+@import '../partial/flight/flexibleFlight';
+@import '../partial/flight/selectFlight';
+@import '../partial/flight/passenger';
+@import '../partial/flight/product';
+@import '../partial/flight/seat';

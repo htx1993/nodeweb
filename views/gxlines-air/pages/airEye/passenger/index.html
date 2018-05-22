@@ -1,0 +1,21 @@
+{{css base.css}}
+
+<div class="content passenger-content">
+    <div class="container">
+        <div class="row">
+            {{> flight/flightState}}
+            <div class="container_right">
+                {{> shoppingCart/cart}}
+            </div>
+            <div class="container_left">
+                <form class="hnaui-form">
+                    {{> base/searchLoading}}
+                    <div class="search-result hnaui-border-box"></div>
+                    <div class="search-submit hnaui-clear hnaui-push-right"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{js base.jsPageId}}

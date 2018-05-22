@@ -1,0 +1,33 @@
+{{css base.css}}
+
+<div class="content refund-ticket-content">
+
+    <div class="container">
+        <div class="row">
+            <div class="mmb-state">
+                <div class="container">
+                    <div class="row">
+                        <ul class="mmb-step hnaui-clear">
+                            <li class="refund-Tickets-apply">
+                                <a title=" 申请退票" href="javascript:;" onclick="return false;"> 1<span class="m_hide">.  申请退票</span></a>
+                            </li>
+                            <li class="refund-audit">
+                                <a title=" 费用展示" href="javascript:;" onclick="return false;"> 2<span class="m_hide">.  费用展示</span></a>
+                            </li>
+                            <li class="complete-refund">
+                                <a title=" 提交审核" href="javascript:;" onclick="return false;"> 3<span class="m_hide">.  提交审核</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container_full">
+                {{> base/searchLoading}}
+                <div class="search-result hnaui-form"></div>
+                <div class="search-submit hnaui-clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{js base.jsPageId}}

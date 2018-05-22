@@ -1,0 +1,47 @@
+.register-content {
+  .container_full {
+    background: #fff;
+    .hna-mmv {
+      //left: 95px;
+      //width:83%;
+      display: inline-block;
+      left: 20px;
+    }
+  }
+  .greencolor {
+    color: $greenColor;
+  }
+
+  .hnaui-text-color {
+    color: $themeColor;
+  }
+  .hnaui-field-title {
+    border-top: 1px solid $themeColor;
+    margin-top: 40px;
+    legend {
+      margin: 0 auto;
+    }
+  }
+  .hnaui-register-btn {
+    width: 230px;
+  }
+  .hnaui-warning {
+    max-width: 400px;
+  }
+  .search-submit {
+    text-align: center;
+  }
+}
+
+
+
+//注册协议
+.hna-text-content {
+  padding: 20px;
+  line-height: 25px;
+  p {
+    text-indent: 2em;
+  }
+}
+
+

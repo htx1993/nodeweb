@@ -1,0 +1,108 @@
+@import '../widget/search-box';
+
+.search-box {
+  display: none;
+  position: relative;
+  .hnaui-form-item {
+    margin-bottom: 0;
+    padding:0 25px 5px 25px;
+  }
+  .search-box-up {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    margin-top: -10px;
+    font-size: 24px;
+    cursor: pointer;
+    pointer-events: fill;
+  }
+  .radio-type {
+    .hnaui-form-label {
+      padding-left: 8px;
+      color: #999;
+      line-height: 26px;
+    }
+    .hnaui-input-block {
+      height: 38px;
+    }
+  }
+
+
+  .cabin-class {
+    width: 40.5% !important;
+    margin-top: 10px; 
+  }
+  .lang-type {
+    .hnaui-input-inline {
+      width: 100%;
+    }
+  }
+  //单选
+.hnaui-type-choose{
+  padding:20px 0 0 0;
+  .hnaui-form-item{
+    padding-bottom:0;
+  }
+  li{
+    float:left;
+  }
+ .undefined{
+   .hnaui-input-inline {
+     div{
+       background: $bodyBg;
+       padding:0 12px;
+     }
+     .hnaui-form-radioed{
+       background: $themeColor;
+       color:#fff;
+     }
+     .hnaui-icon{
+       display: none;
+     }
+   }
+
+  }
+}
+
+}
+//查询
+.hnaui-site-tips ul li{
+  float:left;
+  width:25%;
+}
+//出发城市与到达城市之间的切换
+
+
+.hnaui-change-icon{
+  position:absolute;
+  right:-42px;
+  top:22px;
+  z-index: 9;
+  width:20px;
+  height:43px;
+  span{
+    display:block;
+    position: absolute;
+    top:0;
+    left:-10px;
+    left:-11px\9;
+    width:35px;
+    height:35px;
+    line-height:28px;
+    text-align: center;
+    color:#fff;
+    background: $themeColor;
+    cursor: pointer;
+    border:3px solid #fff;
+    @include border-radius(50%);
+  }
+}
+.search-btn{
+  .hnaui-icon{
+    margin-left: 10px;
+  }
+}
+.lang-button .hnaui-input-inline {
+  width: 50%;
+  margin-left: 0;
+}

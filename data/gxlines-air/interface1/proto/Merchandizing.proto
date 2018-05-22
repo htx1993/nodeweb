@@ -1,0 +1,146 @@
+syntax = "proto3";
+
+package merchandizing;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.merchandizing";
+option java_outer_classname = "MerchandizingProto";
+
+import "Common.proto";
+
+service Merchandizing {
+
+    //添加Merchandizing
+    rpc queryMerchandizing (QueryMerchandizingRQ) returns (QueryMerchandizingRS) {
+    }
+
+    rpc priceAncillary (PriceAncillaryRQ) returns (PriceAncillaryRS) {
+    }
+
+    rpc addMerchandizing (AddMerchandizingRQ) returns (AddMerchandizingRS) {
+    }
+}
+
+message QueryMerchandizingRQ {
+    string touchpoint = 1;
+    string shoppingCartId = 2;
+    string reservationCode = 3;
+}
+
+message QueryMerchandizingRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    string touchpoint = 4;
+    repeated MerchandizingGroup group = 5;
+}
+
+
+message MerchandizingGroup {
+    string code = 1;
+    message FlightSegment {
+        string id = 1;
+        string marketingAirlineCode = 2;
+        string flightNumber = 3;
+        string flightDate = 4;
+        string departureCode = 5;
+        string arrivalCode = 6;
+        repeated MerchandizingTraveler traveler = 7;
+    }
+    repeated FlightSegment flightSegments = 2;
+    Insurance insurance = 3;
+}
+
+message Insurance {
+  repeated InsuranceSegment insuranceSegments = 1;
+  repeated InsuranceOfferWithTraveller insuranceOfferWithTravellers = 2;
+ }
+
+message InsuranceSegment {
+    string departureDate = 1;
+    string departureAirportCode = 2;
+    string departureAirportName = 3;
+    string arrivalDate = 4;
+    string arrivalAirportCode = 5;
+    string arrivalAirportName = 6;
+}
+
+message InsuranceOfferWithTraveller {
+    string id = 1;
+    string name = 2;
+    string gender = 3;
+    string dateOfBirth = 4;
+    string type = 5;
+    message InsuranceOffer {
+        string insuranceId = 1;
+        string insuranceUri = 2;
+        string startDate = 3;
+        string endDate = 4;
+        string code = 5;
+        string baseFare = 6;
+        string baseFareCurrency = 7;
+        string totalFare = 8;
+        string totalFareCurrency = 9;
+        string name = 10;
+        string description = 11;
+        string status = 12;
+    }
+   InsuranceOffer insuranceOffer =6;
+}
+
+
+message MerchandizingTraveler {
+     string id = 1;
+    string name = 2;
+    string firstName = 3;
+    string lastName = 4;
+    string gender = 5;
+    string dateOfBirth = 6;
+    string type = 7;
+    repeated MerchandizingItem merchandizingItem = 8;
+}
+
+message MerchandizingItem {
+    string priceId = 1;
+    string code = 2;
+    string type = 3;
+    string productType = 4;
+    string productGroup = 5;
+    string name = 6;
+    string longDescription = 7;
+    string amount = 9; // 基础费用
+    string currency = 10;
+    string insuranceStartDate = 11;
+    string insuranceEndDate = 12;
+    
+}
+
+message PriceAncillaryRQ {
+    string shoppingCartId = 1;
+    repeated string merchandizingId = 2;
+}
+
+message PriceAncillaryRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    AncillaryPriceInfo ancillaryPriceInfo = 4;
+}
+
+message AncillaryPriceInfo {
+    repeated common.AncillaryPriceOffer ancillaryPriceOffer = 1;
+}
+
+
+message AddMerchandizingRQ {
+    string reservationCode = 1;
+    repeated string merchandizingId = 2;
+}
+
+message AddMerchandizingRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    common.Reservation reservation = 4;
+}
+

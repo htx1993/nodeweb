@@ -1,0 +1,286 @@
+.hnaui-flight-seat{
+  .icon-seat {
+    display: inline-block;
+    vertical-align: middle;
+    width: 28px;
+    text-align: center;
+    font-size: 28px;
+    pointer-events: none;
+    margin-right:5px;
+  }
+
+  .hnaui-seat-item {
+    position: relative;
+    min-height: 533px;
+    padding: 10px 0;
+    .plane-explain{
+      display: inline-block;
+      width:280px;
+      //background: $bodyBg;
+      vertical-align:top;
+      min-height:inherit;
+      padding-top:80px;
+    }
+    .traveller-seat-info{
+      display: inline-block;
+      /* position: absolute;
+       left: 325px;
+       top: 0;*/
+      width: 320px;
+    }
+    .traveller-seat{
+      width:52px;
+    }
+    .plane-layout{
+      display: inline-block;
+      width:500px;
+      margin-left:30px;
+    }
+    .hnaui-plane {
+      display: block;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 10px;
+      background: rgba(0, 0, 0, 0) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMsAAAOEBAMAAAD9M9gkAAAABGdBTUEAALGPC/xhBQAAAAFzUkdCAK7OHOkAAAAtUExURUxpcdzd3dzd3dzd3dzd3dzd3dzd3dvc3Nzd3cnKyv///97f39fY2PDx8dDR0cHiLb8AAAAJdFJOUwCguxVTNXKL2BcM7o8AAA61SURBVHja7Z3PaxRpGscr6R8xxIPsrrBLEvAQvDiBeFGGXNosewoLEWFgyRzEYUEIQkDmsERBF2bGNYPXpTc9fdZqG9TExHR1h9GLtB0FRXTsmPv2dpi/Ybp+vm91vW/1+771PrX+eL54Ubvr0+/zPvX+rHq/hjFII8VB+rehQaN9fz9r/bAQ/wkdmGzDrG7CY2bbpllZBsdcNXvagsZkajamsgCMGWnbmOoRYMyY6eghMGbexbwFxky6mAow5qaHKYBicjUXE8oB/Zh828WY10Axwz5mHRRzyKOYG6CYWR/zBhQz72NegmKu+pjboJhpH3MXFHPr+e77Z7vvn+9WZgAxme2fiu/+13n3U5HuCrRjculggkbArBYAMUMEcx4QM5wO5lClYe3VrL2GVV0GxMze8VOA7gm0YxbTwQRNmlk9Boi5lBKm2t73/kBirpK6gcRMpoRJJ2iT6aRAWpiUgoaZ9tlnWoAxMdOEMWQsgJmGmQaJuevPbzDTPrhMS6luPqVMy0yTuvkODjPXJpi9AhQm3zCDjsA0N6EwS6YZpAC9tK4XM1ILYcyXMxCYDHVvug3BUQgMXf/hLNCCSWOb6KJ13VsDWupEr9/1suD0j4/OJ6Gc3SkeuJsoIzusctx3siBf75StQgLMFfsn28XJjDPDteZkwWyvoKV76pT8du9SJXs9Y67JrpZWwfsxxS11zCGnPtbtsHBqv2y3BS+celLHLDqX2mDXf5AFmW0nfuqVs+Rh2PXvZ0HOwZSOKGO+cDGc+vezwMWUryljbrkYXv17WfAXB1P8WRnjXn6zHtsGlDddzLoyxv2+1Ylva7p6MC8GtWluoR+qUtxMFRViEPMZYy5Y//Sb9LNSmCf+1+ZWH30ziDK/Uyzd9/rOugylWPJGuyP1YtkaMALJ2JdecwcsKx0pTLF72f2a3ZwOiOBIM2gF5UJm60EhqNDH8Zgxt+mXD1kQtqzbZc/EV03R/y2yIXPC9vtePFxMfOWsuEnTS5ftooJ646mhpsDIYMLDKITMufqWjzkmgsmohMwNm4spHxMYyzxRC5kTtjNNgXGOh6mrUorl++KYVkcZU1wTxySgeF8WwiQXYj5NzK/hK3VAMC3rRqhteLRqNRUxee60rGQdP+e1eN4/LGe+OlEvxs1J+f0ALxCtB38O5qLe3W53XGe4Beoux6w2cFrMsjU1Q2bWrv7rfCM7ziv//QVuyDgxKPkDoiHqtz/xxigX6/EDHeGQdYMflqdK+zQIAWc2xwvbSXbIWt8Hw4cs9QnyY0+tsivoMTNs2Tq7Wo6Sj+SYGCPHriB22JghK1uXDTaGfqovs7QjGjZmyEoPCryx+0bo23N1/jpYKGQnGB876MtKGtM3fD1bZwSjtBFZnmFUY3drxhDFGKdZCdfqGxWyFn9a38dNeCKD8Twj4cpbA+u/NWVIYXpxj3LWlgfUvzUVP31jrJ3kxrdj25zcROztIoph3UAl6jrzzQjl25hFHP5KUGZlh7kayr7/wzclG8Neqc2sRK4VJPV8p78L+8ZQxBhGpMXuesXJ7vS3++fj1/FiMZEGwS/OYieugeFh+GuO/RxnvdzI7QhTxDC9hidcHOcWOxlKsxK/cw3WWAeuoPZxHs/4S+9iFAoTP0IKc0rL4R4xPmISmD5OLwmGqZiVB1DEMeE86A1PZiUoEhhjbic0pqMwgxZ06LHv4LX6pW0aQ4Z4rcuGOKY0eEtgpUkNHUf8v3SnDBnMsYEfzo37JXhMGvfSpsCa3oQMxsj/SHWBV7zudEY7xl7BCxZw7A24Yjn+tqS39CQw9k6j36jZc5ry4CSjFqgkNp/stPbmOkvNkiDF2wWT2ePqdT/eKCo38UR0+20p1E6Jlad1VHplep7ccYl2hz8MzGLqmAIghrSzawuAmLF0MIc7oWUBKJFeYw2QYgx3wqsPUJhmKpigD/QXOWBEljkeQ2LIoG4zHcwGJIYsczyExJB51Doo5tbAWZQWfSE86EykCamBjbKWZIcCyfo10F6N9Gug3Y1hfN1JozTBekgJtLEhi3tdwJENtbgnNoNQa9HoJ7vWpuBD5swhgW6d0zt9G6kgYYssIcNk20pTZo9GVSd3ZPZoEt+YsGFj7+3oDhtnb0dz2LL1ouzWltKNGfeUKkRbFtGWxvqPe9rhiLbCxD5Aoq048/EPb+jqeeJ398uaRoaDHrrTNGrPD8A81YMZavbth/Tdq5ombsMhTPdBoW+vQdM0lN6+Lzs71OHNR01zd7Lm0AvYt15P2ux7QEEDhg6YP8ihNtE0YcZCAfOz/EKwO6y3NAePwruHwWMCmjBuCrQiPVhuvK4zBeyEPqj/gfE/c9YLfQmd3T6wfmBPNLJ/7IF0daDj1//O/b9Tv1uFnbujUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFQqFQ+hS1RoZQtl482ITHzDb7z6oC0Yrmt2HYct/E6ELXzkjSk+fFNNZJ4W3s4F2cp8AY7w3mLjDmVipvFvvvygPngP/KD/DL5cG7OLBP9Qfv4oAeY0BOM9lM47YBPmKCvPYHei4HeVOulMbdCXw0C3khD/TN/1w6GPLeH2ijRt77Az3SaDgdDHnvD/Qoi1npM7qUtJgOZl7y/DRFLX1SmCvpYCYQgxjEIAYxiEEMYhCDGGhMhjpU+zs4DG2N2QKb44Y8WMpgi0PhQ6cgjjWz1X/oFMxpcBFr1LWj0PUPkAUpWSP/zat/MyrPIHtUhzXytlumGgNjulkwqsMaubNgMKyxaYPsL3VYIxft9QzfGjuwe6cNsv+hzRq54V2WthR3ZLcFTW3WyCYPU9FmjfyaU/9+FmiyRn7NqX8/CzRZI7+OWqOHbNI1WSO/aVA3ZMPaq1l7DYviaLJG3qMuGUkBG60H0x6AMd9pcZI1B+nOx4qptvfdP7AYZt18tJiUgvaxZVrUGlkwaEmtkQVTIKk1siAmqTWyYNCSWiMLpkBSa2RhTDJrZHFMImtk0RRIaI0sgUlijRwanDPGAjQmgTWyRN0ksUaWwqhbI8thlK2RZVIggS/u/wHTP78BwgjUDWIozL51o03XzS+rjbYihmmN7PZne8fPGZNUplVta+QGFyNvjewUxbVGpkpTsTuuM1abjVGwRrZnZJ41MlUht51vZMfbbIy8NbJZDayRqanOK2+McrHBxkhbI1eJNXKbdARvgxA07uiwRm5S1shtkgJvgu+d+pcOa+Q/kY/kaiyMMarDGnmUxpC6eU1hdFgjU5gMhaEeHhzVYY0cwpD75mEIk9waOYQhddOHSWyNLFaaxNbInLqJYBJaI3Mw6xFMMmvkEIa0AgxMImtkCmNQKcDCJLFG5mDuMT+hbo0cwpC6YWPUrZHpizwbjFG1RuZgfuZhFK2RpTFq1sj0RW4KYZSskTmYazEYFWtkFYyCNbLaNhFaIzMwaI2M1shim09ojYzWyEkxBUAMWiMrb7mjNbKU0Bo5EQatkcWF1sgKQmtkBaE1snw/gNbIskJrZGmhNbJ8yNAaOUFbhtbI0tN0tEaWn9SgNbLCLB2tkaUXatAaWTKh0RoZhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAqFEhZ6FssLPYvlhZ7FCkLPYnmhZ7H6bYOexQp3J3oWKzQC6Fms0tagZ7FCk4aexeJCz2LEIAYxiEEMYhCDGMSgZ7GU0LNYWuhZnKz+dWfBRev6Aqv+w1mgw7N4i1n/dBbkdXgWO5sokfqns2BWh2exs54xxzbscbPgijbPYt5pcE4WvNDmWRx3Gpwmz+KN2NPgtHkWb3Dq388CTZ7FG7z697JAk2fxZj3+mDZNnsVWJ/78tK4ezItBBhtNLRavgkIMYj5jTNSzWFBJPYsFldSzWFQJPYuFlcyzWC5syp7FEmFL4lksoSSexTJhS+BZLBc2Zc9iubApexZLSd2zWE7KnsWSUvUsVoodYj5JzK/hK3VAMC3rRqhteLRqNRUxee60rGQdP2dMhOz6Ml+dqBfj5qT8foAXiJbrWVzsOxL4DLdA8p7FtoGZ51nc6T9HOTvOK7+0Z3GxFHgWNyOnQmcu1mUPdueErEs8i7cZZ1yf5czmJD2LqQOOaYdG8mNPrerwLKYW53JMDMtyVd6z2GBj6Kf6dHgWc8bu4YcHk3sWczB9w9fEnsVimMSexYKYpJ7FopiEnsUcDGPtJJFnsTgmkWdxdBGHvxKUwLOYg2Gv1Kp7Fkth1D2Lo+t48W5bip7FHAx/zVHNs1gao+ZZHF1jdb4bt4Kq4lnMwcSOkBQ8i1UwH65nsZIDs7xnMX2RaXGMrGdxCEMM0gdiJD2L2ZjqsYEYOc9i+iKTgXm9AEbOsziECapGBCPlWUxf5KocRsazmIM5IoKR8CymL3Lp7vPd98923z/fFcSIexaHMCTTlsUwwp7F9EX+SkpzXhAjKvoi86RuIDGLaWMqBUDMbFA3lQVAzFiQaaCYwwQzA4g5ROrGAMQMt33M7XQwv0Bihvb8/uYVJCb/zk+Bl5CYbIB5A4qp+XXzGhKTCzAPITFGzdyvtnt/zHVQzE3TqZv/mPdAMdM+5hooZtILGj2wAcBc8nu1ZVCM369VC6CYWb+BXgDFfM3oowFagYYftE1IzFLQEVQARzYjNTJbo2YQmjE5Mu/ohW0KCkNCZmtvGQZzumaGFCz/asVkp8MUkm1aMSvtPoxZWdaPOVkzI3q5oBsT3JiMsGnERENGwqYPwwpZEDZtGGbIgrBpwyy1ORgnbLowIzWTqy19mBU+xV6H0ISJK4xpvtWFmY+j9HoeTZjpWIx5Tw8mU4vHbOjB5NvxmLd6MENhTNXqu1df6cEMhzDVB4W5MOe2HsyhUNfseBY3aHJFD+YwVZQ937OY4lS+1IypUp7F+7oxY6GAecpcaMCUphrxLG5rxbgpsMfwLG7oTAE7oascz+K2voTOtqt7XM/ixr75RgtGbZsIhUKhUCgUCoVCoVAoFAqFQqFQKBQKhUKhUCgUCoVCoVAoFAolp98AUV8egjSoNyIAAAAASUVORK5CYII=') no-repeat;
+    }
+    .hnaui-plane-head {
+      background-position: 0 0;
+    }
+    .hnaui-plane-middle {
+      background-position: 0 -300px;
+    }
+    .hnaui-plane-tail {
+      background-position: 0 -600px;
+    }
+    .table-seat-type {
+      border:0;
+      padding-left:70px;
+      background: none;
+      .seat-type-item {
+        position: relative;
+      }
+
+      td{
+        border:0;
+      }
+      tr:hover{
+        background: none;
+      }
+    }
+    .hnaui-seat-title,.hnaui-seat-price {
+      display: inline-block;
+    }
+    .hnaui-seat-title{
+      left: 50px;
+    }
+    .hnaui-seat-price{
+      right:10px;
+
+    }
+
+    .traveller-ok {
+      display: inline-block;
+      font-size: 20px;
+      cursor: pointer;
+      &:hover {
+        @include border-radius(50%);
+        background: #fff;
+        @include box-shadow(0 0 6px #4a90e2);
+      }
+    }
+    .traveller-close, .traveller-ok {
+      display: none;
+    }
+  }
+
+  .hnui-seat-map {
+    //float: right;
+    position: relative;
+    min-height: 500px;
+    .seat-map-arrow {
+      display: block;
+      height: 34px;
+      text-align: center;
+      border: 1px solid #ddd;
+      color: $themeColor;
+      font-width: 600;
+      cursor: pointer;
+      .hnaui-icon {
+        font-size: 30px;
+      }
+      &:hover {
+        background: #f9f9f9;
+      }
+    }
+    .seat-up,.seat-down{
+      display: block !important;
+    }
+    .seat-map-up {
+      border-bottom: none;
+    }
+    .seat-map-down {
+      border-top: none;
+    }
+    .seat-map-title {
+      margin: 0 auto;
+      border-left: 1px solid #ddd;
+      border-right: 1px solid #ddd;
+      li {
+        display: table-cell;
+        width: 55px;
+        text-align: center;
+        line-height: 33px;
+        cursor: default;
+      }
+    }
+    .seat-map-wrapper {
+      height: 400px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      position: relative;
+      table {
+        position: relative;
+        top:0;
+        left: 0;
+        margin: 0;
+        border: none;
+        tr{
+          height:40px;
+        }
+      }
+    }
+
+    .seat-map-index, .seat-map-item, .seat-map-aisle {
+      width: 40px;
+      height: 36px;
+      padding: 6px 6px 1px;
+      text-align: center;
+    }
+    .seat-map-item {
+      cursor: pointer;
+      &:hover {
+        background: #fff;
+        @include box-shadow(inset 0 0 6px $themeColor);
+      }
+    }
+    .seat-map-aisle {
+      .hnaui-icon-exit {
+        width: 24px;
+        height: 24px;
+        font-size: 24px;
+      }
+    }
+    .disabled {
+      cursor: not-allowed !important;
+      &:hover {
+        background-color: transparent;
+        @include box-shadow(none);
+      }
+    }
+  }
+
+  .currentSeatTitle {
+    position: relative;
+  }
+
+  .table-traveller-info {
+    td {
+      padding: 2px 10px !important;
+    }
+    .hnaui-form-radio {
+      margin-right: 0;
+      padding-right: 0;
+      > span {
+        /* max-width: 100px;
+         text-overflow: ellipsis;
+         overflow: hidden;
+         white-space: nowrap;*/
+        /* &:hover{
+           position: absolute;
+           max-width: 1000px;
+           background: #fbfbfb;
+           padding: 0 4px 0 0;
+         }*/
+      }
+    }
+    .total{
+      height:40px;
+      font-size: 12px;
+      font-weight: 600;
+      .price{
+        font-size: 16px;
+        color:$themeColor;
+        text-align: right;
+      }
+    }
+  }
+
+  /* .table-seat-type, .table-current-seat {
+     td {
+       padding: 6px 10px 0 !important;
+     }
+   }*/
+
+  .table-current-seat {
+    margin-top:15px;
+  }
+
+  .hnaui-form-radio i {
+    margin-top: -2px;
+  }
+
+  .seat-submit {
+    margin-top: 30px;
+    .hnaui-btn {
+      width: 45%;
+    }
+  }
+
+  .icon-seat-first {
+    color: #d040ff;
+  }
+
+  .icon-seat-vip {
+    color: #fe998d;
+  }
+
+  .icon-seat-business {
+    color: #fac045;
+  }
+
+  .icon-seat-comfort {
+    color: #ff903e;
+  }
+
+  .icon-seat-select {
+    color: #00ccff;
+  }
+
+  .icon-seat-domeconomy {
+    color: #a1d767;
+  }
+
+  .icon-seat-standard {
+    color: #3331e6;
+  }
+
+  .icon-seat-exit {
+    color: #ff903e;
+  }
+
+  .icon-seat-blocked {
+    color: #c9c9c9;
+  }
+
+  .icon-seat-selected {
+    color: #fe0003;
+  }
+
+  .icon-exit {
+    color: $themeColor;
+  }
+
+  .icon-seat-disabled {
+    color: #999;
+  }
+}

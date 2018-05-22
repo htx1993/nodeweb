@@ -1,0 +1,43 @@
+/* 折叠面板 */
+.hnaui-collapse {
+  //border: 1px solid #e2e2e2;
+  @include border-radius(2px);
+}
+
+.hnaui-colla-item {
+  border-top: 1px solid #e2e2e2
+}
+
+.hnaui-colla-item:first-child {
+  border-top: none;
+}
+
+.hnaui-colla-title {
+  position: relative;
+  height: 42px;
+  line-height: 42px;
+  padding: 0 15px 0 35px;
+  color: #333;
+  background-color:$bodyBg;
+  cursor: pointer;
+}
+
+.hnaui-colla-content {
+  display: none;
+  padding: 10px 15px;
+  line-height: 22px;
+  border: 1px solid #f2f2f2;
+  border-top:0;
+  color: #666;
+}
+
+//.hnaui-colla-content p {
+//  margin-bottom: 6px;
+//}
+
+.hnaui-colla-icon {
+  position: absolute;
+  left: 15px;
+  top: 0;
+  font-size: 14px;
+}

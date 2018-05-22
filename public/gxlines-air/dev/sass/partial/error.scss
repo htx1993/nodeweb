@@ -1,0 +1,56 @@
+.hnaui-error {
+  background: #fff;
+  .hnaui-error-cont {
+    width: 550px;
+    margin: 0 auto;
+    padding:15% 15px;
+    line-height: 30px;
+  }
+  a {
+    color: $darkthemColor;
+  }
+  .hnaui-error-text {
+    padding-left: 90px;
+    font-size: 16px;
+    color: #666;
+
+  }
+  .hnaui-error-tit {
+    position: relative;
+    padding-left: 90px;
+    margin-bottom: 10px;
+    line-height: 30px;
+    h2 {
+      font-size: $fontDefault + 6;
+    }
+    .english-text{
+      font-size: $fontDefault + 6;
+    }
+  }
+  .hnaui-btn {
+    margin-top: 20px;
+    color: #fff;
+  }
+  .hnaui-icon {
+    position: absolute;
+    left: 0;
+    top: 14px;
+    margin-right: 20px;
+    font-size: 65px;
+    color: $themeColor;
+    vertical-align: middle;
+  }
+}
+
+//页面建设中
+.hnaui-building{
+  img{
+    position:absolute;
+    top:-15px;
+    left:0;
+    width:140px;
+  }
+  .hnaui-error-text,.hnaui-error-tit{
+    padding-left:140px !important;
+  }
+}

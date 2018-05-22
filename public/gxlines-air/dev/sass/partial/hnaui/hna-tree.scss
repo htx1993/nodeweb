@@ -1,0 +1,73 @@
+/** 树组件 **/
+.hnaui-tree {
+  line-height: 26px;
+}
+
+.hnaui-tree li {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.hnaui-tree li a,
+.hnaui-tree li .hnaui-tree-spread {
+  display: inline-block;
+  vertical-align: top;
+  height: 26px;
+  *display: inline;
+  *zoom: 1;
+  cursor: pointer;
+}
+
+.hnaui-tree li a {
+  font-size: 0;
+}
+
+.hnaui-tree li a i {
+  font-size: 16px;
+}
+
+.hnaui-tree li a cite {
+  padding: 0 6px;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.hnaui-tree li i {
+  padding-left: 6px;
+  color: #333;
+  -moz-user-select: none;
+}
+
+.hnaui-tree li .hnaui-tree-check {
+  font-size: 13px;
+}
+
+.hnaui-tree li .hnaui-tree-check:hover {
+  color: $themeColor;
+}
+
+.hnaui-tree li ul {
+  display: none;
+  margin-left: 20px;
+}
+
+.hnaui-tree li .hnaui-tree-enter {
+  line-height: 24px;
+  border: 1px dotted #000;
+}
+
+.hnaui-tree-drag {
+  display: none;
+  position: absolute;
+  left: -666px;
+  top: -666px;
+  background-color: #f2f2f2;
+  padding: 5px 10px;
+  border: 1px dotted #000;
+  white-space: nowrap
+}
+
+.hnaui-tree-drag i {
+  padding-right: 5px;
+}

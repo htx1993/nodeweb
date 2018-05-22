@@ -1,0 +1,93 @@
+<div id="header-block" class="header-block">
+    <div class="container">
+        <div class="topnav">
+            <div class="hnaui-left hnaui-logo">
+                <a href="{{base.server_host}}/"><img src="{{base.static_host}}/images/logo.png"> </a>
+            </div>
+            <div class="hnaui-left hnaui-right-box">
+                <div class="hnaui-login-phone">
+                    <div class="com-phone">官方热线：<strong>{{base.tel}}</strong>服务投诉电话：<strong>0771-5573987</strong></div>
+                    <div  class="hna-btnalink">
+                        {{#unless hasLogin}}
+                        <p>
+                            <a href="{{base.server_host}}/airU/register" class="hna-subColor">注册</a><em>|</em>
+                            <a href="javascript:;" class="hna-indexloginbtn">登录</a>
+                        </p>
+                        {{/unless}}
+                        {{#if hasLogin}}
+                        <p>
+                            <a href="{{base.server_host}}/airU/userInfo" class="hna-loginname"><i class="hnaui-icon">&#xe92a;</i><span class="hnaui-elip">欢迎您：{{userInfo.fullName}}</span></a><em>|</em>
+                            <a href="{{base.server_host}}/airU/loginOut" class="hna-tctext">退出</a>
+                        </p>
+                        {{/if}}
+                    </div>
+
+                </div>
+                <div class="hnaui-nav">
+                    <ul class="hnaui-clear hna-nav">
+                        <li class="hnaui-nav-item">
+                            <a  href="/"><span>首  页</span></a>
+                        </li>
+                        <li class="hnaui-nav-item nav-0">
+                            <a href="javascript:;" onclick="return false;"><span>订单管理</span></a>
+                            <dl class="hnaui-nav-child">
+                                <dd><a href="{{base.server_host}}/airEye/order/orderList"><i class="hnaui-icon">&#xe90c;</i>我的订单</a></dd>
+                                <dd><a href="{{base.server_host}}/airEye/order/searchOrder"><i class="hnaui-icon">&#xe90c;</i>非会员订单</a></dd>
+                            </dl>
+                        </li>
+                        <li class="hnaui-nav-item nav-1">
+                            <a href="javascript:;" onclick="return false;"><span>自助服务</span></a>
+                            <dl class="hnaui-nav-child">
+                                <dd><a href="{{base.server_host}}/airR/flightStatus"><i class="hnaui-icon">&#xe937;</i>航班动态</a></dd>
+                                <dd><a href="http://www.travelsky.com/tsky/" target="_blank"><i class="hnaui-icon">&#xe939;</i>客票验真</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=selfservice#irregularFlightProve"><i class="hnaui-icon">&#xe93c;</i>延误证明</a></dd>
+                                <!--<dd><a href="{{base.server_host}}/airR/onLineCheckIn"><i class="hnaui-icon">&#xe93c;</i>网上值机</a></dd>-->
+                            </dl>
+                        </li>
+                        <li class="hnaui-nav-item nav-2">
+                            <a  href="{{base.server_host}}/airR/rules?type=addedService#luggage"><span>增值服务</span></a>
+                            <dl class="hnaui-nav-child">
+                                <dd><a href="{{base.server_host}}/airR/rules?type=addedService#luggage"><i class="hnaui-icon">&#xe91c;</i>行李</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=addedService#meals"><i class="hnaui-icon">&#xe90e;</i>餐食</a></dd>
+                                <dd><a href="http://www.auib.com.cn/beiBuGulf/product/getProductList" target="_blank"><i class="hnaui-icon">&#xe914;</i>保险</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=addedService#vipHall"><i class="hnaui-icon">&#xe91b;</i>贵宾厅</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=addedService#fortuneWingsClub"><i class="hnaui-icon">&#xe91f;</i>金鹏俱乐部</a></dd>
+                            </dl>
+                        </li>
+                        <li class="hnaui-nav-item nav-3">
+                            <a  href="{{base.server_host}}/airR/rules?type=passengerService#illnessNotes"><span>旅客服务</span></a>
+                            <dl class="hnaui-nav-child">
+                                <dd><a href="{{base.server_host}}/airR/rules?type=passengerService#illnessNotes"><i class="hnaui-icon">&#xe935;</i>机票</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=passengerService#baggageLimit"><i class="hnaui-icon">&#xe91c;</i>行李</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=passengerService#airportAndLocalTraffic"><i class="hnaui-icon">&#xe938;</i>机场</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=passengerService#lithiumBattery"><i class="hnaui-icon">&#xe91f;</i>安检须知</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=passengerService#travelNotes"><i class="hnaui-icon">&#xe936;</i>行程单须知</a></dd>
+                            </dl>
+                        </li>
+                        <li class="hnaui-nav-item nav-4">
+                            <a  href="{{base.server_host}}/airR/rules?type=companyProfile#companyIntroduction"><span>公司概况</span></a>
+                            <dl class="hnaui-nav-child">
+                                <dd><a href="{{base.server_host}}/airR/rules?type=companyProfile#companyIntroduction"><i class="hnaui-icon">&#xe918;</i>公司介绍</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=companyProfile#airlineNetworkTable"><i class="hnaui-icon">&#xe90b;</i>航线网络</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=companyProfile#ticketOutlets"><i class="hnaui-icon">&#xe93b;</i>售票网点</a></dd>
+                                <dd><a href="{{base.server_host}}/airR/rules?type=companyProfile#contactUs"><i class="hnaui-icon">&#xe63b;</i>联系我们</a></dd>
+                                <!-- <dd><a href="{{base.server_host}}/airR/rules?type=companyProfile#partner"><i class="hnaui-icon">&#xe613;</i>合作伙伴</a></dd> -->
+                            </dl>
+                        </li>
+                        <li class="hnaui-nav-item nav-5">
+                            <a  href="https://fltnet.hnair.net/crew/pub/complaint/cbg.do?locale=zh_CN"><span>建议与投诉</span></a>
+                            <dl class="hnaui-nav-child">
+                                <dd><a href="https://ucc.hnair.com/JtalkManager/echatNew.do?companyPk=ff8080815ca3cd2d015ccdafc1037ac9&codeKey=8" target="_blank"><i class="hnaui-icon">&#xe63a;</i>在线客服</a></dd>
+                                <dd><a href="https://fltnet.hnair.net/crew/pub/complaint/cbg.do?locale=zh_CN" target="_blank"><i class="hnaui-icon">&#xe642;</i>建议与投诉</a></dd>
+                            </dl>
+                        </li>
+                       <!-- <li class="hnaui-nav-item">
+                            <a  href="#">建议与投诉</a>
+                        </li>-->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

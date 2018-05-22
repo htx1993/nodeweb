@@ -1,0 +1,134 @@
+/****************************************************/
+$sorry: url('#{$imgUrl}/sorry.jpg');
+.hnaui-fax {
+  color: #999;
+}
+
+.flight-flexible-content {
+  .change-btn {
+    display: none;
+  }
+  .submit-btn{
+    margin-left: 10px;
+  }
+  .search-price{
+    padding:15px;
+  }
+  .search-submit{
+    margin-top: 0 !important;
+  }
+  //搜索结果信息提示部分
+  .search-title {
+    background: #fff;
+    padding:15px;
+    .title-info {
+      font-size: 12px;
+      color: #a3a3a3;
+    }
+    .search-destination {
+      float: left;
+      width:70%;
+      color: #3e3e3e;
+      font-size:$fontDefault + 4;
+      .hnaui-icon {
+        color: $themeColor;
+        font-size: 35px;
+        margin: 0 5px;
+        vertical-align: middle;
+      }
+    }
+    .search-weekchange {
+      float: right;
+      .preweek {
+        padding-left: 5px;
+      }
+      .nextweek {
+        padding-right: 8px;
+      }
+      span {
+
+        color: #fff;
+
+        background-color: $themeColor-opacity;
+      }
+    }
+  }
+  //隐藏星期;
+  .hide-week {
+    display: none;
+  }
+  //td居中
+  .hnaui-table td {
+    text-align: center;
+  }
+  //td中日期居中
+  .flight-date {
+    margin-bottom: 5px;
+    pointer-events: none;
+  }
+  .flight-look{
+    pointer-events: none;
+  }
+  .hnaui-table {
+    th {
+      text-align: center;
+    }
+    td {
+      min-height: 60px !important;
+      height: 60px;
+      vertical-align: top;
+      cursor: pointer;
+      &.active{
+        background: $themeColor;
+        color:#fff;
+      }
+    }
+  }
+  .hnaui-table tbody tr:hover,td.voidtd:hover{
+    background: none !important;
+    cursor: auto;
+  }
+  .hnaui-table td:hover {
+    background-color: $border;
+  }
+}
+
+.hnaui-price{
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+  font-size: 18px;
+  //color: $subColor;
+  >span{
+    font-size: 12px;
+  }
+}
+
+/*没有航班*/
+.flight-no-result {
+  display: block;
+  padding: 20px;
+  margin-top: 10px;
+  min-height: 150px;
+  line-height: 24px;
+  font-size: 16px;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  .no-flight {
+    float: left;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background: $sorry no-repeat center center;
+  }
+  .flight-no-result-info {
+    display: table;
+    height: 100px;
+    p {
+      display: table-cell;
+      vertical-align: middle;
+      text-indent: 2em;
+    }
+  }
+}
+

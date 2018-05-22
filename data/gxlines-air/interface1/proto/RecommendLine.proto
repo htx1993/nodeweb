@@ -1,0 +1,41 @@
+syntax = "proto3";
+
+package recommendline;
+
+option java_multiple_files = true;
+
+option java_package = "com.hna.rest.air.recommendLine";
+
+service RecommendLine {
+    rpc recommendLineSearch (RecommendLineRQ) returns (RecommendLineRS) {
+    }
+}
+
+// 特价机票请求
+message RecommendLineRQ {
+    string languageCode = 1;
+}
+
+message RecommendLineRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    repeated string citys = 4; // 机场三字码
+    repeated AirLowFareLineGroup data = 5; // 航段信息
+}
+
+message AirLowFareLineGroup {
+    string city = 1;
+    repeated AirLowFareInfo lines = 2;
+}
+
+message AirLowFareInfo {
+    string org = 1; // 出发城市
+    string dst = 2; // 达到城市
+    string flightNo = 3; // 航班号
+    string date = 4; // 起飞时间
+    string amount = 5; // 票价
+    string currency = 6; // 币种
+    int64 expire = 7; // 过期时间
+}
+  

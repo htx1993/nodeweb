@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package reservation;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.air.reservation";
+option java_outer_classname = "ReservationCreateProto";
+
+import "Common.proto";
+
+service ReservationCreate {
+    rpc createReservation (ReservationCreateRQ) returns (ReservationCreateRS) {
+    }
+}
+
+message ReservationCreateRQ {
+    string shoppingCartId = 1;
+}
+
+message ReservationCreateRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    common.Reservation reservation = 4;
+}

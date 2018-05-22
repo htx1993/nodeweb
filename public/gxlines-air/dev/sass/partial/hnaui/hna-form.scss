@@ -1,0 +1,649 @@
+/** 表单 **/
+.hnaui-input, .hnaui-textarea, .hnaui-select {
+  height: $inputH;
+ //line-height: $inputH;
+  //line-height: 36px \9;
+  padding:10px;
+  border: 1px solid #ececec;
+  background-color: #fff;
+  //@include border-radius(2px);
+}
+//浏览器文本框自动加为元素图标
+input::-webkit-contacts-auto-fill-button {
+  visibility: hidden;
+  display: none !important;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
+.hnaui-input, .hnaui-textarea {
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.hnaui-input:hover, .hnaui-textarea:hover {
+  border-color: #D2D2D2 !important; /*border-bottom-color: $themeColor !important;*/
+}
+
+.hnaui-input:focus, .hnaui-textarea:focus {
+  border-color: #C9C9C9 !important; /*border-bottom-color: $themeColor !important;*/
+}
+
+.hnaui-textarea {
+  position: relative;
+  min-height: 100px;
+  height: auto;
+  line-height: 20px;
+  padding: 6px 10px;
+  resize: vertical;
+}
+
+.hnaui-select {
+  padding: 0 10px;
+}
+
+.hnaui-form select,
+.hnaui-form input[type=checkbox],
+.hnaui-form input[type=radio] {
+  display: none;
+}
+
+.hnaui-form input[readonly=readonly] {
+  cursor: pointer;
+}
+
+/*.hnaui-form-select input[readonly], input.o-date[readonly] {
+  color: #000;
+  background: #fff;
+  //cursor: pointer !important;
+}*/
+
+.hnaui-form-item {
+  margin-bottom: 10px;
+  clear: both;
+  *zoom: 1;
+}
+
+.hnaui-form-item:after {
+  content: '\20';
+  clear: both;
+  *zoom: 1;
+  display: block;
+  height: 0;
+}
+
+.hnaui-form-label {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 10px;
+  height:$inputH;
+  line-height:$inputH - 20px;
+  width: 80px;
+  font-weight: normal;
+  text-align: right;
+}
+
+.hnaui-form-item .hnaui-inline {
+  margin-bottom: 5px;
+  margin-right: 10px;
+}
+
+.hnaui-input-block, .hnaui-input-inline {
+  position: relative;
+}
+
+.hnaui-input-block {
+  margin-left: 120px;
+  min-height: 36px;
+}
+
+.hnaui-input-inline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+//.hnaui-form-item .hnaui-input-inline{float: left; width: 190px; margin-right: 10px;}
+.hnaui-form-item .hnaui-input-inline {
+  float: left;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.hnaui-form-text .hnaui-input-inline {
+  width: auto;
+}
+
+/* 分割块 */
+.hnaui-form-mid {
+  position: relative;
+  float: left;
+  display: block;
+  padding: 8px 0;
+  line-height: 20px;
+  margin-right: 10px;
+}
+
+/* 警告域 */
+.hnaui-form-danger:focus, .hnaui-form-danger + .hnaui-form-select .hnaui-input {
+  border: 1px solid #FF5722 !important;
+}
+
+/* 下拉选择 */
+.hnaui-form-select {
+  position: relative;
+}
+
+/*移动端下拉框*/
+.hnaui-form-select .hnaui-mobile-select {
+  display: none;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 99999;
+  width: 100%;
+  height:200px;
+ @include box-shadow(0 -3px 5px 0 rgba(0,0,0,.2));
+  background-color: #fff;
+  dl{
+    position: static;
+    height: 162px;
+    overflow-y: auto;
+    -webkit-overflow-scrolling:touch;
+    border:none;
+    box-shadow: none;
+  }
+  dd{
+    text-align: center;
+    font-size: $fontDefault;
+    border-bottom:1px solid #ececec;
+    &.hnaui-this{
+      font-size: $fontDefault + 2;
+      background: none;
+      color:$themeColor;
+      background: #ececec;
+      font-weight:bold;
+    }
+  }
+}
+.hnaui-form-select .hnaui-mobile-title {
+  text-align: right;
+  padding: 0 10px;
+  height:38px;
+  background-color: $themeColor;
+  line-height:38px;
+  .confirm-btn {
+    color: #fff;
+    font-size: $fontDefault + 2;
+  }
+  .hnaui-btn{
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+  }
+}
+.hnaui-form-selected .hnaui-mobile-select {
+  display: block;
+}
+
+
+
+.hnaui-form-select .hnaui-input {
+  padding-right: 0;
+  cursor: pointer;
+}
+
+.hnaui-form-select .hnaui-edge {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  margin-top: -3px;
+  cursor: pointer;
+  border-width: 6px;
+  border-top-color: #c2c2c2;
+  border-top-style: solid;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+}
+
+.hnaui-form-select dl {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 42px;
+  z-index: 999;
+  min-width: 100%;
+  border: 1px solid #d2d2d2;
+  max-height: 300px;
+  overflow-y: auto;
+  background-color: #fff;
+  @include border-radius(2px);
+  @include box-shadow(0 2px 4px rgba(0, 0, 0, .12));
+  @include box-sizing(border-box);
+
+  .img-item{
+    line-height:1.5;
+    position: relative;
+    padding: 10px 10px 10px 135px;
+    min-height:130px;
+    img{
+      position: absolute;
+      top:12px;
+      left:10px;
+      width:114px;
+      height:114px;
+      pointer-events: none;
+    }
+    .img-name{
+      font-size: 14px;
+      color:#000;
+      pointer-events: none;
+      white-space:normal;
+      position: relative;
+      padding-right:55px;
+    }
+    .img-description{
+      font-size: 12px;
+      color: #666;
+      white-space:normal;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .img-price{
+      position: absolute;
+      right:0;
+      top:0;
+    }
+  }
+}
+
+.hnaui-form-select dl dt,
+.hnaui-form-select dl dd {
+  padding: 5px 10px;
+  color:#333;
+  line-height:1.5;
+}
+
+.hnaui-form-select dl dt {
+  font-size: 12px;
+  color: #999;
+}
+
+.hnaui-form-select dl dd {
+  cursor: pointer;
+}
+
+.hnaui-form-select dl dd:hover {
+  background-color: #f2f2f2;
+}
+
+.hnaui-form-select .hnaui-select-group dd {
+  padding-left: 20px;
+}
+
+.hnaui-form-select dl dd.hnaui-this {
+  //background-color: $themeColor;
+  //color: #fff;
+  background-color: #e8e0ec;
+}
+
+.hnaui-form-select dl dd.hnaui-disabled {
+  background-color: #fff;
+}
+
+.hnaui-form-selected dl {
+  display: block;
+}
+
+.hnaui-form-selected .hnaui-edge {
+  margin-top: -9px;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  transform-origin: 50% 25%;
+}
+
+.hnaui-form-selected .hnaui-edge {
+  margin-top: -3px \0
+;
+}
+
+:root .hnaui-form-selected .hnaui-edge {
+  margin-top: -9px \0/
+  IE9;
+}
+
+
+.hnaui-select-none {
+  margin: 5px 0;
+  text-align: center;
+  color: #999;
+}
+
+.hnaui-select-disabled .hnaui-disabled {
+  border-color: #eee;
+}
+
+.hnaui-select-disabled .hnaui-edge {
+  border-top-color: #d2d2d2
+}
+.hnaui-select-disabled .hnaui-unselect{
+  cursor: not-allowed !important;
+}
+
+/* 复选框 */
+.hnaui-form-checkbox {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 30px;
+  line-height: 28px;
+  margin-right: 10px;
+  padding-right: 30px;
+  border: 1px solid #d2d2d2;
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 0;
+  @include border-radius(2px);
+  @include transition(.1s linear);
+  @include box-sizing(border-box !important);
+}
+
+.hnaui-form-checkbox:hover {
+  border: 1px solid #c2c2c2;
+}
+
+.hnaui-form-checkbox * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hnaui-form-checkbox span {
+  padding: 0 5px;
+  height: 100%;
+  font-size: 12px;
+  background-color: #d2d2d2;
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.hnaui-form-checkbox:hover span {
+  background-color: #c2c2c2;
+}
+
+.hnaui-form-checkbox i {
+  position: absolute;
+  right: 0;
+  width: 30px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
+
+.hnaui-form-checkbox:hover i {
+  color: #c2c2c2;
+}
+
+.hnaui-form-checked, .hnaui-form-checked:hover {
+  border-color: $themeColor;
+}
+
+.hnaui-form-checked span, .hnaui-form-checked:hover span {
+  background-color: $themeColor;
+}
+
+.hnaui-form-checked i, .hnaui-form-checked:hover i {
+  color: #5FB878;
+}
+
+.hnaui-form-item .hnaui-form-checkbox {
+  margin-top: 4px;
+}
+
+/* 复选框-原始风格 */
+.hnaui-form-checkbox[hna-skin="primary"] {
+  height: auto !important;
+  line-height: normal !important;
+  border: none !important;
+  margin-right: 0;
+  padding-right: 0;
+  background: none;
+}
+
+.hnaui-form-checkbox[hna-skin="primary"] span {
+  float: right;
+  padding-right: 15px;
+  line-height: 18px;
+  background: none;
+  color: #666;
+}
+
+.hnaui-form-checkbox[hna-skin="primary"] i {
+  position: relative;
+  top: 0;
+  width: 16px;
+  line-height: 14px;
+  border: 1px solid $themeColor;
+  font-size: 12px;
+  @include border-radius(2px);
+  background-color: #fff;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+.hnaui-form-checkbox[hna-skin="primary"]:hover i {
+  border-color: $themeColor;
+  color: #fff;
+}
+
+.hnaui-form-checked[hna-skin="primary"] i {
+  border-color: $themeColor;
+  background-color: $themeColor;
+  color: #fff;
+}
+
+.hnaui-checkbox-disbaled[hna-skin="primary"] span {
+  background: none !important;
+}
+
+.hnaui-checkbox-disbaled[hna-skin="primary"]:hover i {
+  border-color: #d2d2d2;
+}
+
+.hnaui-form-item .hnaui-form-checkbox[hna-skin="primary"] {
+  margin-top: 10px;
+}
+
+/* 复选框-开关风格 */
+.hnaui-form-switch {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  height: 22px;
+  line-height: 22px;
+  width: 42px;
+  padding: 0 5px;
+  margin-top: 8px;
+  border: 1px solid #d2d2d2;
+  @include border-radius(20px);
+  cursor: pointer;
+  background-color: #fff;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+.hnaui-form-switch i {
+  position: absolute;
+  left: 5px;
+  top: 3px;
+  width: 16px;
+  height: 16px;
+  @include border-radius(20px);
+  background-color: #d2d2d2;
+  -webkit-transition: .1s linear;
+  transition: .1s linear;
+}
+
+.hnaui-form-switch em {
+  position: absolute;
+  right: 5px;
+  top: 0;
+  width: 25px;
+  padding: 0 !important;
+  text-align: center !important;
+  color: #999 !important;
+  font-style: normal !important;
+  font-size: 12px;
+}
+
+.hnaui-form-onswitch {
+  border-color: #5FB878;
+  background-color: #5FB878;
+}
+
+.hnaui-form-onswitch i {
+  left: 32px;
+  background-color: #fff;
+}
+
+.hnaui-form-onswitch em {
+  left: 5px;
+  right: auto;
+  color: #fff !important;
+}
+
+.hnaui-checkbox-disbaled {
+  border-color: #e2e2e2 !important;
+}
+
+.hnaui-checkbox-disbaled span {
+  background-color: #e2e2e2 !important;
+}
+
+.hnaui-checkbox-disbaled:hover i {
+  color: #fff !important;
+}
+
+/* 单选框 */
+.hnaui-form-radio {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 28px;
+  margin: 6px 10px 0 0;
+  padding-right: 10px;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.hnaui-form-radio * {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hnaui-form-radio i {
+  margin-right: 8px;
+  font-size:$fontDefault + 6;
+  color: $themeColor;
+  opacity: .6;
+  filter: alpha(opacity=75);
+}
+
+.hnaui-form-radio span {
+  font-size: $fontDefault;
+}
+
+.hnaui-form-radioed i, .hnaui-form-radio i:hover {
+  color: $themeColor;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+.hnaui-radio-disbaled i {
+  color: #e2e2e2 !important;
+}
+
+/* 表单方框风格 */
+.hnaui-form-pane .hnaui-form-label {
+  width: 120px;
+  @include border-radius(2px 0 0 2px);
+  text-align: center;
+  background-color: #ededed;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  @include box-sizing(border-box !important);
+}
+
+.hnaui-form-pane .hnaui-input-inline {
+  margin-left: -1px;
+}
+
+.hnaui-form-pane .hnaui-input-block {
+  margin-left: 120px;
+  left: -1px;
+}
+
+.hnaui-form-pane .hnaui-input {
+  @include border-radius(0 2px 2px 0);
+}
+
+.hnaui-form-pane .hnaui-form-text .hnaui-form-label {
+  float: none;
+  width: 100%;
+  border-right: 1px solid #e6e6e6;
+  @include border-radius(2px);
+  @include box-sizing(border-box !important);
+  text-align: left;
+}
+
+.hnaui-form-pane .hnaui-form-text .hnaui-input-inline {
+  display: block;
+  margin: 0;
+  top: -1px;
+  clear: both;
+}
+
+.hnaui-form-pane .hnaui-form-text .hnaui-input-block {
+  margin: 0;
+  left: 0;
+  top: -1px;
+}
+
+.hnaui-form-pane .hnaui-form-text .hnaui-textarea {
+  min-height: 100px;
+  @include border-radius(0 0 2px 2px);
+}
+
+.hnaui-form-pane .hnaui-form-checkbox {
+  margin: 4px 0 4px 10px;
+}
+
+.hnaui-form-pane .hnaui-form-switch,
+.hnaui-form-pane .hnaui-form-radio {
+  margin-top: 6px;
+  margin-left: 10px;
+}
+
+.hnaui-form-pane .hnaui-form-item[pane] {
+  position: relative;
+  border: 1px solid #e6e6e6;
+}
+
+.hnaui-form-pane .hnaui-form-item[pane] .hnaui-form-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-width: 0px;
+  border-right-width: 1px;
+}
+
+.hnaui-form-pane .hnaui-form-item[pane] .hnaui-input-inline {
+  margin-left: 120px;
+}
+
+.hnaui-required {
+  font-style: normal;
+  color: $hnaui-redColor;
+}

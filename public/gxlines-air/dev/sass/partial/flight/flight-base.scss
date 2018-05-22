@@ -1,0 +1,22 @@
+.search-info {
+  display: none;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: $themePanelBg;
+  label {
+    display: inline-block;
+    margin-bottom: 0;
+    color: $themeColor;
+  }
+}
+
+.flight-attention-panel {
+  .hnaui-panel-content {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  p {
+    margin-bottom: 4px;
+    text-indent: 2em;
+  }
+}

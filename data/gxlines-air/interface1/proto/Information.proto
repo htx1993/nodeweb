@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+package information;
+
+option java_multiple_files = true;
+option java_package = "com.hna.rest.air.information";
+
+service Information {
+
+    //获取所以的机场信息
+    rpc getLocations (LocationsRQ) returns (LocationsRS) {
+    }
+
+}
+
+//分页通用请求
+message LocationsRQ {
+    int32 pageSize = 1;
+    int32 startIndex = 2;
+}
+
+message LocationsRS {
+    string status = 1;
+    string code = 2;
+    string message = 3;
+    int64 maxCount = 4;
+    int64 pageSize = 5;
+    int64 startIndex = 6;
+    int64 totalCount = 7;
+    repeated Location location = 8;
+}
+
+
+message Location {
+    string code = 1;
+    string type = 9;
+    double latitude = 4;
+    double longitude = 5;
+    string name = 6;
+    string timeZone = 7;
+}
+

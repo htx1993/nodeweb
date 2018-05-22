@@ -1,0 +1,48 @@
+{{css base.css}}
+
+<div class="content">
+    <div class="hnaui-shadow">
+        <!--轮播图片 start-->
+        <div class="hnaui-slider hnaui-banner">
+            <div class="slider-load"></div>
+        </div>
+        <!--航班查询-->
+        <div class="hnaui-quick-search">
+            <div class="container">
+                <div class="row">
+                    <form class="hnaui-form">
+                        <div class="hnaui-index-search hnaui-clear">
+                            <!--标签-->
+                            {{> protal/bookBar}}
+                            <!--查询航班快速入口-->
+                            {{> protal/searchFlight}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="hnaui-module-box hnaui-ticket-notice  hnaui-clear">
+                <!--特价机票-->
+                {{> protal/ticket}}
+                <!--公告-->
+                {{> protal/notice}}
+            </div>
+
+            <!--广告-->
+            <div class="hnaui-slider hnaui-advert" >
+                <div class="slider-load">
+
+                </div>
+            </div>
+
+            <!--辅盈产品-->
+            {{> protal/product}}
+        </div>
+    </div>
+</div>
+
+{{js base.jsPageId}}

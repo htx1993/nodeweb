@@ -1,0 +1,30 @@
+/** 面包屑 **/
+.hnaui-breadcrumb {
+  visibility: hidden;
+  font-size: 0;
+  padding: 0 10px;
+  margin-bottom: 15px;
+}
+
+.hnaui-breadcrumb a {
+  padding-right: 8px;
+  line-height: 22px;
+  font-size: $fontDefault;
+  color: #333 !important;
+}
+
+.hnaui-breadcrumb a:hover {
+  color: $themeColor !important;
+}
+
+.hnaui-breadcrumb a span,
+.hnaui-breadcrumb a cite {
+  color: #666;
+  cursor: text;
+  font-style: normal;
+}
+
+.hnaui-breadcrumb a span {
+  padding-left: 8px;
+  font-family: Sim sun;
+}

@@ -1,0 +1,35 @@
+<div class="hnaui-ticket hnaui-shadow col-xs-12 col-sm-12 col-md-9 col-lg-9" id="hnaui_ticket_box">
+    <h2><i class="hnaui-icon">&#xe90a;</i> <span>Ticket<strong>特价机票</strong></span><!--<a href="{{base.server_host}}/airR/customService#ticketNotes" class="hnaui-more">更多<i class="hnaui-icon">&#xe654;</i>--></a>
+    </h2>
+    <div class="city-change"></div>
+    <!--<ul class="hnaui-city">
+        {{#each business.ticket.cityList}}
+        <li class="hnaui-elip" data-val="{{depCode}}">{{depCity}}</li>
+        {{/each}}
+    </ul>
+    <ul class="hnaui-prev-next">
+        <li class="prev disabled"><i class="prev hnaui-icon">&#xe623;</i></li>
+        <li class="next"><i class="next hnaui-icon">&#xe623;</i></li>
+    </ul>-->
+    <div class="hnaui-content row hnaui-clear" id="hnaui_ticket_content">
+        <i class="hnaui-icon hnaui-anim hnaui-anim-rotate hnaui-anim-loop loading-icon">&#xe63e;</i>
+        <span class="ticket-line"></span>
+        <!--<ul class="hnaui-ticket-list">
+            {{#each business.ticket.ticketList}}
+            <li class="col-xs-6 col-sm-4 col-md-2 col-lg-2 hnaui-special-ticket hnaairlines_{{depCode}}">
+                <h3>
+                    <span class="hnaui-ticket-dep">{{depCity}}</span>
+                    <i class="hnaui-icon">&#xe901;</i>
+                    <span class="hnaui-ticket-arr">{{arrCity}}</span>
+                </h3>
+                <p class="hnaui-ticket-price">￥<dfn>{{price}}</dfn>起</p>
+                <p class="hnaui-ticket-date">{{depDate}}</p>
+                <p class="hnaui-buy-ticket">
+                    <span> 立即预订</span>
+                </p>
+                <input type="hidden" name="ticketParamers" value="{{tripType}} | {{depCode}} | {{arrCode}} | {{depDate}} | {{arrDate}} | {{currency}} | {{cabinClass}}">
+            </li>
+            {{/each}}
+        </ul>-->
+    </div>
+</div>

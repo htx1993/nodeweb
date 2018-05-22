@@ -1,0 +1,92 @@
+.tipBox{
+  position: absolute;
+  font-size:12px;
+  background: $themeColor;
+  z-index:1111;
+  color: white;
+}
+.hna-tooltip{
+  padding: 3px 8px;
+  .hna-tip-arrow{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    vertical-align: middle;
+    z-index: 1111111;
+  }
+}
+
+.tip-weixin-img {
+  top: -1px !important;
+  padding: 0 !important;
+  height: 160px ;
+  line-height: 160px;
+  background: none;
+  .hnaui-arrow-left {
+    top: 23px;
+  }
+  img {
+    background: #fff;
+    border: 10px solid $themeColor;
+    //padding: 10px;
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/*三角形在上*/
+.hnaui-arrow-top {
+  bottom: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px 5px 0;
+  border-color: $themeColor transparent transparent transparent;
+}
+
+/*三角形在下*/
+.hnaui-arrow-bottom {
+  top: -5px;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 0 5px 5px;
+  border-color: transparent transparent $themeColor transparent;
+}
+
+/*三角形在左*/
+.hnaui-arrow-left {
+  top: 50%;
+  right: -5px;
+  margin-top: -5px;
+  border-width: 5px 0 5px 5px;
+  border-color: transparent transparent transparent $themeColor;
+}
+
+/*三角形在右*/
+.hnaui-arrow-right {
+  top: 50%;
+  left: -5px;
+  margin-top: -5px;
+  border-width: 5px 5px 5px 0;
+  border-color: transparent $themeColor transparent transparent;
+}
+
+.hnaui-wechat,.hnaui-weibo,.hnaui-service,.hnaui-suggestion{
+  margin:5px auto;
+  width:32px;
+  height:32px;
+  display: block;
+  background: url("#{$imgUrl}/bar-icon.png") no-repeat;
+}
+.hnaui-wechat{
+  background-position: 0 0;
+}
+.hnaui-weibo{
+  background-position: 0 -50px;
+}
+.hnaui-service{
+  background-position: 0 -106px;
+}
+.hnaui-suggestion{
+  background-position: 0 -166px;
+}
